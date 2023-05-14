@@ -1,4 +1,4 @@
-## Node + TypeScript + PostgreSQL TODOAPI
+## Voicze API
 
 This todoapi services is to provide the functionalities of every user which includes
 
