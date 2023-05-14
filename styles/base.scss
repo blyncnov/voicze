@@ -1,0 +1,121 @@
+// SCSS Dashboard Styles
+@import "./dashboard/index.scss";
+@import "./dashboard/invoices.scss";
+@import "./dashboard/settings.scss";
+@import "./dashboard/traffic_usage.scss";
+@import "./dashboard/purchase_plans.scss";
+@import "./dashboard/subscription_plans.scss";
+
+// Authentication
+@import "./auth/auth.scss";
+
+// Root Variables
+:root {
+  --black: #181818;
+  --white: #ffffff;
+  --black-100: #333333;
+  --primary-color: #735236;
+  --secondary-color: #FAB100;
+  --header-color: #F8FBFE;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  white-space: nowrap;
+  padding: 0.8em 2em;
+  border-radius: 3px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.133;
+  text-align: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px 0 rgba(37, 85, 152, 0.15) !important;
+  background-color: var(--primary-color);
+  color: black !important;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: var(--primary-color) !important;
+  transition: all 0.2s ease-in;
+}
+
+button[data-btn="primary"] {
+  color: #ffffff !important;
+  background-color: #0b4296 !important;
+}
+
+button[data-btn="transparent"] {
+  color: #0b4296 !important;
+  background-color: transparent !important;
+}
+
+button:hover {
+  transform: translateY(2%) !important;
+}
+
+button:active {
+  box-shadow: 0 5px 15px 0 rgba(37, 85, 152, 0.928);
+  transform: translateY(2%) !important;
+}
+
+input,
+textarea,
+select {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 18px 1em;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  border-radius: 3px;
+  color: rgb(53, 61, 66);
+  font-family: "Inter", sans-serif;
+  border: 1px solid rgba(115, 82, 54, 0.21);
+}
+
+input:active {
+  background-color: rgba(115, 82, 54, 0.167) !important;
+}
+
+.input,
+select {
+  width: 100% !important;
+
+  &::placeholder {
+    color: #111232 !important;
+    opacity: 0.5;
+    font-weight: 400;
+  }
+}
+
+
+// DASHBOARD GLOBAL STYLE
+.dashboard_header {
+  width: 100%;
+  height: 150px;
+  padding: 1em;
+  line-height: 1.5;
+  background-color: var(--header-color);
+
+  p {
+    color: #333 !important;
+  }
+}
+
+.index {
+  background-color: #111;
+  background-image: radial-gradient(#2d2d2d 1px, transparent 0),
+    radial-gradient(#373636 1px, transparent 0);
+  background-position: 0 0,
+    25px 25px;
+  background-size: 50px 50px;
+}
