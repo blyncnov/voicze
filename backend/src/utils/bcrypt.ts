@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import { logger } from "../utils/logger";
+import { logger } from "./logger";
 
 export const bcryptUtils = async (myPlaintextPassword: any) => {
   const salt = await bcrypt.genSalt(10);
