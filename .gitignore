@@ -2,11 +2,12 @@
 
 # dependencies
 /node_modules
-/api/node_modules
 /.pnp
 .pnp.js
 
-/api/.env
+# Backend Folder
+/backend/node_modules
+/backend/.env
 
 # testing
 /coverage
