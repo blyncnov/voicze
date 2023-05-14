@@ -7,7 +7,7 @@
 
 # Backend Folder
 /backend/node_modules
-/backend/.env
+/backend
 
 # testing
 /coverage
