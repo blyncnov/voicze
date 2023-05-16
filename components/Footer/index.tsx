@@ -5,10 +5,10 @@ import Link from "next/link";
 import style from "./footer.module.scss";
 
 // React Icons
-import { HiViewfinderCircle } from "react-icons/hi2";
+import { TbFileInvoice } from "react-icons/tb";
 
 // Naviagtion Data
-import { NavBarData, PlatformName } from "../../data/Naviagtion";
+import { PlatformName } from "../../data/Naviagtion";
 
 // Utilities
 import { getLocaltimeAndDate } from "@/utils/getTimeDate";
@@ -25,8 +25,8 @@ const Footer = () => {
               <div className={style.footer_grid_column}>
                 <div className={style.logo}>
                   <Link href="/">
-                    <HiViewfinderCircle />
-                    Locare
+                    <TbFileInvoice />
+                    {PlatformName}
                   </Link>
                 </div>
                 <p>
