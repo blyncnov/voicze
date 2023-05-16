@@ -1,22 +1,28 @@
 // SCSS Dashboard Styles
 @import "./dashboard/index.scss";
-@import "./dashboard/invoices.scss";
 @import "./dashboard/settings.scss";
-@import "./dashboard/traffic_usage.scss";
-@import "./dashboard/purchase_plans.scss";
-@import "./dashboard/subscription_plans.scss";
 
-// Authentication
-@import "./auth/auth.scss";
 
 // Root Variables
 :root {
   --black: #181818;
   --white: #ffffff;
   --black-100: #333333;
-  --primary-color: #735236;
-  --secondary-color: #FAB100;
+  --primary-color: #344373;
+  --secondary-color: #536FA6;
+  --text-color: #14165d;
+
+  --border: 1px solid #ccc;
+  --shadow: 0 1px;
+  --cream-color: #eee3d9;
+  --dark-cream-color: #fed5af;
   --header-color: #F8FBFE;
+
+  --heading-size: 25pt;
+  --title-size: 15pt;
+  --description-size: 12pt;
+
+  --rav-shadow: 0 5px 15px 0 rgba(37, 85, 152, 0.15);
 }
 
 button {
@@ -25,7 +31,7 @@ button {
   justify-content: center;
   gap: 1em;
   white-space: nowrap;
-  padding: 0.8em 2em;
+  padding: 0.65em 2em !important;
   border-radius: 3px;
   font-weight: 400;
   line-height: 1.5;
@@ -38,22 +44,22 @@ button {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  box-shadow: 0 5px 15px 0 rgba(37, 85, 152, 0.15) !important;
-  background-color: var(--primary-color);
-  color: black !important;
+  box-shadow: var(--rav-shadow) !important;
+  background-color: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
   border-width: 1.5px;
   border-style: solid;
-  border-color: var(--primary-color) !important;
+  border-color: var(--secondary-color) !important;
   transition: all 0.2s ease-in;
 }
 
 button[data-btn="primary"] {
-  color: #ffffff !important;
-  background-color: #0b4296 !important;
+  color: var(--white) !important;
+  background-color: var(--primary-color) !important;
 }
 
 button[data-btn="transparent"] {
-  color: #0b4296 !important;
+  color: var(--primary-color) !important;
   background-color: transparent !important;
 }
 
@@ -79,11 +85,11 @@ select {
   border-radius: 3px;
   color: rgb(53, 61, 66);
   font-family: "Inter", sans-serif;
-  border: 1px solid rgba(115, 82, 54, 0.21);
+  border: 1px solid #536fa657;
 }
 
 input:active {
-  background-color: rgba(115, 82, 54, 0.167) !important;
+  background-color: #f6f9fe;
 }
 
 .input,
@@ -98,7 +104,6 @@ select {
 }
 
 
-// DASHBOARD GLOBAL STYLE
 .dashboard_header {
   width: 100%;
   height: 150px;

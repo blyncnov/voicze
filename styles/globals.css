@@ -27,10 +27,12 @@ body {
 #main {
   position: relative;
   width: 100%;
-  background-color: #f6f9fe;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  background-color: var(--white) !important;
+  background-image: radial-gradient(
+    circle(closest-side at 60%, #122046, transparent)
+  );
+  background-size: 40%;
+  background-position: center right;
 }
 
 #container {
@@ -38,4 +40,8 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+section {
+  position: relative !important;
 }
