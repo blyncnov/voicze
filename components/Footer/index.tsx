@@ -8,7 +8,7 @@ import style from "./footer.module.scss";
 import { HiViewfinderCircle } from "react-icons/hi2";
 
 // Naviagtion Data
-import { NavBarData, LogoName } from "../../data/Naviagtion";
+import { NavBarData, PlatformName } from "../../data/Naviagtion";
 
 // Utilities
 import { getLocaltimeAndDate } from "@/utils/getTimeDate";
