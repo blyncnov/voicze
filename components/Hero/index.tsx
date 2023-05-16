@@ -1,5 +1,8 @@
 import React from "react";
-import Link from "next/link";
+import Image from "next/image";
+
+// Image
+import SvgImage from "@/public/mobile.png";
 
 // Naviagtion Style
 import style from "./Hero.module.scss";
@@ -12,53 +15,42 @@ const Hero = () => {
           <div className={style.hero_section_cto}>
             <div className={style.hero_text}>
               <div className={style.cto_text}>
-                <h1>
-                  Bringing Business Owners and Clients together through Voicze
-                  Platform.
-                </h1>
+                <h1>Streamline invoices and amplify your brand with Voicze.</h1>
               </div>
               <div className={style.cto_desc}>
                 <p>
-                  Locare is your go-to tool for finding the nearest hospitals in
-                  your area. Whether you&apos;re looking for emergency care or
-                  just need to schedule a routine check-up, Locare has got you
-                  covered. Simply enter your location and let us do the rest.
+                  The ultimate platform for business professionals to
+                  effortlessly create invoices and effectively promote their
+                  advertisements. Voicze is here to streamline your invoicing
+                  process and boost your marketing efforts.
                 </p>
               </div>
               <div className={style.cto_action}>
-                {false ? (
-                  <>
-                    <Link href="/auth/login">
-                      <button data-btn="transparent">Get Started</button>
-                    </Link>
-                    <Link href="/demo">
-                      <button data-btn="primary" style={{ color: "#ffffff" }}>
-                        Request Demo
-                      </button>
-                    </Link>
-                  </>
-                ) : (
-                  <>
-                    {/* {* FORM - TRY FOR FREE*} */}
-                    <form>
-                      <div className={style.join_waitlist}>
-                        <input
-                          type="email"
-                          placeholder="Enter your email"
-                          name="email"
-                        />
-                        <button type="submit">Try for free</button>
-                      </div>
+                <>
+                  {/* {* FORM - TRY FOR FREE*} */}
+                  <form>
+                    <div className={style.join_waitlist}>
+                      <input
+                        type="email"
+                        placeholder="Enter your email"
+                        name="email"
+                      />
+                      <button type="submit">Try for free</button>
+                    </div>
 
-                      <li>Full access, No credit card required</li>
-                    </form>
-                    {/* {* FORM - ENDS*} */}
-                  </>
-                )}
+                    <li>Full access, No credit card required.</li>
+                  </form>
+                  {/* {* FORM - ENDS*} */}
+                </>
               </div>
             </div>
             <div className={style.hero_image_illustration}>
-              {/* <Image src={SvgImage} alt="lottie" /> */}
+              <div className={style.hero_image_frame}>
+                <Image src={SvgImage} alt="hero_image_showcase" />
+              </div>
+              <div className={style.floating_banner}>
+                <h1>Growing Your Business.</h1>
+              </div>
             </div>
           </div>
         </div>

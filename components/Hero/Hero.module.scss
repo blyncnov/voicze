@@ -11,12 +11,12 @@
         width: 100%;
         display: grid;
         gap: 10%;
-        grid-template-columns: 1.6fr 1fr;
-        align-items: center;
+        grid-template-columns: 1.6fr 400px;
         justify-content: flex-start;
         color: var(--primary-color);
 
         .hero_text {
+            position: relative;
             display: flex;
             gap: 20px;
             line-height: 1.5;
@@ -28,17 +28,19 @@
                 h1 {
                     text-transform: capitalize;
                     font-size: var(--heading-size);
+                    line-height: 1.3 !important;
                 }
             }
 
             .cto_desc {
                 width: auto;
+                font-size: 16px;
                 opacity: .95;
             }
 
             .cto_action {
+                position: relative;
                 width: auto;
-                // display: flex;
                 gap: 20px;
 
                 form {
@@ -49,11 +51,14 @@
                         padding: .4em .2em;
                         border-radius: 3px;
                         background-color: white;
+                        border-radius: 1px;
                         box-shadow: 0 5px 15px 0 rgba(37, 85, 152, 0.15);
 
                         input {
                             border: none;
                             outline: none;
+                            padding: 17px 1em;
+                            border-radius: 1px;
                         }
 
                         button {
@@ -62,12 +67,8 @@
                     }
 
                     li {
-                        margin: .5em .2em;
+                        margin: 1em 0;
                     }
-                }
-
-                button {
-                    width: 100%;
                 }
 
                 @media (max-width: 1000px) {
@@ -92,24 +93,31 @@
 
     .hero_image_illustration {
         position: relative;
-        max-width: 100%;
-        min-width: 100%;
-        max-height: 100%;
 
-        // background: url("../../public/three.png");
-        // background-repeat: no-repeat;
-        // background-size: 100px, 100px, cover;
-        // background-position: top right;
-
-        img {
-            position: relative;
+        .hero_image_frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: .5em;
             width: 100%;
-            max-width: 100%;
-            min-width: 100%;
-            height: 80%;
-            max-height: 80%;
-            min-height: 80%;
+            height: 100%;
+            max-height: 100%;
             object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .floating_banner {
+            position: relative;
+            bottom: -65%;
+            left: 28%;
+            width: 100%;
+            padding: .5em;
+            border-radius: 3px;
+            text-align: center;
+            border: 1px solid rgba(72, 79, 88, 0.087);
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 3px 1px 0 rgba(37, 85, 152, 0.5);
+            transform: rotate(-90deg);
         }
 
         @media (max-width: 1000px) {
@@ -122,6 +130,6 @@
     }
 
     @media (max-width: 768px) {
-        padding: 20px 0 50px 0;
+        padding: 50px 0 50px 0;
     }
 }
