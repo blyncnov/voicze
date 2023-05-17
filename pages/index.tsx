@@ -3,6 +3,7 @@ import Head from "next/head";
 // => Components
 import Naviagtion from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import Brands from "@/components/brands";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -11,11 +12,11 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Voicze | Access all healthcare in Nigeria within your region!
+          Voicze | Streamline Invoices And Amplify Your Brand With Voicze.
         </title>
         <meta
-          name="  Voicze | Access all healthcare in Nigeria within your region!"
-          content="Voicze | healthcare"
+          name="  Voicze | Streamline Invoices And Amplify Your Brand With Voicze."
+          content="Voicze | Streamline Invoices"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -28,6 +29,8 @@ export default function Home() {
         <Hero />
       </section>
       <section>
+        {/* Brands components */}
+        <Brands />
         {/* FAQ components */}
         <FAQ />
         {/* Footer components */}

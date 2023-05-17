@@ -5,6 +5,8 @@
     margin: 0 auto;
     line-height: 1.3;
     padding: 70px 0 100px 0;
+    box-shadow: 0 0 5px 10px var(--white);
+    background-color: var(--white);
 
     .hero_section_cto {
         position: relative;
@@ -14,6 +16,7 @@
         grid-template-columns: 1.6fr 400px;
         justify-content: flex-start;
         color: var(--primary-color);
+
 
         .hero_text {
             position: relative;
@@ -49,10 +52,9 @@
                         display: grid;
                         grid-template-columns: 1fr .5fr;
                         padding: .4em .2em;
-                        border-radius: 3px;
                         background-color: white;
-                        border-radius: 1px;
-                        box-shadow: 0 5px 15px 0 rgba(37, 85, 152, 0.15);
+                        border-radius: 3px;
+                        box-shadow: 0 5px 20px 0 rgba(37, 85, 152, 0.15);
 
                         input {
                             border: none;
