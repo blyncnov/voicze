@@ -3,7 +3,8 @@ import Head from "next/head";
 // => Components
 import Naviagtion from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import Brands from "@/components/brands";
+import Brands from "@/components/Brands";
+import Feature from "@/components/Feature";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -31,6 +32,8 @@ export default function Home() {
       <section>
         {/* Brands components */}
         <Brands />
+        {/* Feature components */}
+        <Feature />
         {/* FAQ components */}
         <FAQ />
         {/* Footer components */}

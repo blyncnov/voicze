@@ -28,7 +28,7 @@ const Hero = () => {
               <div className={style.cto_action}>
                 <>
                   {/* {* FORM - TRY FOR FREE*} */}
-                  <form>
+                  <form method="GET" action="/auth/register">
                     <div className={style.join_waitlist}>
                       <input
                         type="email"

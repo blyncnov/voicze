@@ -17,9 +17,9 @@ const Login = () => {
         <div className="auth_container">
           <div className="auth_grid_column">
             <h1>
-              Design And Publish Your Giveaways With{" "}
+              Streamline Invoices And Amplify Your Brand With
               <span>
-                <Link href="/">FOY</Link>
+                <Link href="/">Voicze</Link>
               </span>
             </h1>
             <p>

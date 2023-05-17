@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 // React icons
 import { FcGoogle } from "react-icons/fc";
@@ -11,15 +12,18 @@ const IconCardStyle = {
 };
 
 const Register = () => {
+  const router = useRouter();
+  const { email } = router.query;
+  console.log(email);
   return (
     <div>
       <div className="auth_section">
         <div className="auth_container">
           <div className="auth_grid_column">
             <h1>
-              Design And Publish Your Giveaways With{" "}
+              Streamline Invoices And Amplify Your Brand With
               <span>
-                <Link href="/">FOY</Link>
+                <Link href="/">Voicze</Link>
               </span>
             </h1>
             <p>
@@ -78,6 +82,7 @@ const Register = () => {
                     type="text"
                     name="email"
                     id="email"
+                    defaultValue={email}
                     placeholder="Email"
                     required
                   />

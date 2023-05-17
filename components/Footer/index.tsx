@@ -35,7 +35,7 @@ const Footer = () => {
                 </p>
                 <br />
                 <div className={style.footer_grid_column}>
-                  <address>*Contact Info</address>
+                  <h2>Contact Information</h2>
                   <div className={style.column_flex_details}>
                     <p>5, Agbede, Olaitan/Sallyman Hostel</p>
                   </div>

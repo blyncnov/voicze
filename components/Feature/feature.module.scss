@@ -1,0 +1,85 @@
+.feature_section {
+    width: 100%;
+    color: #fff;
+    background-color: var(--primary-color);
+
+    .feature_container {
+        position: relative;
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+        line-height: 1.3;
+        background-color: transparent;
+        padding: 50px 0;
+
+        h1 {
+            font-size: calc(var(--heading-size) - 5pt);
+            margin: .1em 0;
+            text-transform: capitalize;
+        }
+
+        .feature_identites {
+            display: grid;
+            gap: 30px;
+            margin: 2em 0;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+
+
+            .box {
+                width: 100%;
+                padding: 1em;
+                border-radius: 4px;
+                height: 400px;
+                background-color: rgba(64, 82, 142, 0.522);
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(64, 82, 142, 0.522)0px 1px 2px 0px;
+                transition: all 0.5s ease-in-out;
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                cursor: pointer;
+
+
+                &:hover {
+                    background-color: var(--secondary-color) !important;
+                }
+
+                &:nth-child(1) {
+                    background-color: var(--secondary-color) !important;
+                }
+
+
+                .feature_top_container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    border-bottom: 1px solid rgba(175, 183, 218, 0.192);
+                }
+
+                .feature_content {
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 1em;
+                    flex-direction: column;
+
+                    h4 {
+                        font-size: 20px;
+                        text-transform: capitalize;
+                    }
+
+                    li {
+                        font-size: 13px;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            padding: 30px 0 30px 0;
+        }
+    }
+}

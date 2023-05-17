@@ -13,6 +13,9 @@ import "@/styles/dashboard/index.scss";
 // SCSS Animation
 import "@/styles/animation.scss";
 
+// Authentication STYLES
+import "@/styles/auth/auth.scss";
+
 // Redux
 import { Provider } from "react-redux";
 import store from "../redux/store";
