@@ -1,13 +1,13 @@
+import React from "react";
 import Head from "next/head";
 
-// => Components
+// => Componentss
 import Naviagtion from "@/components/Navigation";
 import Hero from "@/components/Hero";
-
+import Brands from "@/components/Trusted";
 import Feature from "@/components/Feature";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import Brands from "@/components/Brands";
 
 export default function Home() {
   return (
