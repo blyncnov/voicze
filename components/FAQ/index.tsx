@@ -41,8 +41,8 @@ const FAQTab = ({ data }: any) => {
         <div
           className={
             !isClicked
-              ? style.show_tab
-              : `${style.show_tab}  ${style.hide_tab} `
+              ? `${style.show_tab}  ${style.hide_tab} `
+              : `${style.show_tab}  `
           }
         >
           <p className={style.tab_answer}>{data.answer}</p>
