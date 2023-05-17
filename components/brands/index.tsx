@@ -22,7 +22,7 @@ const Brands = () => {
     <>
       <div id="container">
         <div className={style.brands_container}>
-          <h1>Soon be Trusted by 7+ customers</h1>
+          <h1>Trusted by 7+ customers</h1>
           <div className={style.brands_identites}>
             <div className={style.brand}>
               <FcVlc style={brand_icon} />

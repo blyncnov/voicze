@@ -5,7 +5,7 @@ import { FaTimes } from "react-icons/fa";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
-import { EDIT_EVENT } from "../../redux/actions/action";
+import { EDIT_EVENT } from "../../../redux/actions/action";
 
 // Modal Style
 import style from "./modal.module.scss";

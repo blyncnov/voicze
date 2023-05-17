@@ -49,7 +49,7 @@
 .footer_grid_layout {
     display: grid;
     color: white !important;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 40px;
     justify-content: flex-start;
@@ -98,6 +98,7 @@
 
     button {
         color: var(--white) !important;
+        padding: 16px !important;
         background-color: var(--secondary-color) !important;
     }
 }

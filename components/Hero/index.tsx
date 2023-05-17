@@ -32,7 +32,7 @@ const Hero = () => {
                     <div className={style.join_waitlist}>
                       <input
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Enter your email..."
                         name="email"
                       />
                       <button type="submit">Try for free</button>

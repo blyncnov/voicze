@@ -5,7 +5,7 @@ import { FaTimes } from "react-icons/fa";
 
 // Redux
 import { useDispatch } from "react-redux";
-import { SHOW_MODAL, CREATE_NEW_EVENT } from "../../redux/actions/action";
+import { SHOW_MODAL, CREATE_NEW_EVENT } from "../../../redux/actions/action";
 
 // Modal Style
 import style from "./modal.module.scss";
