@@ -22,21 +22,21 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* Header components */}
+      {/* Header component */}
       <section id="main">
-        {/* Navigation components */}
+        {/* Navigation component */}
         <Naviagtion />
-        {/* Hero components */}
+        {/* Hero component */}
         <Hero />
       </section>
       <section>
-        {/* Brands components */}
+        {/* Brands component */}
         <Brands />
-        {/* Feature components */}
+        {/* Feature component */}
         <Feature />
-        {/* FAQ components */}
+        {/* FAQ component */}
         <FAQ />
-        {/* Footer components */}
+        {/* Footer component*/}
         <Footer />
       </section>
     </>
