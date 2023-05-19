@@ -12,6 +12,7 @@ import { PlatformName } from "../../data/Naviagtion";
 
 // Utilities
 import { getLocaltimeAndDate } from "@/utils/getTimeDate";
+import LabelTag from "../Label";
 
 const Footer = () => {
   const { getFullYear } = getLocaltimeAndDate();
@@ -57,7 +58,7 @@ const Footer = () => {
 
               <div className={style.footer_grid_column}>
                 <h2>
-                  Products <span id="coming_soon">coming soon</span>
+                  Products <LabelTag tag="Coming Soon" />
                 </h2>
                 <div className={style.column_flex_details}>
                   <p>What&apos;s New</p>
