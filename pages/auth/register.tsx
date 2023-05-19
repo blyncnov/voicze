@@ -21,7 +21,7 @@ const Register = () => {
         <div className="auth_container">
           <div className="auth_grid_column">
             <h1>
-              Streamline Invoices And Amplify Your Brand With
+              Streamline Invoices And Amplify Your Brand With{" "}
               <span>
                 <Link href="/">Voicze</Link>
               </span>
@@ -101,7 +101,7 @@ const Register = () => {
                 </div>
                 <button type="submit">Create account</button>
                 <li style={{ fontSize: "13px" }}>
-                  By continuing, you agree Locare <span>Terms of Service</span>{" "}
+                  By continuing, you agree Voicze <span>Terms of Service</span>{" "}
                   and <span>Privacy Policy.</span>
                 </li>
               </form>

@@ -17,7 +17,7 @@ const Login = () => {
         <div className="auth_container">
           <div className="auth_grid_column">
             <h1>
-              Streamline Invoices And Amplify Your Brand With
+              Streamline Invoices And Amplify Your Brand With{" "}
               <span>
                 <Link href="/">Voicze</Link>
               </span>
@@ -31,7 +31,7 @@ const Login = () => {
             <div>
               <h1>Log in</h1>
               <p>
-                New to Locare?{" "}
+                New to Voicze?{" "}
                 <span>
                   <Link href="/auth/register">Create an account</Link>
                 </span>
@@ -78,7 +78,7 @@ const Login = () => {
                 </div>
                 <button type="submit">Log in</button>
                 <li style={{ fontSize: "13px" }}>
-                  By continuing, you agree Locare <span>Terms of Service</span>{" "}
+                  By continuing, you agree Voicze <span>Terms of Service</span>{" "}
                   and <span>Privacy Policy.</span>
                 </li>
               </form>
