@@ -56,14 +56,14 @@ const Footer = () => {
               </div>
 
               <div className={style.footer_grid_column}>
-                <h2>Products</h2>
+                <h2>
+                  Products <span id="coming_soon">coming soon</span>
+                </h2>
                 <div className={style.column_flex_details}>
                   <p>What&apos;s New</p>
                 </div>
                 <div className={style.column_flex_details}>
-                  <p>
-                    Design <span id="coming_soon">coming soon</span>{" "}
-                  </p>
+                  <p>Design</p>
                 </div>
                 <div className={style.column_flex_details}>
                   <p>Pricing</p>
@@ -72,14 +72,10 @@ const Footer = () => {
                   <p>Extensions</p>
                 </div>
                 <div className={style.column_flex_details}>
-                  <p>
-                    Gateways <span id="coming_soon">coming soon</span>{" "}
-                  </p>
+                  <p>Gateways</p>
                 </div>
                 <div className={style.column_flex_details}>
-                  <p>
-                    Collaboration <span id="coming_soon">coming soon</span>{" "}
-                  </p>
+                  <p>Collaboration</p>
                 </div>
               </div>
 
