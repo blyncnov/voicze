@@ -78,8 +78,8 @@ const Login = () => {
                 </div>
                 <button type="submit">Log in</button>
                 <li style={{ fontSize: "13px" }}>
-                  By continuing, you agree Voicze <span>Terms of Service</span>{" "}
-                  and <span>Privacy Policy.</span>
+                  By continuing, you agree <Link href="/">Voicze</Link>{" "}
+                  <span>Terms of Service</span> and <span>Privacy Policy.</span>
                 </li>
               </form>
             </div>
