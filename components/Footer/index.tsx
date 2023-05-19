@@ -37,7 +37,7 @@ const Footer = () => {
                 <div className={style.footer_grid_column}>
                   <h2>Contact Information</h2>
                   <div className={style.column_flex_details}>
-                    <p>5, Agbede, Olaitan/Sallyman Hostel</p>
+                    <p>Abeokuta, Ogun-State, Nigeria</p>
                   </div>
                   <div className={style.column_flex_details}>
                     <p>+234 (814) 9055 068</p>

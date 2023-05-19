@@ -133,7 +133,7 @@ a:visited {
 
             &:hover {
                 color: var(--white) !important;
-                background-color: rgba(160, 111, 69, 0.158);
+                background-color: rgba(77, 102, 184, 0.138);
                 padding: .8em 1em;
                 border-radius: 5px;
             }
@@ -141,7 +141,7 @@ a:visited {
 
         #dashboard_active_home {
             color: var(--white) !important;
-            background-color: rgba(160, 111, 69, 0.158);
+            background-color: rgba(77, 102, 184, 0.138);
             padding: 1em 1em;
             border-radius: 5px;
         }
@@ -169,10 +169,12 @@ a:visited {
         width: 100%;
         display: flex;
         gap: 15px;
+        align-items: center;
         color: var(--white) !important;
 
         button {
             color: var(--white) !important;
+            background-color: transparent !important;
             all: unset;
             cursor: pointer;
         }
@@ -183,7 +185,7 @@ a:visited {
     }
 
     &:hover {
-        background-color: rgba(160, 111, 69, 0.158);
+        background-color: rgba(77, 102, 184, 0.138);
     }
 }
 

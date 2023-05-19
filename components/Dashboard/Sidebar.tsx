@@ -65,6 +65,10 @@ const Sidebar = () => {
 
         <div className="dashboard_sidebar_navigation ">
           <ul>
+            <div className="sidebar_quicklinks_summary">
+              <li> Dashboard</li>
+            </div>
+
             <Link href="/" onClick={CloseSidebar}>
               <div className="dashboard_flex_item" id="dashboard_active_home">
                 <MdSpaceDashboard style={Iconstyle} />
@@ -73,7 +77,7 @@ const Sidebar = () => {
             </Link>
 
             <div className="sidebar_quicklinks_summary">
-              <li>Giveaway Mode</li>
+              <li> Services</li>
             </div>
 
             <Link href="/traffic_usage" onClick={CloseSidebar}>
@@ -112,7 +116,7 @@ const Sidebar = () => {
             </Link>
 
             <div className="sidebar_quicklinks_summary">
-              <li>User Settings</li>
+              <li> Settings</li>
             </div>
 
             <Link href="/settings" onClick={CloseSidebar}>
