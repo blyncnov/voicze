@@ -44,7 +44,7 @@ const Hero = () => {
 
                     <li>
                       {isWaitList
-                        ? "Join the Future. Join Voize"
+                        ? "Join the Future. Join Voicze"
                         : "  Full access, No credit card required."}
                     </li>
                   </form>
