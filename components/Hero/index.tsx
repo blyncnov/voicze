@@ -9,6 +9,7 @@ import SvgImage from "@/public/mobile.png";
 import style from "./Hero.module.scss";
 
 const Hero = () => {
+  const [isWaitList, setIsWaitList] = React.useState(true);
   return (
     <>
       <div id="container">
@@ -36,10 +37,16 @@ const Hero = () => {
                         placeholder="Enter your email..."
                         name="email"
                       />
-                      <button type="submit">Try for free</button>
+                      <button type="submit">
+                        {isWaitList ? "Join Waitlist" : "Try for free"}
+                      </button>
                     </div>
 
-                    <li>Full access, No credit card required.</li>
+                    <li>
+                      {isWaitList
+                        ? "Join the Future. Join Voize"
+                        : "  Full access, No credit card required."}
+                    </li>
                   </form>
                   {/* {* FORM - ENDS*} */}
                 </>
@@ -50,7 +57,7 @@ const Hero = () => {
                 <Image src={SvgImage} alt="hero_image_showcase" />
               </div>
               <div className={style.floating_banner}>
-                <h1>Growing Your Business.</h1>
+                <h1>Simplify. Amplify. Succeed.</h1>
               </div>
             </div>
           </div>

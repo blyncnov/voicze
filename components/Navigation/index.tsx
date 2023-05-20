@@ -70,7 +70,7 @@ const Naviagtion = () => {
                 </Link>
                 <Link href="/demo">
                   <button className={style.btn} id={style.primary}>
-                    Join wait-list
+                    Join waitlist
                   </button>
                 </Link>
               </div>
