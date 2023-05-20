@@ -14,7 +14,7 @@ export const NavBarData: NavBarType[] = [
   {
     id: 2,
     title: "Features",
-    url: "features",
+    url: "#features",
   },
   // {
   //   id: 3,
@@ -24,12 +24,12 @@ export const NavBarData: NavBarType[] = [
   {
     id: 4,
     title: "FAQ",
-    url: "faq",
+    url: "#faq",
   },
   {
     id: 5,
     title: "Support",
-    url: "support",
+    url: "#support",
   },
 ];
 

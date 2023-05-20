@@ -24,7 +24,7 @@ const FAQTab = ({ data }: any) => {
   };
 
   return (
-    <div onClick={HandleToggler} id="FAQ">
+    <div onClick={HandleToggler} id="faq">
       <div className={style.faq_section}>
         <div className={style.faq_title_section}>
           <div className={style.faq_title}>

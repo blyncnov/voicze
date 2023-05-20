@@ -48,7 +48,7 @@ const Naviagtion = () => {
                       return (
                         <Link
                           key={data.id}
-                          href={data.url.toLowerCase()}
+                          href={`${data.url.toLowerCase()}`}
                           id={
                             current_url_pathname === "/"
                               ? "active"

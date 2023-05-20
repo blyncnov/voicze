@@ -9,7 +9,7 @@ import SvgImage from "@/public/mobile.png";
 import style from "./Hero.module.scss";
 
 const Hero = () => {
-  const [isWaitList, setIsWaitList] = React.useState(true);
+  const [isWaitList] = React.useState(true);
   return (
     <>
       <div id="container">
@@ -53,12 +53,21 @@ const Hero = () => {
               </div>
             </div>
             <div className={style.hero_image_illustration}>
-              <div className={style.hero_image_frame}>
-                <Image src={SvgImage} alt="hero_image_showcase" />
+              <div className={style.hero_circular_illustration}>
+                <div className={style.hero_circular_illustration}>
+                  <div className={style.hero_circular_illustration}>
+                    <div
+                      className={style.hero_circular_illustration_inner}
+                    ></div>
+                  </div>
+                </div>
               </div>
-              <div className={style.floating_banner}>
+              {/* <div className={style.hero_image_frame}> */}
+              {/* <Image src={SvgImage} alt="hero_image_showcase" /> */}
+              {/* </div> */}
+              {/* <div className={style.floating_banner}>
                 <h1>Simplify. Amplify. Succeed.</h1>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

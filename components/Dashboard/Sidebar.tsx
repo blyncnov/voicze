@@ -3,26 +3,24 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Voicze Logo
-import MyLogo from "@/public/logo/voicze_logo.svg";
+import MyLogo from "@/public/logo/voicze_reverse.svg";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 import { CLOSE } from "../../redux/actions/action";
 
 // React Icon
-import { FaExchangeAlt } from "react-icons/fa";
 import { BiTargetLock } from "react-icons/bi";
 import { MdSpaceDashboard, MdHistory } from "react-icons/md";
 import { RiListSettingsFill, RiExchangeDollarFill } from "react-icons/ri";
 import { GiTrafficLightsReadyToGo } from "react-icons/gi";
 import { AiOutlinePoweroff } from "react-icons/ai";
 import { VscReferences } from "react-icons/vsc";
-import { TbFileInvoice } from "react-icons/tb";
 
 // Icon Style
 const Iconstyle = {
   fontSize: "1.5em",
-  color: "#ffffff",
+  color: "#373131",
 };
 
 const Sidebar = () => {
@@ -62,10 +60,6 @@ const Sidebar = () => {
 
         <div className="dashboard_sidebar_navigation ">
           <ul>
-            <div className="sidebar_quicklinks_summary">
-              <li> Dashboard</li>
-            </div>
-
             <Link href="/" onClick={CloseSidebar}>
               <div className="dashboard_flex_item" id="dashboard_active_home">
                 <MdSpaceDashboard style={Iconstyle} />
@@ -80,35 +74,28 @@ const Sidebar = () => {
             <Link href="/traffic_usage" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <GiTrafficLightsReadyToGo style={Iconstyle} />
-                <li>Task Mode</li>
+                <li>Invoices</li>
               </div>
             </Link>
 
             <Link href="/fund_wallet" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <RiExchangeDollarFill style={Iconstyle} />
-                <li>Instant Mode</li>
+                <li>Contacts</li>
               </div>
             </Link>
 
             <Link href="/invoices" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <MdHistory style={Iconstyle} />
-                <li>Brand & Growth</li>
-              </div>
-            </Link>
-
-            <Link href="/purchase_plans" onClick={CloseSidebar}>
-              <div className="dashboard_flex_item">
-                <FaExchangeAlt style={Iconstyle} />
-                <li>Data & Reviews</li>
+                <li>Quick Survey</li>
               </div>
             </Link>
 
             <Link href="/subscription_plans" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <BiTargetLock style={Iconstyle} />
-                <li>Generate Lead</li>
+                <li>Brand & Growth</li>
               </div>
             </Link>
 
@@ -130,11 +117,11 @@ const Sidebar = () => {
               </div>
             </Link>
 
-            <div className="sidebar_quicklinks_summary">
+            {/* <div className="sidebar_quicklinks_summary">
               <li>Others</li>
-            </div>
+            </div> */}
 
-            <div
+            {/* <div
               className="dashboard_sidebar_bottom_height"
               onClick={LogOutHandler}
             >
@@ -142,7 +129,7 @@ const Sidebar = () => {
                 <AiOutlinePoweroff style={Iconstyle} />
                 <button>Log out</button>
               </div>
-            </div>
+            </div> */}
           </ul>
         </div>
       </div>

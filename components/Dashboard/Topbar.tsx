@@ -12,7 +12,7 @@ import { TOGGLE_SIDEBAR } from "../../redux/actions/action";
 const Iconstyle = {
   fontSize: "1.8em",
   cursor: "pointer",
-  color: "#735236",
+  color: "#251851",
 };
 
 const Topbar = () => {
@@ -29,7 +29,8 @@ const Topbar = () => {
         <div className="dashboard_topBar_flex">
           <div className="dashboard_topBar_title" onClick={Clickhandler}>
             <div className="hambuger_icon">
-              <FaBars style={Iconstyle} />
+              {/* <FaBars style={Iconstyle} /> */}
+              <h2>Hi, Octavia!</h2>
             </div>
           </div>
           <div className="dashboard_topBar_left">

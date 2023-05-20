@@ -15,8 +15,10 @@ export default function Dashboard() {
   return (
     <>
       <header className="dashboard_header">
-        <h1>My Dashboard</h1>
-        <p>Realtime Insight on giveaway sessions.</p>
+        <h1>Invoice Insight</h1>
+        <p>
+          Realtime Insight on giveaway sessions. Yesterday’s Invoices Issued
+        </p>
       </header>
     </>
   );

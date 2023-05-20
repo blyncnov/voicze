@@ -18,6 +18,7 @@
 .main_content {
     width: 100%;
     overflow: scroll;
+    padding: 0 .5em;
     background-color: white;
     height: calc(100vh - 70px);
     min-height: calc(100vh - 70px);
@@ -25,6 +26,12 @@
 }
 
 a {
+
+    img {
+        max-width: 150px !important;
+        margin-left: -20px;
+    }
+
     h2 {
         display: flex !important;
         gap: 1px;
@@ -48,9 +55,9 @@ a:visited {
 .dashboard_sideBar {
     z-index: 999999999;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--white);
     min-height: 100vh;
-    border-right: 1px solid var(--primary-color);
+    border-right: 1px solid rgba(55, 49, 49, 0.053);
     color: var(--white) !important;
     border-radius: 0 0.5px .5px 0;
     transition: left .5s ease-out;
@@ -66,7 +73,7 @@ a:visited {
 
 .sidebar_quicklinks_summary {
     padding: 1.2em 0;
-    opacity: .5;
+    color: #333;
     text-transform: uppercase;
     font-size: 13px !important;
 }
@@ -85,8 +92,7 @@ a:visited {
     overflow: hidden;
     min-height: 70px;
     align-items: center;
-    border-bottom: 1px solid rgba(137, 141, 148, 0.173);
-
+    border-bottom: 1px solid rgba(55, 49, 49, 0.053);
 
     .dashboard_logo {
         width: 100%;
@@ -128,20 +134,26 @@ a:visited {
             gap: 10px;
             padding: .8em 1em;
             cursor: pointer;
-            color: rgb(222, 221, 221) !important;
-            transition: all .5s ease-in-out;
+            color: #373131 !important;
+            transition: background-image .5s ease-in-out;
 
             &:hover {
-                color: var(--white) !important;
-                background-color: rgba(77, 102, 184, 0.138);
+                color: var(--secondary-color) !important;
+                background-image:
+                    linear-gradient(to right,
+                        #c3fdfe, #fff, #fff);
                 padding: .8em 1em;
-                border-radius: 5px;
+                border-radius: 1px;
+                font-weight: 700 !important;
             }
         }
 
         #dashboard_active_home {
-            color: var(--white) !important;
-            background-color: rgba(77, 102, 184, 0.138);
+            color: var(--black) !important;
+            background-color: rgba(242, 242, 243, 0.571);
+            background-image:
+                linear-gradient(to right,
+                    #c3fdfe, #fff);
             padding: 1em 1em;
             border-radius: 5px;
         }
@@ -185,7 +197,7 @@ a:visited {
     }
 
     &:hover {
-        background-color: rgba(77, 102, 184, 0.138);
+        background-color: rgba(242, 242, 243, 0.571);
     }
 }
 
@@ -209,9 +221,7 @@ a:visited {
     overflow: hidden;
     display: flex;
     align-items: center;
-    // background-color: var(--white);
-    background-color: var(--header-color);
-    // border-bottom: 1px solid #e9ecef;
+    // background-color: var(--header-color);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 
     .dashboard_topBar_flex {
