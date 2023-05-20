@@ -16,11 +16,11 @@ export const NavBarData: NavBarType[] = [
     title: "Features",
     url: "features",
   },
-  {
-    id: 3,
-    title: "Pricing",
-    url: "pricing",
-  },
+  // {
+  //   id: 3,
+  //   title: "Pricing",
+  //   url: "pricing",
+  // },
   {
     id: 4,
     title: "FAQ",

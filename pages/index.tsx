@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import Brands from "@/components/Trusted";
 import Feature from "@/components/Feature";
 import FAQ from "@/components/FAQ";
+import Support from "@/components/Support";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -37,6 +38,8 @@ export default function Home() {
         <Feature />
         {/* FAQ component */}
         <FAQ />
+        {/* Support components */}
+        <Support />
         {/* Footer component*/}
         <Footer />
       </section>

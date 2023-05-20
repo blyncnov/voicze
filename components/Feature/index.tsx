@@ -12,7 +12,7 @@ const brand_icon = {
 
 const Feature = () => {
   return (
-    <div className={style.feature_section}>
+    <div className={style.feature_section} id="features">
       <div id="container">
         <div className={style.feature_container}>
           <div>
@@ -30,10 +30,9 @@ const Feature = () => {
               <div className={style.feature_content}>
                 <h4>Secure and Convenient Payment.</h4>
                 <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure
-                  consequatur voluptatem numquam aut a facilis deserunt incidunt
-                  ea modi, officia dolorum tempora aspernatur, debitis nemo
-                  cumque! Perferendis facilis nihil nisi.
+                  You can effortlessly collect payments directly through the
+                  invoices. Voicze ensures the highest level of security for
+                  transactions, giving you and your clients peace of mind.
                 </li>
               </div>
             </div>
@@ -44,10 +43,11 @@ const Feature = () => {
               <div className={style.feature_content}>
                 <h4>Effective Advertisement Promotion.</h4>
                 <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure
-                  consequatur voluptatem numquam aut a facilis deserunt incidunt
-                  ea modi, officia dolorum tempora aspernatur, debitis nemo
-                  cumque! Perferendis facilis nihil nisi.
+                  Our platform provides targeted marketing features that allow
+                  you to showcase your products or services to the right
+                  audience. With Voicze, you can create compelling ads, select
+                  your desired demographics, and track the performance of your
+                  campaigns.
                 </li>
               </div>
             </div>
@@ -56,12 +56,13 @@ const Feature = () => {
                 <BiAward style={brand_icon} />
               </div>
               <div className={style.feature_content}>
-                <h4>Automated Payment Tracking.</h4>
+                <h4>Analytics and Insights.</h4>
                 <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure
-                  consequatur voluptatem numquam aut a facilis deserunt incidunt
-                  ea modi, officia dolorum tempora aspernatur, debitis nemo
-                  cumque! Perferendis facilis nihil nisi.
+                  Track your invoice performance, monitor advertising campaign
+                  metrics, and gain valuable insights into your revenue streams.
+                  With this information at your fingertips, you can identify
+                  trends, identify areas for improvement, and optimize your
+                  overall business strategy.
                 </li>
               </div>
             </div>
