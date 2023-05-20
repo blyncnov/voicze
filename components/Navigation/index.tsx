@@ -1,6 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
+
+// Voicze Logo
+import MyLogo from "@/public/logo/voicze_logo.svg";
 
 // React Icons
 import { RiBarChartHorizontalLine } from "react-icons/ri";
@@ -35,8 +39,7 @@ const Naviagtion = () => {
               <div className={style.left_items}>
                 <div className={style.logo}>
                   <Link href="/">
-                    <TbFileInvoice />
-                    {PlatformName}
+                    <Image src={MyLogo} alt={PlatformName} priority={true} />
                   </Link>
                 </div>
                 <div className={style.list}>

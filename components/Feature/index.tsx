@@ -16,7 +16,7 @@ const Feature = () => {
       <div id="container">
         <div className={style.feature_container}>
           <div>
-            <h1>Here&apos;s how Voicze can benfit your business!</h1>
+            <h1>Here&apos;s how Voicze can benefit your business!</h1>
             <li>
               Voicze is here to streamline your invoicing process and boost your
               marketing efforts.

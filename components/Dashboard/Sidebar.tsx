@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// Foy PlatForm Logo
-import FoyLogo from "../../public/favicon.ico";
+// Voicze Logo
+import MyLogo from "@/public/logo/voicze_logo.svg";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
@@ -54,11 +54,8 @@ const Sidebar = () => {
       >
         <div className="dashboard_sidebar_height">
           <div className="dashboard_logo">
-            <Link href="/" onClick={CloseSidebar}>
-              <h2>
-                <TbFileInvoice />
-                <span>Voicze</span>
-              </h2>
+            <Link href="/">
+              <Image src={MyLogo} alt={`sidebar-logo`} priority={true} />
             </Link>
           </div>
         </div>

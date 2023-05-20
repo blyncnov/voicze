@@ -43,6 +43,13 @@
             color: var(--primary-color) !important;
             display: flex;
             align-items: center;
+
+            img {
+                margin-left: -15px;
+                width: 150px;
+                height: auto;
+                object-fit: cover;
+            }
         }
 
         img {
@@ -115,13 +122,14 @@
         background-color: transparent !important;
         color: var(--primary-color) !important;
         box-shadow: none !important;
-        border-color: var(--primary-color);
+        border-color: var(--primary-color) !important;
     }
 
     #primary {
+        margin-left: 1em;
         color: var(--white) !important;
         background-color: var(--primary-color) !important;
-        margin-left: 1em;
+        border-color: var(--primary-color) !important;
     }
 
     @media (max-width: 1000px) {

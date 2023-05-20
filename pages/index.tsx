@@ -40,9 +40,11 @@ export default function Home() {
         <FAQ />
         {/* Support components */}
         <Support />
+      </section>
+      <footer>
         {/* Footer component*/}
         <Footer />
-      </section>
+      </footer>
     </>
   );
 }

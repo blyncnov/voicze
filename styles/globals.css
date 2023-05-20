@@ -5,6 +5,7 @@
   list-style-type: none;
   text-decoration: none;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 html,

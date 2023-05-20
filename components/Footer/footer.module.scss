@@ -1,11 +1,15 @@
 .footer_layout_container {
-    position: relative;
+    position: sticky;
+    bottom: 0;
     width: 100%;
     margin: 50px 0 0 0;
     padding: 20px 0;
-    color: white;
+    color: var(--primary-color);
     font-size: 15px;
     background-color: var(--primary-color);
+    background-color: white;
+    box-shadow: rgba(20, 21, 94, 0.1) 0px 1px 3px 0px, rgba(20, 21, 94, 0.06) 0px 1px 10px 2px;
+    z-index: 1 !important;
 
     h2 {
         font-size: 20px;
@@ -26,7 +30,7 @@
 }
 
 .logo {
-    color: #ffffff !important;
+    color: inherit;
     font-size: 25px;
     font-weight: 800;
     cursor: pointer;
@@ -35,9 +39,16 @@
     align-items: center;
 
     a {
-        color: #ffffff !important;
+        color: var(--primary-color) !important;
         display: flex;
         align-items: center;
+
+        img {
+            margin-left: -15px;
+            width: 150px;
+            height: auto;
+            object-fit: cover;
+        }
     }
 
     img {
@@ -48,7 +59,7 @@
 
 .footer_grid_layout {
     display: grid;
-    color: white !important;
+    color: var(--primary-color) !important;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 40px;
@@ -67,12 +78,15 @@
         flex-direction: column;
 
         .column_flex_details {
-            display: flex;
-            gap: 10px;
-            flex-direction: column;
+            display: block;
 
-            a {
-                color: white !important;
+            .social_link_grid {
+                display: flex;
+                gap: 10px;
+
+                a {
+                    color: var(--primary-color) !important;
+                }
             }
         }
     }
@@ -100,5 +114,6 @@
         color: var(--white) !important;
         padding: 16px !important;
         background-color: var(--secondary-color) !important;
+        border: var(--secondary-color) !important;
     }
 }

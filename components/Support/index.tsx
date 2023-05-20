@@ -9,9 +9,7 @@ const Support = () => {
       <div className={style.support_section}>
         <div className={style.support_container}>
           <div className={style.support_text_holder}>
-            <h2>
-              Streamline your invoicing process and marketing efforts Today!
-            </h2>
+            <h2>Streamline your invoicing process Today!</h2>
             <p>
               With our user-friendly interface and intuitive features, creating
               professional invoices has never been easier. Voicze will generate

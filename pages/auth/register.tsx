@@ -21,7 +21,7 @@ const Register = () => {
         <div className="auth_container">
           <div className="auth_grid_column">
             <h1>
-              Streamline Invoices And Amplify Your Brand With{" "}
+              Amplify Your Brand With{" "}
               <span>
                 <Link href="/">Voicze</Link>
               </span>

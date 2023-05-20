@@ -1,5 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+
+// Voicze Logo
+import MyLogo from "@/public/logo/voicze_logo.svg";
 
 // Footer Style
 import style from "./footer.module.scss";
@@ -18,16 +22,17 @@ const Footer = () => {
   const { getFullYear } = getLocaltimeAndDate();
 
   return (
-    <footer className={style.footer_layout_container}>
+    <div className={style.footer_layout_container}>
       <div id="container">
         <div className={style.footer_container}>
-          <div className={style.footer_layout_container}>
+          <div className={style.nill}>
+            <br />
+            <br />
             <div className={style.footer_grid_layout}>
               <div className={style.footer_grid_column}>
                 <div className={style.logo}>
                   <Link href="/">
-                    <TbFileInvoice />
-                    {PlatformName}
+                    <Image src={MyLogo} alt={PlatformName} priority={true} />
                   </Link>
                 </div>
                 <p>
@@ -44,11 +49,16 @@ const Footer = () => {
                     <p>+234 (814) 9055 068</p>
                   </div>
                   <div className={style.column_flex_details}>
-                    <p>
+                    <div className={style.social_link_grid}>
                       <a href="https://twitter.com/jeremytechie">Twitter</a> |{" "}
-                      <a href="https://twitter.com/jeremytechie">Instagram</a> |{" "}
-                      <a href="https://twitter.com/jeremytechie">Facebook</a>
-                    </p>
+                      <a href="https://www.instagram.com/jeremytechie/">
+                        Instagram
+                      </a>{" "}
+                      |{" "}
+                      <a href="https://web.facebook.com/taiwo.jeremiah.5">
+                        Facebook
+                      </a>
+                    </div>
                   </div>
                   <div className={style.column_flex_details}>
                     <p>customercare@voicze.io</p>
@@ -61,19 +71,16 @@ const Footer = () => {
                   Products <LabelTag tag="Coming Soon" />
                 </h2>
                 <div className={style.column_flex_details}>
-                  <p>What&apos;s New</p>
-                </div>
-                <div className={style.column_flex_details}>
                   <p>Design</p>
                 </div>
                 <div className={style.column_flex_details}>
                   <p>Pricing</p>
                 </div>
                 <div className={style.column_flex_details}>
-                  <p>Extensions</p>
+                  <p>Gateways</p>
                 </div>
                 <div className={style.column_flex_details}>
-                  <p>Gateways</p>
+                  <p>Extensions</p>
                 </div>
                 <div className={style.column_flex_details}>
                   <p>Collaboration</p>
@@ -115,7 +122,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

@@ -12,7 +12,7 @@
         height: 100%;
         min-height: 100vh;
         display: grid;
-        grid-template-columns: 1.2fr 500px;
+        grid-template-columns: 1fr 550px;
 
         @media (max-width: 800px) {
             grid-template-columns: 1fr;
@@ -30,7 +30,7 @@
                 font-size: 30pt;
 
                 span {
-                    color: var(--secondary-color) !important;
+                    color: var(--primary-color) !important;
                 }
             }
 
@@ -49,8 +49,8 @@
                 flex-direction: column;
                 justify-content: center;
                 color: #ffffff !important;
-                border-radius: 0 50px 50px 0;
-                background-color: var(--primary-color);
+                border-radius: 0;
+                background-color: var(--secondary-color);
 
                 @media (max-width: 800px) {
                     display: none;
@@ -58,7 +58,7 @@
             }
 
             &:nth-child(2) {
-                max-width: 500px !important;
+                max-width: 550px !important;
                 padding: 4em 2em;
 
                 h1 {
@@ -80,6 +80,8 @@
                     button {
                         width: 100%;
                         color: var(--white) !important;
+                        border: var(--primary-color) !important;
+                        // background-color: var(--primary-color) !important;
                     }
 
                     .auth_options {

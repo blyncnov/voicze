@@ -3,6 +3,7 @@ import Image from "next/image";
 
 // Image
 import SvgImage from "@/public/mobile.png";
+// import SvgImage from "@/public/platform/mobile.png";
 
 // Naviagtion Style
 import style from "./Hero.module.scss";
