@@ -30,7 +30,7 @@
                 font-size: 30pt;
 
                 span {
-                    color: var(--primary-color) !important;
+                    color: var(--secondary-color) !important;
                 }
             }
 
@@ -50,7 +50,7 @@
                 justify-content: center;
                 color: #ffffff !important;
                 border-radius: 0;
-                background-color: var(--secondary-color);
+                background-color: var(--primary-color);
 
                 @media (max-width: 800px) {
                     display: none;
@@ -79,9 +79,10 @@
 
                     button {
                         width: 100%;
+                        padding: 0.8em 2em !important;
                         color: var(--white) !important;
                         border: var(--primary-color) !important;
-                        // background-color: var(--primary-color) !important;
+                        background-color: var(--primary-color) !important;
                     }
 
                     .auth_options {
