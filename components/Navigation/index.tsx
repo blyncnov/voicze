@@ -76,7 +76,11 @@ const Naviagtion = () => {
               </div>
               <div className={style.hivee_hamburger}>
                 <div className="hivee_fold_hamburger">
-                  <RiBarChartHorizontalLine style={Iconstyle} />
+                  {true ? (
+                    <h1 style={Iconstyle}>👋</h1>
+                  ) : (
+                    <RiBarChartHorizontalLine style={Iconstyle} />
+                  )}
                 </div>
               </div>
             </div>

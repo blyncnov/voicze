@@ -14,7 +14,7 @@ This `Project` is currently under development .
 
 ## Demo
 
-Live Site URl : [Voicze](https://Voicze.vercel.app)
+Live Site URl : [Voicze](https://getvoicze.vercel.app)
 
 ## My Process
 
