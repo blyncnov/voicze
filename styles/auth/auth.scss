@@ -119,16 +119,39 @@
     }
 }
 
+.another_login_option {
+    position: relative;
+
+    padding: 2em 0 !important;
+    opacity: .2;
+
+    h2 {
+        font-weight: 600 !important;
+    }
+}
+
 
 .social_media_login_option {
     display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    grid-template-columns: 1fr;
+
 
     button {
         width: 100%;
         border: unset;
-        background-color: white !important;
+        display: flex;
+        align-items: center;
+        color: white !important;
+        border-radius: 3px !important;
         box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px 1px !important;
+    }
+
+    #facebook {
+        background-color: #3b5998 !important;
+    }
+
+    #google {
+        background-color: #db3236 !important;
     }
 }

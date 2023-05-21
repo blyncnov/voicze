@@ -2,8 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 // React icons
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
+import { TfiFacebook, TfiGoogle } from "react-icons/tfi";
 
 // Icon Style
 const IconCardStyle = {
@@ -29,7 +28,7 @@ const Login = () => {
           </div>
           <div className="auth_grid_column">
             <div>
-              <h1>Log in</h1>
+              <h1>Sign in</h1>
               <p>
                 New to Voicze?{" "}
                 <span>
@@ -37,21 +36,6 @@ const Login = () => {
                 </span>
               </p>
             </div>
-            <br />
-            <div className="social_media_login_option">
-              <div className="social_btn">
-                <button>
-                  <FaFacebook style={IconCardStyle} />
-                </button>
-              </div>
-              <div className="social_btn">
-                <button>
-                  <FcGoogle style={IconCardStyle} />
-                </button>
-              </div>
-            </div>
-            <br />
-            <hr style={{ border: "1px solid #F8FBFE" }} />
             <br />
             <div>
               <form className="auth_form">
@@ -82,6 +66,23 @@ const Login = () => {
                   <span>Terms of Service</span> and <span>Privacy Policy.</span>
                 </li>
               </form>
+              <div className="another_login_option">
+                <h2 style={{ textAlign: "center" }}>OR</h2>
+              </div>
+              <div className="social_media_login_option">
+                <div className="social_btn">
+                  <button id="facebook">
+                    <TfiFacebook style={IconCardStyle} />
+                    <span>Facebook</span>
+                  </button>
+                </div>
+                <div className="social_btn">
+                  <button id="google">
+                    <TfiGoogle style={IconCardStyle} />
+                    <span>Google</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

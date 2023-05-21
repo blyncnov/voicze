@@ -92,12 +92,18 @@
         .grouped_data {
             width: 100%;
 
+
+            label {
+                opacity: .9;
+                color: #333;
+            }
+
             .input,
             textarea,
             select {
+                margin-top: .4em;
                 width: 100% !important;
-                padding: 1em;
-
+                padding: 17px 1em 17px 33px;
 
                 &::placeholder {
                     color: #111232 !important;
@@ -109,7 +115,7 @@
             textarea {
                 width: 100%;
                 min-height: 150px;
-
+                padding: 1em !important;
             }
 
             select {

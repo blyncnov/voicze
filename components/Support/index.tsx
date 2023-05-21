@@ -20,14 +20,14 @@ const Support = () => {
                 include payment options for your clients convenience
               </p>
               <br />
-              <a href="mailto: support@voicze.io">
+              <a href="mailto:support@voicze.io?subject = Feedback">
                 <button>Our Support Team</button>
               </a>
               <br />
               <br />
             </div>
             <form action="POST" className={style.support_form}>
-              <h2>Make Your Enquiries !</h2>
+              <h2>Make Your Enquiries!</h2>
               <div className={style.grouped_data}>
                 <label htmlFor="full_name">Full Name</label>
                 <input

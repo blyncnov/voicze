@@ -3,8 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 // React icons
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
+import { TfiFacebook, TfiGoogle } from "react-icons/tfi";
 
 // Icon Style
 const IconCardStyle = {
@@ -37,25 +36,10 @@ const Register = () => {
               <p>
                 Already have an account?{" "}
                 <span>
-                  <Link href="/auth/login">Login</Link>
+                  <Link href="/auth/login">Sign in</Link>
                 </span>
               </p>
             </div>
-            <br />
-            <div className="social_media_login_option">
-              <div className="social_btn">
-                <button>
-                  <FaFacebook style={IconCardStyle} />
-                </button>
-              </div>
-              <div className="social_btn">
-                <button>
-                  <FcGoogle style={IconCardStyle} />
-                </button>
-              </div>
-            </div>
-            <br />
-            <hr style={{ border: "1px solid #F8FBFE" }} />
             <br />
             <div>
               <form className="auth_form">
@@ -79,7 +63,7 @@ const Register = () => {
                 </div>
                 <div>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     id="email"
                     defaultValue={email}
@@ -105,6 +89,24 @@ const Register = () => {
                   <span>Terms of Service</span> and <span>Privacy Policy.</span>
                 </li>
               </form>
+              <br />
+              <hr style={{ border: "1px solid #F8FBFE" }} />
+              <br />
+              <br />
+              <div className="social_media_login_option">
+                <div className="social_btn">
+                  <button id="facebook">
+                    <TfiFacebook style={IconCardStyle} />
+                    <span>Facebook</span>
+                  </button>
+                </div>
+                <div className="social_btn">
+                  <button id="google">
+                    <TfiGoogle style={IconCardStyle} />
+                    <span>Google</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
