@@ -2,7 +2,7 @@
     position: relative;
     z-index: 5;
     line-height: 1.5;
-    background-color: none;
+    background-color: white;
 
     .support_container {
         position: relative;
@@ -49,7 +49,7 @@
         // padding: 2em 1em;
         display: flex;
         gap: unset !important;
-        justify-content: center;
+        // justify-content: center;
         align-items: flex-start;
         flex-direction: column;
 
@@ -69,6 +69,11 @@
             font-size: 14px;
         }
 
+        button {
+            color: var(--white) !important;
+            border: 1px solid var(--secondary-color) !important;
+        }
+
         // @media (max-width: 900px) {
         //     padding: 2em 0;
         // }
@@ -80,7 +85,7 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
-        padding: 2em 0;
+        padding: 0;
         border-radius: 2px;
         background-color: var(--white);
 

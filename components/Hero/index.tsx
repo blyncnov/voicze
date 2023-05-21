@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 // Image
-import SvgImage from "@/public/mobile.png";
+import SvgImage from "@/public/logo/voicze_icon.png";
 // import SvgImage from "@/public/platform/mobile.png";
 
 // Naviagtion Style
@@ -56,18 +56,18 @@ const Hero = () => {
               <div className={style.hero_circular_illustration}>
                 <div className={style.hero_circular_illustration}>
                   <div className={style.hero_circular_illustration}>
-                    <div
-                      className={style.hero_circular_illustration_inner}
-                    ></div>
+                    <div className={style.hero_circular_illustration_inner}>
+                      <Image src={SvgImage} alt="hero_image_showcase" />
+                    </div>
+                    <div className={style.floating_banner}>
+                      <p>
+                        Simplify, Create, Promote: Streamline Your Invoices,
+                        Boost Your Business.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              {/* <div className={style.hero_image_frame}> */}
-              {/* <Image src={SvgImage} alt="hero_image_showcase" /> */}
-              {/* </div> */}
-              {/* <div className={style.floating_banner}>
-                <h1>Simplify. Amplify. Succeed.</h1>
-              </div> */}
             </div>
           </div>
         </div>

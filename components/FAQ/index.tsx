@@ -24,7 +24,7 @@ const FAQTab = ({ data }: any) => {
   };
 
   return (
-    <div onClick={HandleToggler} id="faq">
+    <div onClick={HandleToggler}>
       <div className={style.faq_section}>
         <div className={style.faq_title_section}>
           <div className={style.faq_title}>
@@ -54,11 +54,15 @@ const FAQTab = ({ data }: any) => {
 
 const FAQ = () => {
   return (
-    <div style={{ backgroundColor: "#ffffff" }}>
+    <div style={{ backgroundColor: "#ffffff" }} id="faq">
       <div id="container">
         <div className={style.faq_container}>
           <div className={style.faq_top_container}>
             <h1>Frequently Asked Questions</h1>
+            <p>
+              Can&apos;t find the answer you are looking for? Please reach out
+              to support@voicze.io
+            </p>
           </div>
           <div className={style.faq_tabs}>
             {FAQQuestionAndAnswer.map((faq) => {

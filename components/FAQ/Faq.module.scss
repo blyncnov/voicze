@@ -13,6 +13,10 @@
         h1 {
             font-size: calc(var(--heading-size) - 5pt);
         }
+
+        p {
+            margin: .4em 0;
+        }
     }
 
     .faq_tabs {

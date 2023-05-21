@@ -6,7 +6,7 @@ import style from "./support.module.scss";
 const Support = () => {
   return (
     <div id="support">
-      <div id="container ">
+      <div id="container">
         <div className={style.support_section}>
           <div className={style.support_container}>
             <div className={style.support_text_holder}>
@@ -19,9 +19,17 @@ const Support = () => {
                 customize the design, add your branding elements, and even
                 include payment options for your clients convenience
               </p>
+              <br />
+              <a href="mailto: support@voicze.io">
+                <button>Our Support Team</button>
+              </a>
+              <br />
+              <br />
             </div>
             <form action="POST" className={style.support_form}>
+              <h2>Make Your Enquiries !</h2>
               <div className={style.grouped_data}>
+                <label htmlFor="full_name">Full Name</label>
                 <input
                   type="text"
                   name="full_name"
@@ -30,11 +38,12 @@ const Support = () => {
                 />
               </div>
               <div className={style.grouped_data}>
+                <label htmlFor="message">Your Enquiry</label>
                 <textarea
                   name="message"
                   className={style.input}
                   lang="en"
-                  placeholder="Message "
+                  placeholder="Enter your Message/Enquiry "
                 />
               </div>
               <div className={style.support_button}>

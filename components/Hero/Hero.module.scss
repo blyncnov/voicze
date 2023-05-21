@@ -104,19 +104,21 @@
             background-color: transparent;
             border-radius: 50%;
             border: 1px solid var(--secondary-color);
-            scale: 1.09;
+            scale: 1.08;
 
             .hero_circular_illustration_inner {
                 position: relative;
                 width: 100%;
                 height: 100%;
-                background-color: var(--secondary-color);
-                scale: -.5;
+                background-color: transparent;
+                scale: -.6;
                 border-radius: 4px;
 
                 img {
-
-                    top: 0;
+                    width: 100%;
+                    object-fit: contain;
+                    rotate: 180deg;
+                    margin-top: 40px;
                 }
             }
         }
@@ -135,8 +137,8 @@
 
         .floating_banner {
             position: relative;
-            bottom: -65%;
-            left: 28%;
+            top: -25%;
+            left: 0%;
             width: 100%;
             padding: .5em;
             border-radius: 3px;
@@ -145,7 +147,7 @@
             border: 1px solid rgba(72, 79, 88, 0.087);
             background-color: rgb(255, 255, 255);
             box-shadow: 0 3px 1px 0 rgba(37, 85, 152, 0.5);
-            transform: rotate(-90deg);
+            transform: rotate(0deg);
         }
 
         @media (max-width: 1000px) {
