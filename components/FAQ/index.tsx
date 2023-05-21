@@ -61,7 +61,7 @@ const FAQ = () => {
             <h1>Frequently Asked Questions</h1>
             <p>
               Can&apos;t find the answer you are looking for? Please reach out
-              to support@voicze.io
+              to getvoicze@gmail.com
             </p>
           </div>
           <div className={style.faq_tabs}>

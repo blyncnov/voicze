@@ -88,8 +88,6 @@ select {
   border: 1px solid rgba(183, 172, 220, 0.163);
   background-color: transparent !important;
   box-sizing: border-box;
-
-
 }
 
 input:active {
@@ -119,6 +117,14 @@ input[type=email] {
   background-color: transparent !important;
   background-image: url('../public/icon/mail.jpeg');
   background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+textarea {
+  background-color: transparent !important;
+  background-image: url('../public/icon/mail.jpeg');
+  background-position: 1px bottom;
   background-repeat: no-repeat;
   background-size: 20px;
 }

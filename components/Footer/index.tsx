@@ -43,7 +43,7 @@ const Footer = () => {
                 <div className={style.footer_grid_column}>
                   <h2>Contact Information</h2>
                   <div className={style.column_flex_details}>
-                    <p>Abeokuta, Ogun-State, Nigeria</p>
+                    <p>Abeokuta • Nigeria</p>
                   </div>
                   <div className={style.column_flex_details}>
                     <p>+234 (814) 9055 068</p>
@@ -61,7 +61,7 @@ const Footer = () => {
                     </div>
                   </div>
                   <div className={style.column_flex_details}>
-                    <p>customercare@voicze.io</p>
+                    <p>getvoicze@gmail.com</p>
                   </div>
                 </div>
               </div>
