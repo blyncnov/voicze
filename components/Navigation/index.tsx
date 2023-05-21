@@ -68,7 +68,7 @@ const Naviagtion = () => {
                     Login
                   </button>
                 </Link>
-                <Link href="/demo">
+                <Link href="/waitlist">
                   <button className={style.btn} id={style.primary}>
                     Join waitlist
                   </button>

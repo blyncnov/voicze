@@ -1,15 +1,21 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 // Image
 import SvgImage from "@/public/logo/voicze_icon.png";
-// import SvgImage from "@/public/platform/mobile.png";
 
 // Naviagtion Style
 import style from "./Hero.module.scss";
 
 const Hero = () => {
+  const router = useRouter();
   const [isWaitList] = React.useState(true);
+
+  const onhandleJoinWaitListButton = () => {
+    router.push("https://forms.gle/zJxqxqw9aSpmx5SF6");
+  };
+
   return (
     <>
       <div id="container">
@@ -30,14 +36,17 @@ const Hero = () => {
               <div className={style.cto_action}>
                 <>
                   {/* {* FORM - TRY FOR FREE*} */}
-                  <form method="GET" action="/auth/register">
+                  <form method="GET" action="/waitlist">
                     <div className={style.join_waitlist}>
                       <input
                         type="email"
                         placeholder="Enter your email..."
                         name="email"
                       />
-                      <button type="submit">
+                      <button
+                        type="submit"
+                        onClick={onhandleJoinWaitListButton}
+                      >
                         {isWaitList ? "Join Waitlist" : "Try for free"}
                       </button>
                     </div>
