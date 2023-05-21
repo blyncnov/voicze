@@ -20,7 +20,7 @@ const Support = () => {
                 include payment options for your clients convenience
               </p>
               <br />
-              <a href="mailto:support@voicze.io?subject = Feedback">
+              <a href="mailto:getvoicze@gmail.com?subject = Make Enquiry">
                 <button>Our Support Team</button>
               </a>
               <br />

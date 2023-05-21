@@ -1,16 +1,14 @@
 import React from "react";
 
 // React Icon
-// import {
-//   FcVlc,
-//   FcStart,
-//   FcRadarPlot,
-//   FcDribbble,
-//   FcCloseUpMode,
-//   FcAddDatabase,
-// } from "react-icons/fc";
-
-import { MdQuestionMark } from "react-icons/md";
+import {
+  FcVlc,
+  FcStart,
+  FcRadarPlot,
+  FcDribbble,
+  FcCloseUpMode,
+  FcAddDatabase,
+} from "react-icons/fc";
 
 // My Card Style
 import style from "./brands.module.scss";
@@ -24,25 +22,28 @@ const Brands = () => {
     <>
       <div id="container">
         <div className={style.brands_container}>
-          <h1>Trusted by 7+ customers</h1>
+          <div>
+            <h1>Trusted by 7+ customers</h1>
+            <p>Become one of our trusted user today!</p>
+          </div>
           <div className={style.brands_identites}>
             <div className={style.brand}>
-              <MdQuestionMark style={brand_icon} />
+              <FcVlc style={brand_icon} />
             </div>
             <div className={style.brand}>
-              <MdQuestionMark style={brand_icon} />
+              <FcStart style={brand_icon} />
             </div>
             <div className={style.brand}>
-              <MdQuestionMark style={brand_icon} />
+              <FcRadarPlot style={brand_icon} />
             </div>
             <div className={style.brand}>
-              <MdQuestionMark style={brand_icon} />
+              <FcDribbble style={brand_icon} />
             </div>
             <div className={style.brand}>
-              <MdQuestionMark style={brand_icon} />
+              <FcCloseUpMode style={brand_icon} />
             </div>
             <div className={style.brand}>
-              <MdQuestionMark style={brand_icon} />
+              <FcAddDatabase style={brand_icon} />
             </div>
           </div>
         </div>

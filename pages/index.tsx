@@ -33,7 +33,7 @@ export default function Home() {
       </section>
       <section>
         {/* Brands component */}
-        <Brands />
+        {/* <Brands /> */}
         {/* Feature component */}
         <Feature />
         {/* FAQ component */}
