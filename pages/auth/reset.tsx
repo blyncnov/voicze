@@ -52,7 +52,7 @@ const Reset = () => {
             </div>
             <br />
             <div>
-              <form className="auth_form">
+              <form className="auth_form" autoComplete="false">
                 <div>
                   <input
                     type="email"

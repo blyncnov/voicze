@@ -9,6 +9,7 @@ import Feature from "@/components/Feature";
 import FAQ from "@/components/FAQ";
 import Support from "@/components/Support";
 import Footer from "@/components/Footer";
+import Loading from "@/components/Loading";
 
 export default function Home() {
   return (
@@ -24,15 +25,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       {/* Header component */}
-      <section id="main">
+      <section id="Main__Header">
         {/* Navigation component */}
         <Naviagtion />
         {/* Hero component */}
         <Hero />
       </section>
       <section>
-        {/* Brands component */}
+        {/* Brands component <Remove this component for now> */}
         {/* <Brands /> */}
         {/* Feature component */}
         <Feature />
@@ -45,6 +47,9 @@ export default function Home() {
         {/* Footer component*/}
         <Footer />
       </footer>
+
+      {/* Loading State Component */}
+      {/* <Loading /> */}
     </>
   );
 }

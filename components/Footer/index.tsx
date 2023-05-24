@@ -8,9 +8,6 @@ import MyLogo from "@/public/logo/voicze_logo.svg";
 // Footer Style
 import style from "./footer.module.scss";
 
-// React Icons
-import { TbFileInvoice } from "react-icons/tb";
-
 // Naviagtion Data
 import { PlatformName } from "../../data/Naviagtion";
 
@@ -43,10 +40,10 @@ const Footer = () => {
                 <div className={style.footer_grid_column}>
                   <h2>Contact Information</h2>
                   <div className={style.column_flex_details}>
-                    <p>Abeokuta • Nigeria</p>
+                    <p>Phone: +234 (814) 9055 068</p>
                   </div>
                   <div className={style.column_flex_details}>
-                    <p>+234 (814) 9055 068</p>
+                    <p>Email: getvoicze@gmail.com</p>
                   </div>
                   <div className={style.column_flex_details}>
                     <div className={style.social_link_grid}>
@@ -60,9 +57,6 @@ const Footer = () => {
                       </a>
                     </div>
                   </div>
-                  <div className={style.column_flex_details}>
-                    <p>getvoicze@gmail.com</p>
-                  </div>
                 </div>
               </div>
 
@@ -71,19 +65,29 @@ const Footer = () => {
                   Products <LabelTag tag="Coming Soon" />
                 </h2>
                 <div className={style.column_flex_details}>
-                  <p>Design</p>
+                  <Link href="/">
+                    <p>iDesign</p>
+                  </Link>
                 </div>
                 <div className={style.column_flex_details}>
-                  <p>Pricing</p>
+                  <Link href="/">
+                    <p>Pricing</p>
+                  </Link>
                 </div>
                 <div className={style.column_flex_details}>
-                  <p>Gateways</p>
+                  <Link href="/">
+                    <p>Showcase</p>
+                  </Link>
                 </div>
                 <div className={style.column_flex_details}>
-                  <p>Extensions</p>
+                  <Link href="/">
+                    <p>Extensions</p>
+                  </Link>
                 </div>
                 <div className={style.column_flex_details}>
-                  <p>Collaboration</p>
+                  <Link href="/">
+                    <p>Collaboration</p>
+                  </Link>
                 </div>
               </div>
 

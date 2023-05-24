@@ -24,22 +24,18 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-#main {
-  position: relative;
+#Main__Header {
   width: 100%;
-  background-color: var(--white) !important;
-  background-image: radial-gradient(
-    circle(closest-side at 60%, #122046, transparent)
-  );
-  background-size: 40%;
-  background-position: center right;
+  position: relative;
+  min-height: 80vh;
+  background-image: linear-gradient(to bottom, #e8f7f8, #fff, #fff);
 }
 
 #container {
-  position: relative;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  max-width: 1200px;
 }
 
 section {

@@ -1,15 +1,31 @@
 #nav {
     width: 100%;
     max-width: 100%;
-    background-color: transparent;
     color: var(--secondary-color) !important;
     font-family: 'Source Sans 3', sans-serif;
+
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background-color: #fff !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 99999999999999;
+}
+
+#nav__scroll__drop {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background-color: #fff !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 99999999999999;
 }
 
 .container {
     width: 100%;
     max-width: 100%;
-    backdrop-filter: blur(5px);
     border-bottom: 1px solid #c3f7ff03;
 }
 
@@ -22,6 +38,15 @@
     padding: 20px 0;
     justify-content: space-between;
     background-color: transparent;
+}
+
+#mobile_logo_appear {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block;
+        margin-left: -10px;
+    }
 }
 
 .left_items {
@@ -64,6 +89,7 @@
     }
 
     .list {
+
         ul {
             display: flex;
             align-items: center;
@@ -89,21 +115,29 @@
         }
 
         @media (max-width: 768px) {
-            display: none;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background-color: rgba(51, 51, 51, 0.095);
+            background-color: rgba(0, 0, 0, 0.626);
             height: 100vh;
             width: 100%;
+            z-index: 999999 !important;
 
             ul {
-                display: none;
-                width: auto;
-                height: 100%;
+                height: auto;
+                width: 100%;
+                display: block;
+                z-index: 99999999;
+                padding: 1em 2em;
+                border-radius: 0 0 8px 8px;
                 background-color: rgb(255, 255, 255);
-                border-radius: 0 30px 30px 0;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+                li {
+                    margin: 1em 0;
+                    border-bottom: 1px solid rgba(226, 223, 223, 0.299);
+                }
             }
         }
     }
@@ -111,6 +145,13 @@
     @media (max-width: 1000px) {
         justify-content: space-between;
         gap: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .toggle_off {
+        display: none !important;
+        background-color: green !important;
     }
 }
 
@@ -152,5 +193,7 @@
 
     @media (max-width: 768px) {
         display: block;
+        position: relative;
+        z-index: 999999999999;
     }
 }

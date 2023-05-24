@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-// Image
-import SvgImage from "@/public/logo/voicze_icon.png";
+// Voicze Illustration SVG
+import SvgImage from "@/public/illustrations/illus4.svg";
+
+// Components
+import Partner from "@/components/Analytics";
 
 // Naviagtion Style
 import style from "./Hero.module.scss";
 
 const Hero = () => {
   const router = useRouter();
-  const [isWaitList] = React.useState(true);
+  const [isWaitList] = useState(true);
 
+  // Join Waitlist Function
   const onhandleJoinWaitListButton = () => {
     router.push("https://forms.gle/zJxqxqw9aSpmx5SF6");
   };
@@ -42,6 +46,7 @@ const Hero = () => {
                         type="email"
                         placeholder="Enter your email..."
                         name="email"
+                        required
                       />
                       <button
                         type="submit"
@@ -60,22 +65,15 @@ const Hero = () => {
                   {/* {* FORM - ENDS*} */}
                 </>
               </div>
+              <Partner />
             </div>
             <div className={style.hero_image_illustration}>
-              <div className={style.hero_circular_illustration}>
-                <div className={style.hero_circular_illustration}>
-                  <div className={style.hero_circular_illustration}>
-                    <div className={style.hero_circular_illustration_inner}>
-                      <Image src={SvgImage} alt="hero_image_showcase" />
-                    </div>
-                    <div className={style.floating_banner}>
-                      <p>
-                        Simplify, Create, Promote: Streamline Your Invoices,
-                        Boost Your Business.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <Image src={SvgImage} alt="hero_image_showcase" />
+              <div className={style.floating_banner}>
+                <p>
+                  Simplify, Create, Promote: Streamline Your Invoices, Boost
+                  Your Business.
+                </p>
               </div>
             </div>
           </div>

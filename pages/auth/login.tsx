@@ -38,10 +38,10 @@ const Login = () => {
             </div>
             <br />
             <div>
-              <form className="auth_form">
+              <form className="auth_form" autoComplete="false">
                 <div>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     id="email"
                     placeholder="Email"

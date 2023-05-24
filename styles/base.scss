@@ -75,19 +75,29 @@ button:active {
 input,
 textarea,
 select {
+  width: 100% !important;
   font-size: 14px;
   font-weight: 400;
   padding: 18px 1em 18px 35px;
   display: block;
+  outline: none;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100%;
   border-radius: 3px;
   color: rgb(53, 61, 66);
   font-family: "Inter", sans-serif;
-  border: 1px solid rgba(183, 172, 220, 0.163);
+  border: 1px solid #33333341;
   background-color: transparent !important;
   box-sizing: border-box;
+
+
+  &::placeholder {
+    color: #111232 !important;
+    background-color: transparent !important;
+    opacity: 0.5;
+    font-weight: 400;
+  }
 }
 
 input:active {
@@ -121,27 +131,22 @@ input[type=email] {
   background-size: 20px;
 }
 
-textarea {
-  background-color: transparent !important;
-  background-image: url('../public/icon/mail.jpeg');
-  background-position: 1px bottom;
-  background-repeat: no-repeat;
-  background-size: 20px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  padding: 18px 1em;
 }
 
-.input,
-select {
-  width: 100% !important;
-
-  &::placeholder {
-    color: #111232 !important;
-    background-color: transparent !important;
-    opacity: 0.5;
-    font-weight: 400;
-  }
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: #333 !important;
 }
 
-
+// input[type=email]:invalid {
+//   border: 1px solid red;
+// }
 
 .dashboard_header {
   width: 100%;
@@ -155,13 +160,4 @@ select {
   p {
     color: #333 !important;
   }
-}
-
-.index {
-  background-color: #111;
-  background-image: radial-gradient(#2d2d2d 1px, transparent 0),
-    radial-gradient(#373636 1px, transparent 0);
-  background-position: 0 0,
-    25px 25px;
-  background-size: 50px 50px;
 }

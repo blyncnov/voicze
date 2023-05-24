@@ -52,7 +52,7 @@ const Sidebar = () => {
       >
         <div className="dashboard_sidebar_height">
           <div className="dashboard_logo">
-            <Link href="/">
+            <Link href="/dashboard">
               <Image src={MyLogo} alt={`sidebar-logo`} priority={true} />
             </Link>
           </div>
@@ -60,7 +60,7 @@ const Sidebar = () => {
 
         <div className="dashboard_sidebar_navigation ">
           <ul>
-            <Link href="/" onClick={CloseSidebar}>
+            <Link href="/dashboard" onClick={CloseSidebar}>
               <div className="dashboard_flex_item" id="dashboard_active_home">
                 <MdSpaceDashboard style={Iconstyle} />
                 <li>Dashboard </li>
