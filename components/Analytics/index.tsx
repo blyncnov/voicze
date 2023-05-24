@@ -24,7 +24,7 @@ const Analytics = () => {
           <p> Profile</p>
         </div>
         <div className={style.analytics_identites}>
-          <h1>100</h1>
+          <h1>1000</h1>
           <p>
             <BsDot style={style_icon} />
             Invoices

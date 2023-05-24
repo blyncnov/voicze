@@ -92,22 +92,26 @@ const Naviagtion = () => {
                         />
                       </Link>
                     </div>
-                    {NavBarData.map((data) => {
-                      return (
-                        <Link
-                          key={data.id}
-                          href={`${data.url.toLowerCase()}`}
-                          onClick={isClickedHandler}
-                          id={
-                            current_url_pathname === "/"
-                              ? "active"
-                              : "not-active"
-                          }
-                        >
-                          <li>{data.title}</li>
-                        </Link>
-                      );
-                    })}
+                    <br />
+                    <br />
+                    <>
+                      {NavBarData.map((data) => {
+                        return (
+                          <Link
+                            key={data.id}
+                            href={`${data.url.toLowerCase()}`}
+                            onClick={isClickedHandler}
+                            id={
+                              current_url_pathname === "/"
+                                ? "active"
+                                : "not-active"
+                            }
+                          >
+                            <li>{data.title}</li>
+                          </Link>
+                        );
+                      })}
+                    </>
                   </ul>
                 </div>
               </div>
