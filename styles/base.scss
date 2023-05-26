@@ -159,3 +159,13 @@ input:-webkit-autofill {
     color: #333 !important;
   }
 }
+
+
+.dashboard_special_container {
+  width: 100%;
+  padding: 1.5em 1em;
+  line-height: 1.5;
+  border: 1px;
+  background-color: var(--white);
+  border: 1px solid rgba(240, 233, 233, 0.531);
+}

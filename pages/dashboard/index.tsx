@@ -4,6 +4,7 @@ import React from "react";
 import { CgCalendarDue } from "react-icons/cg";
 import { MdPendingActions, MdOutlineVerifiedUser } from "react-icons/md";
 import { VscArchive } from "react-icons/vsc";
+import { GoPlus } from "react-icons/go";
 
 // Icon Style
 const IconCardStyle = {
@@ -14,7 +15,7 @@ const IconCardStyle = {
 export default function Dashboard() {
   return (
     <>
-      <header className="dashboard_header">
+      <header className="dashboard_special_container">
         <div className="dashboard_create_invoice_header">
           <div>
             <h2>Hi, Octavia!</h2>
@@ -27,6 +28,9 @@ export default function Dashboard() {
       </header>
       <br />
       <section className="dashboard_special_container">
+        <div>
+          <h2>Invoice Total Analytics!</h2>
+        </div>
         <div className="dashboard_invoice_grid">
           <QuickAnalytic
             icon={<VscArchive style={IconCardStyle} />}
