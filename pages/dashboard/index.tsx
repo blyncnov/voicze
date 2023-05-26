@@ -18,7 +18,7 @@ export default function Dashboard() {
       <header className="dashboard_special_container">
         <div className="dashboard_create_invoice_header">
           <div>
-            <h2>Hi, Octavia!</h2>
+            <h2>Hi, Blyncnov!</h2>
             <p>Welcome back </p>
           </div>
           <button className="dashboard_create_invoice_button">
