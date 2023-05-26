@@ -6,8 +6,10 @@
 
     .dashboard_create_invoice_button {
         font-weight: 500;
-        background-color: var(--secondary-color);
-        border: 1px solid var(--secondary-color) !important;
+        color: black !important;
+        background-color: var(--secondary-color-100) !important;
+        border: 1px solid rgba(51, 51, 51, 0.08) !important;
+        box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 4px 0px inset !important;
     }
 }
 
@@ -34,7 +36,7 @@
 
 .quick_analytic_grid {
     display: grid;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
     grid-template-columns: auto 1fr;
     padding: 1em;
@@ -44,6 +46,7 @@
             padding: 1em;
             border-radius: 4px;
             background-color: var(--secondary-color-100);
+            box-shadow: 0 1px 5px 0 rgba(248, 253, 253, 0.095);
         }
 
         li {

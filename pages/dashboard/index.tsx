@@ -1,7 +1,9 @@
 import React from "react";
 
 // React Icon
-import { CiTimer } from "react-icons/ci";
+import { CgCalendarDue } from "react-icons/cg";
+import { MdPendingActions, MdOutlineVerifiedUser } from "react-icons/md";
+import { VscArchive } from "react-icons/vsc";
 
 // Icon Style
 const IconCardStyle = {
@@ -26,10 +28,26 @@ export default function Dashboard() {
       <br />
       <section className="dashboard_special_container">
         <div className="dashboard_invoice_grid">
-          <QuickAnalytic title="Total" />
-          <QuickAnalytic title="Paid" />
-          <QuickAnalytic title="Pending" />
-          <QuickAnalytic title="Due" />
+          <QuickAnalytic
+            icon={<VscArchive style={IconCardStyle} />}
+            title="Total"
+            count={80}
+          />
+          <QuickAnalytic
+            icon={<MdOutlineVerifiedUser style={IconCardStyle} />}
+            title="Paid"
+            count={77}
+          />
+          <QuickAnalytic
+            icon={<MdPendingActions style={IconCardStyle} />}
+            title="Pending"
+            count={2}
+          />
+          <QuickAnalytic
+            icon={<CgCalendarDue style={IconCardStyle} />}
+            title="Due"
+            count={1}
+          />
         </div>
       </section>
       <br />
@@ -40,17 +58,15 @@ export default function Dashboard() {
   );
 }
 
-const QuickAnalytic = ({ title }: any) => {
+const QuickAnalytic = ({ title, icon, count }: any) => {
   return (
     <div>
       <div className="quick_analytic_grid">
         <div className="quick_analytic_column">
-          <div className="quick_analytic_icon">
-            <CiTimer style={IconCardStyle} />
-          </div>
+          <div className="quick_analytic_icon">{icon}</div>
         </div>
         <div className="quick_analytic_column">
-          <h1>0</h1>
+          <h1> {count} </h1>
           <li> {title} Invoice</li>
         </div>
       </div>
