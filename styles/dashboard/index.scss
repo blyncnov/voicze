@@ -1,106 +1,54 @@
-.dashboard_overview_section {
-    padding: 1em 0;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: -50px;
-    background-color: transparent;
-
-    .dashboard_overview_details {
-        width: 100%;
-        margin: 0 auto;
-        border-radius: 4px;
-        padding: 1em;
-        background-color: var(--primary-color);
-        background-position: center;
-        background-repeat: repeat;
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-
-        .dashboard_user_info {
-            color: var(--white);
-            display: flex;
-            gap: 5px;
-            flex-direction: column;
-
-            div {
-                padding: .25em 0;
-                display: flex;
-                gap: 10px;
-                align-items: center;
-                font-weight: 400 !important;
-
-                li,
-                h4 {
-                    letter-spacing: 1.3px;
-                    font-weight: 400 !important;
-                }
-            }
-        }
-
-        @media (max-width: 900px) {
-            background: var(--primary-color) !important;
-            padding: 1em !important;
-        }
-    }
-}
-
-.dashboard_overview_cards {
+.dashboard_create_invoice_header {
     width: 100%;
-    padding: 1em;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
 
-    .dashboard_card {
-        width: 100%;
-        display: flex;
-        gap: 15px;
-        flex-direction: column;
-        border-radius: 3px;
-        padding: 1em 1em 3em 1em;
-        background-color: white !important;
-        flex-basis: 1;
-        background: url("../../public/confei.svg");
-        background-position: bottom right;
-        background-repeat: no-repeat;
-        background-size: 50%;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        // box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1.3px;
-
-        div {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-
-            h1 {
-                color: #0e072a;
-                opacity: 1;
-                margin-left: 1.5em;
-            }
-        }
-
-        @media (max-width: 900px) {
-            padding: 1em 1em 3em 1em !important;
-        }
-    }
-
-    @media (max-width: 900px) {
-        flex-direction: column;
+    .dashboard_create_invoice_button {
+        font-weight: 500;
+        background-color: var(--secondary-color);
+        border: 1px solid var(--secondary-color) !important;
     }
 }
 
-.active_plan,
-.expired_plan {
-    color: white !important;
-    padding: .5em 3.5em;
-    border-radius: 3px;
-    font-size: 14px !important;
-    background-color: #28a745;
+
+.dashboard_special_container {
+    width: 100%;
+    padding: 1.5em 1em;
+    line-height: 1.5;
+    border: 1px;
+    background-color: var(--white);
+    border: 1px solid rgba(240, 233, 233, 0.531);
 }
 
-.expired_plan {
-    background-color: tomato;
+.dashboard_invoice_grid {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
-.sck_text {
-    font-size: 14px;
+.quick_analytic_grid {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    padding: 1em;
+
+    .quick_analytic_column {
+        .quick_analytic_icon {
+            padding: 1em;
+            border-radius: 4px;
+            background-color: var(--secondary-color-100);
+        }
+
+        li {
+            font-size: 13px;
+            word-wrap: keep-all;
+        }
+    }
 }

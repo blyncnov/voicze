@@ -30,7 +30,7 @@ const Topbar = () => {
           <div className="dashboard_topBar_title" onClick={Clickhandler}>
             <div className="hambuger_icon">
               {/* <FaBars style={Iconstyle} /> */}
-              <h2>Hi, Octavia!</h2>
+              <h2>Admin Dashboard</h2>
             </div>
           </div>
           <div className="dashboard_topBar_left">

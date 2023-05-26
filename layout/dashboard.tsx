@@ -13,10 +13,12 @@ const DashboardLayout = ({ children }: any) => {
   return (
     <>
       <Head>
-        <title>Foy Platform - Create Giveway like pro!!!</title>
+        <title>
+          Voicze | Streamline Invoices And Amplify Your Brand With Voicze.
+        </title>
         <meta
-          name="Bright Technologies - User Control Panel"
-          content="Bright Technologies - User Control Panel"
+          name="Voicze | Streamline Invoices And Amplify Your Brand With Voicze."
+          content="Voicze | Streamline Invoices And Amplify Your Brand With Voicze."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

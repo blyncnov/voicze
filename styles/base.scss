@@ -10,6 +10,7 @@
   --black-100: #333333;
   --primary-color: #251851;
   --secondary-color: #4ac3c6;
+  --secondary-color-100: #c3fdfe;
   --text-color: #14165d;
 
   --border: 1px solid #ccc;
@@ -144,14 +145,11 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #333 !important;
 }
 
-// input[type=email]:invalid {
-//   border: 1px solid red;
-// }
+
 
 .dashboard_header {
   width: 100%;
-  height: 150px;
-  padding: 1em;
+  padding: 1.5em 1em;
   line-height: 1.5;
   border: 1px;
   background-color: var(--white);

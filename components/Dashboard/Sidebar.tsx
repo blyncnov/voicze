@@ -15,7 +15,9 @@ import { MdSpaceDashboard, MdHistory } from "react-icons/md";
 import { RiListSettingsFill, RiExchangeDollarFill } from "react-icons/ri";
 import { GiTrafficLightsReadyToGo } from "react-icons/gi";
 import { AiOutlinePoweroff } from "react-icons/ai";
+import { HiOutlineIdentification } from "react-icons/hi";
 import { VscReferences } from "react-icons/vsc";
+import { FcBusiness } from "react-icons/fc";
 
 // Icon Style
 const Iconstyle = {
@@ -78,6 +80,13 @@ const Sidebar = () => {
               </div>
             </Link>
 
+            <Link href="/subscription_plans" onClick={CloseSidebar}>
+              <div className="dashboard_flex_item">
+                <BiTargetLock style={Iconstyle} />
+                <li>Brands</li>
+              </div>
+            </Link>
+
             <Link href="/fund_wallet" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <RiExchangeDollarFill style={Iconstyle} />
@@ -92,10 +101,21 @@ const Sidebar = () => {
               </div>
             </Link>
 
-            <Link href="/subscription_plans" onClick={CloseSidebar}>
+            <div className="sidebar_quicklinks_summary">
+              <li>Generate</li>
+            </div>
+
+            <Link href="/invoices" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
-                <BiTargetLock style={Iconstyle} />
-                <li>Brand & Growth</li>
+                <HiOutlineIdentification style={Iconstyle} />
+                <li>Event Card</li>
+              </div>
+            </Link>
+
+            <Link href="/invoices" onClick={CloseSidebar}>
+              <div className="dashboard_flex_item">
+                <FcBusiness style={Iconstyle} />
+                <li>Business ID</li>
               </div>
             </Link>
 
