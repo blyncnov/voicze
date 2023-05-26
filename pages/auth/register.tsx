@@ -3,11 +3,15 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 // React icons
-import { TfiFacebook, TfiGoogle } from "react-icons/tfi";
+import { FcGoogle } from "react-icons/fc";
 
 // Icon Style
 const IconCardStyle = {
   fontSize: "1.5em",
+  color: "#ffffff",
+  backgroundColor: "white",
+  padding: ".1em",
+  borderRadius: "3px",
 };
 
 const Register = () => {
@@ -89,21 +93,14 @@ const Register = () => {
                   <span>Terms of Service</span> and <span>Privacy Policy.</span>
                 </li>
               </form>
-              <br />
-              <hr style={{ border: "1px solid #F8FBFE" }} />
-              <br />
-              <br />
+              <div className="another_login_option">
+                <h2 style={{ textAlign: "center" }}>COMING SOON 😊</h2>
+              </div>
               <div className="social_media_login_option">
                 <div className="social_btn">
-                  <button id="facebook">
-                    <TfiFacebook style={IconCardStyle} />
-                    <span>Facebook</span>
-                  </button>
-                </div>
-                <div className="social_btn">
                   <button id="google">
-                    <TfiGoogle style={IconCardStyle} />
-                    <span>Google</span>
+                    <FcGoogle style={IconCardStyle} />
+                    <span>Continue with Google</span>
                   </button>
                 </div>
               </div>
