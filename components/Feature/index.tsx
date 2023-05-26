@@ -7,7 +7,7 @@ import { BiAlbum, BiAperture, BiAward } from "react-icons/bi";
 import style from "./feature.module.scss";
 
 const brand_icon = {
-  fontSize: "100px",
+  fontSize: "60px",
 };
 
 const Feature = () => {
@@ -38,7 +38,7 @@ const Feature = () => {
             </div>
             <div className={style.box}>
               <div className={style.feature_top_container}>
-                <BiAperture style={brand_icon} />
+                <BiAward style={brand_icon} />
               </div>
               <div className={style.feature_content}>
                 <h4>Effective Advertisement Promotion.</h4>
@@ -53,7 +53,7 @@ const Feature = () => {
             </div>
             <div className={style.box}>
               <div className={style.feature_top_container}>
-                <BiAward style={brand_icon} />
+                <BiAperture style={brand_icon} />
               </div>
               <div className={style.feature_content}>
                 <h4>Analytics and Insights.</h4>

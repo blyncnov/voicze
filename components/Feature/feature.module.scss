@@ -1,7 +1,8 @@
 .feature_section {
     width: 100%;
     color: #fff;
-    background-color: var(--primary-color);
+    background-color: #ffffff;
+
 
     .feature_container {
         position: relative;
@@ -11,11 +12,19 @@
         line-height: 1.3;
         background-color: transparent;
         padding: 50px 0;
+        color: var(--primary-color);
+
 
         h1 {
-            font-size: calc(var(--heading-size) - 5pt);
+            font-size: calc(var(--heading-size));
             margin: .1em 0;
             text-transform: capitalize;
+            text-align: center;
+        }
+
+        li {
+            font-size: calc(var(--description-size));
+            text-align: center;
         }
 
         .feature_identites {
@@ -27,26 +36,33 @@
 
 
             .box {
+                display: grid;
                 width: 100%;
                 padding: 2em;
-                border-radius: 4px;
                 height: 400px;
-                background-color: rgba(64, 82, 142, 0.522);
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(64, 82, 142, 0.522)0px 1px 2px 0px;
-                transition: all 0.5s ease-in-out;
-                display: grid;
-                grid-template-rows: 1fr 1fr;
                 cursor: pointer;
+                border-radius: 4px;
+                grid-template-rows: .5fr 1fr;
+                transition: all 0.5s ease-in-out;
+                backdrop-filter: saturate(180%) blur(10px);
+                background-image: linear-gradient(to top, #e8f7f8, #fff);
+                box-shadow: rgba(182, 226, 233, 0.02) 0px 1px 3px 0px, rgba(165, 199, 198, 0.522)0px 1px 2px 0px;
 
 
                 &:hover {
-                    background-color: var(--secondary-color) !important;
+                    background-image: linear-gradient(to bottom, #e8f7f8, #fff);
                 }
 
-                &:nth-child(1) {
-                    background-color: var(--secondary-color) !important;
-                }
+                &:nth-child(2) {
+                    scale: 1.02;
+                    -o-font-smoothing: antialiased;
+                    text-rendering: optimizeSpeed;
+                    -moz-font-smoothing: antialiased;
 
+                    @media (max-width: 768px) {
+                        scale: 1 !important;
+                    }
+                }
 
                 .feature_top_container {
                     display: flex;
@@ -60,6 +76,7 @@
                     gap: 10px;
                     margin-top: 1em;
                     flex-direction: column;
+                    text-align: start !important;
 
                     h4 {
                         font-size: 20px;
@@ -70,6 +87,7 @@
                         font-size: 13px;
                         line-height: 1.5;
                         font-weight: 400;
+                        text-align: inherit;
                     }
                 }
             }

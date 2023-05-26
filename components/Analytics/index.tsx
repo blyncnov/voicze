@@ -15,16 +15,16 @@ const Analytics = () => {
     <div>
       <div className={style.analytics_container}>
         <div className={style.analytics_identites}>
-          <h1>7k</h1> <BsDot style={style_icon} />
+          <h1>7+</h1> <BsDot style={style_icon} />
           <p>Users</p>
         </div>
         <div className={style.analytics_identites}>
-          <h1>40</h1>
+          <h1>10+</h1>
           <BsDot style={style_icon} />
           <p> Profile</p>
         </div>
         <div className={style.analytics_identites}>
-          <h1>1000</h1>
+          <h1>80+</h1>
           <p>
             <BsDot style={style_icon} />
             Invoices
@@ -36,3 +36,4 @@ const Analytics = () => {
 };
 
 export default Analytics;
+  

@@ -57,7 +57,7 @@ a:visited {
     width: 100%;
     background-color: var(--white);
     min-height: 100vh;
-    border-right: 1px solid rgba(55, 49, 49, 0.053);
+    border-right: 1px solid rgba(55, 49, 49, 0.077);
     color: var(--white) !important;
     border-radius: 0 0.5px .5px 0;
     transition: left .5s ease-out;
@@ -172,7 +172,7 @@ a:visited {
     gap: 15px;
     overflow: hidden;
     align-items: center;
-    background-color: rgba(160, 111, 69, 0.158) !important;
+    border-right: 1px solid rgba(55, 49, 49, 0.077) !important;
     border-radius: 5px;
     cursor: pointer;
     justify-content: center !important;

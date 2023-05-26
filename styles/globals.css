@@ -28,7 +28,7 @@ body {
   width: 100%;
   position: relative;
   min-height: 80vh;
-  background-image: linear-gradient(to bottom, #e8f7f8, #fff, #fff);
+  background-image: linear-gradient(to bottom, #e8f7f8, #fff, #fff, #fff);
 }
 
 #container {

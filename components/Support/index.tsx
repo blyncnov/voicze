@@ -1,4 +1,8 @@
 import React from "react";
+import Image from "next/image";
+
+// Voicze Illustration SVG
+import SvgImage from "@/public/illustrations/illus3.svg";
 
 // Support Style
 import style from "./support.module.scss";
@@ -9,32 +13,25 @@ const Support = () => {
       <div id="container">
         <div className={style.support_section}>
           <div className={style.support_container}>
-            <div className={style.support_text_holder}>
-              <h2>Streamline your invoicing process Today!</h2>
-              <br />
-              <p>
-                With our user-friendly interface and intuitive features,
-                creating professional invoices has never been easier. Voicze
-                will generate a polished invoice ready to be sent. You can
-                customize the design, add your branding elements, and even
-                include payment options for your clients convenience
-              </p>
-              <br />
-              <a href="mailto:getvoicze@gmail.com?subject = Make Enquiry">
-                <button>Our Support Team</button>
-              </a>
-              <br />
-              <br />
-            </div>
+            <Image src={SvgImage} alt="hero_image_showcase" />
             <form action="POST" className={style.support_form}>
-              <h2>Make Your Enquiries!</h2>
+              <div className={style.support_text_holder}>
+                <h2>Make Your Enquiries!</h2>
+                <br />
+                <p>
+                  Voicze will generate a polished invoice ready to be sent. You
+                  can customize the design, add your branding elements, and even
+                  include payment options for your clients convenience
+                </p>
+              </div>
+
               <div className={style.grouped_data}>
                 <label htmlFor="full_name">Full Name</label>
                 <input
                   type="text"
                   name="full_name"
                   className={style.input}
-                  placeholder="First name"
+                  placeholder="Full name"
                 />
               </div>
               <div className={style.grouped_data}>

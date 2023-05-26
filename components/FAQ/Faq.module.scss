@@ -6,16 +6,21 @@
     margin: 0 auto;
     transition: all 1s ease-in-out;
 
+
     .faq_top_container {
         color: var(--primary-color) !important;
         padding: 20px 0;
+        text-align: center !important;
 
         h1 {
-            font-size: calc(var(--heading-size) - 5pt);
+            font-size: calc(var(--heading-size));
+            text-align: center !important;
         }
 
         p {
             margin: .4em 0;
+            font-size: calc(var(--description-size));
+            text-align: center;
         }
     }
 
