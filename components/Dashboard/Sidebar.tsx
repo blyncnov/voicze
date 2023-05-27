@@ -18,6 +18,7 @@ import { AiOutlinePoweroff } from "react-icons/ai";
 import { HiOutlineIdentification } from "react-icons/hi";
 import { VscReferences } from "react-icons/vsc";
 import { FcBusiness } from "react-icons/fc";
+import LabelTag from "../Label";
 
 // Icon Style
 const Iconstyle = {

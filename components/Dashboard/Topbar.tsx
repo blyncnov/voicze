@@ -29,8 +29,10 @@ const Topbar = () => {
         <div className="dashboard_topBar_flex">
           <div className="dashboard_topBar_title" onClick={Clickhandler}>
             <div className="hambuger_icon">
-              {/* <FaBars style={Iconstyle} /> */}
-              <h2>Admin Dashboard</h2>
+              <FaBars style={Iconstyle} />
+            </div>
+            <div className="dashboard_user_business_name">
+              <h2>Ocyon&apos;s Faucet</h2>
             </div>
           </div>
           <div className="dashboard_topBar_left">

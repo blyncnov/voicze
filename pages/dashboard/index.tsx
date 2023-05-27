@@ -4,7 +4,6 @@ import React from "react";
 import { CgCalendarDue } from "react-icons/cg";
 import { MdPendingActions, MdOutlineVerifiedUser } from "react-icons/md";
 import { VscArchive } from "react-icons/vsc";
-import { GoPlus } from "react-icons/go";
 
 // Icon Style
 const IconCardStyle = {
