@@ -1,9 +1,13 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
 // React Icon
 import { CgCalendarDue } from "react-icons/cg";
 import { MdPendingActions, MdOutlineVerifiedUser } from "react-icons/md";
 import { VscArchive } from "react-icons/vsc";
+
+// Chart
+import BarChart from "@/components/Dashboard/Utils/BarChart";
 
 // Icon Style
 const IconCardStyle = {
@@ -17,7 +21,7 @@ export default function Dashboard() {
       <header className="dashboard_special_container">
         <div className="dashboard_create_invoice_header">
           <div>
-            <h2>Hi, Blyncnov!</h2>
+            <h2 className="dashboard_greeting_text">Hi, Blyncnov!</h2>
             <p>Welcome back </p>
           </div>
           <button className="dashboard_create_invoice_button">
@@ -28,7 +32,7 @@ export default function Dashboard() {
       <br />
       <section className="dashboard_special_container">
         <div>
-          <h2>Invoice Total Analytics!</h2>
+          <h2 className="dashboard_title">Invoice Analytics!</h2>
         </div>
         <div className="dashboard_invoice_grid">
           <QuickAnalytic
@@ -55,7 +59,8 @@ export default function Dashboard() {
       </section>
       <br />
       <section className="dashboard_special_container">
-        <h2>Analytic Data Showcase</h2>
+        <h2 className="dashboard_title">Analytic Chart</h2>
+        <BarChart />
       </section>
     </>
   );
