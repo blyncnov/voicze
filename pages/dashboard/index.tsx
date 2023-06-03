@@ -18,6 +18,7 @@ const IconCardStyle = {
 export default function Dashboard() {
   return (
     <>
+      <br />
       <header className="dashboard_special_container">
         <div className="dashboard_create_invoice_header">
           <div>
@@ -58,7 +59,7 @@ export default function Dashboard() {
         </div>
       </section>
       <br />
-      <section className="dashboard_special_container">
+      <section className="dashboard_special_container" id="gradient">
         <h2 className="dashboard_title">Analytic Chart</h2>
         <BarChart />
       </section>

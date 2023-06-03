@@ -160,7 +160,6 @@ input:-webkit-autofill {
   }
 }
 
-
 .dashboard_special_container {
   width: 100%;
   padding: 1.5em 1em;
@@ -168,4 +167,9 @@ input:-webkit-autofill {
   border: 1px;
   background-color: var(--white);
   border: 1px solid rgba(240, 233, 233, 0.531);
+}
+
+
+#gradient {
+  background-image: linear-gradient(to left, #e8f7f8, #fff, #fff) !important;
 }

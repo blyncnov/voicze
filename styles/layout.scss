@@ -19,7 +19,7 @@
     width: 100%;
     overflow: scroll;
     padding: 0 .5em;
-    background-color: white;
+    background-color: rgb(249, 249, 249);
     height: calc(100vh - 70px);
     min-height: calc(100vh - 70px);
     max-height: calc(100vh - 70px);
@@ -53,15 +53,16 @@ a:visited {
 
 // SIDEBAR LAYOUT STYLE
 .dashboard_sideBar {
-    z-index: 999999999;
     width: 100%;
-    background-color: var(--white);
     min-height: 100vh;
-    border-right: 1px solid rgba(55, 49, 49, 0.077);
+    z-index: 99999999999;
+    transition: left .5s ease-out;
     color: var(--white) !important;
     border-radius: 0 0.5px .5px 0;
-    transition: left .5s ease-out;
-    z-index: 99999999999;
+    background-color: var(--white);
+    border-right: 1px solid rgba(55, 49, 49, 0.077);
+    background-image: linear-gradient(to top, #e8f7f8, #fff);
+
 
     @media (max-width: 800px) {
         position: absolute;
@@ -76,6 +77,11 @@ a:visited {
     color: #333;
     text-transform: uppercase;
     font-size: 13px !important;
+
+    li {
+        color: rgb(0, 0, 0) !important;
+        font-weight: 900 !important;
+    }
 }
 
 .active {
@@ -212,7 +218,6 @@ a:visited {
 
 
 // TOBAR LAYOUT STYLE
-
 .dashboard_topBar {
     width: 100%;
     height: 70px;
@@ -221,7 +226,6 @@ a:visited {
     overflow: hidden;
     display: flex;
     align-items: center;
-    // background-color: var(--header-color);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 
     .dashboard_topBar_flex {

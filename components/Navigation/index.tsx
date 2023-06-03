@@ -61,11 +61,7 @@ const Naviagtion = () => {
 
   return (
     <>
-      <nav
-        id={
-          scrollY ? `${style.nav}` : `${style.nav} ${style.nav__scroll__drop}`
-        }
-      >
+      <nav id={!scrollY ? `${style.nav}` : `${style.nav__scroll__drop}`}>
         <div className={style.container}>
           <div id="container">
             <div className={style.navbar_container}>
