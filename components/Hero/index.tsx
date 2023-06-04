@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+
+// Voicze Config
+import { voicze_config } from "../../axios.config";
 
 // Voicze Illustration SVG
 import SvgImage from "@/public/illustrations/illus4.svg";
@@ -12,12 +15,35 @@ import Partner from "@/components/Analytics";
 import style from "./Hero.module.scss";
 
 const Hero = () => {
+  const [waitlistCount, setWaitListCount] = useState(0);
   const router = useRouter();
   const [isWaitList] = useState(true);
 
+  useEffect(() => {
+    voicze_config.get("waitlist").then((waitlist) => {
+      // Number of People who are on the waitlist
+      setWaitListCount(waitlist.data.length);
+    });
+  }, [waitlistCount]);
+
   // Join Waitlist Function
-  const onhandleJoinWaitListButton = () => {
-    router.push("https://forms.gle/zJxqxqw9aSpmx5SF6");
+  const onJoinWaitListHandler = (e: any) => {
+    e.preventDefault();
+
+    // Email from body
+    const email = e.target.email.value;
+
+    voicze_config
+      .post("join-waitlist", { email })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    // Clear Value
+    e.target.email.value = "";
   };
 
   return (
@@ -40,18 +66,20 @@ const Hero = () => {
               <div className={style.cto_action}>
                 <>
                   {/* {* FORM - TRY FOR FREE*} */}
-                  <form method="GET" action="/waitlist">
+                  <form
+                    method="GET"
+                    action="/waitlist"
+                    onSubmit={onJoinWaitListHandler}
+                  >
                     <div className={style.join_waitlist}>
                       <input
                         type="email"
                         placeholder="Enter your email..."
                         name="email"
+                        onChange={(e) => e.target.value}
                         required
                       />
-                      <button
-                        type="submit"
-                        onClick={onhandleJoinWaitListButton}
-                      >
+                      <button type="submit">
                         {isWaitList ? "Join Waitlist" : "Try for free"}
                       </button>
                     </div>
@@ -65,7 +93,7 @@ const Hero = () => {
                   {/* {* FORM - ENDS*} */}
                 </>
               </div>
-              <Partner />
+              <Partner waitlistCount={waitlistCount} />
             </div>
             <div className={style.hero_image_illustration}>
               <Image src={SvgImage} alt="hero_image_showcase" />

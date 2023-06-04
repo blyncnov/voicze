@@ -41,8 +41,6 @@ const Naviagtion = () => {
   }, []);
 
   useEffect(() => {
-    console.log(scrollY);
-
     //add eventlistener to window
     window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -119,7 +117,7 @@ const Naviagtion = () => {
                 </Link>
                 <Link href="/waitlist">
                   <button className={style.btn} id={style.primary}>
-                    Join waitlist
+                    Quick Survey
                   </button>
                 </Link>
               </div>

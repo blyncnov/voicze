@@ -10,13 +10,13 @@ const style_icon = {
   width: "auto",
 };
 
-const Analytics = () => {
+const Analytics = ({ waitlistCount }: any) => {
   return (
     <div>
       <div className={style.analytics_container}>
         <div className={style.analytics_identites}>
-          <h1>7+</h1> <BsDot style={style_icon} />
-          <p>Users</p>
+          <h1> {waitlistCount}+</h1> <BsDot style={style_icon} />
+          <p>Waitlist</p>
         </div>
         <div className={style.analytics_identites}>
           <h1>10+</h1>
@@ -36,4 +36,3 @@ const Analytics = () => {
 };
 
 export default Analytics;
-  
