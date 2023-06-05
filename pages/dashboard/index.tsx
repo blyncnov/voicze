@@ -59,7 +59,7 @@ export default function Dashboard() {
         </div>
       </section>
       <br />
-      <section className="dashboard_special_container" id="gradient">
+      <section className="dashboard_special_container">
         <h2 className="dashboard_title">Analytic Chart</h2>
         <BarChart />
       </section>

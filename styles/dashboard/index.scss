@@ -14,8 +14,10 @@
 
         .dashboard_create_invoice_button {
             font-weight: 500;
-            color: black !important;
-            background-color: var(--secondary-color-100) !important;
+            padding: 10px 1em !important;
+            color: white !important;
+            border-radius: 3px !important;
+            background-color: #000000 !important;
             border: 1px solid rgba(51, 51, 51, 0.08) !important;
             box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 4px 0px inset !important;
 
@@ -43,10 +45,10 @@
         }
     }
 
-
     .dashboard_invoice_grid {
         display: grid;
         gap: 10px;
+        margin-top: 1em;
         align-items: center;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
@@ -55,13 +57,15 @@
             gap: 15px;
             align-items: center;
             grid-template-columns: auto 1fr;
-            padding: 1em 0;
+            padding: 1em;
+            background-color: rgba(204, 204, 204, 0.159);
+            border-radius: 3px;
 
             .quick_analytic_column {
                 .quick_analytic_icon {
                     padding: 1em 1em;
                     border-radius: 4px;
-                    background-color: var(--secondary-color-100);
+                    background-color: rgba(198, 204, 204, 0.178);
                     box-shadow: 0 1px 5px 0 rgba(248, 253, 253, 0.095);
                 }
 
@@ -75,5 +79,9 @@
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
         }
+    }
+
+    @media (max-width: 768px) {
+        padding: 1em !important;
     }
 }

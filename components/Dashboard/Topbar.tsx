@@ -32,7 +32,7 @@ const Topbar = () => {
               <FaBars style={Iconstyle} />
             </div>
             <div className="dashboard_user_business_name">
-              <h2>Ocyon&apos;s Faucet</h2>
+              <h2>Angelmo&apos;s Collections</h2>
             </div>
           </div>
           <div className="dashboard_topBar_left">
