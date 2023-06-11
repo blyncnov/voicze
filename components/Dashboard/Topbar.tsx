@@ -41,9 +41,9 @@ const Topbar = () => {
                 <IoNotificationsSharp style={Iconstyle} />
                 <div className="dashboard_notification_counter">0</div>
               </div>
-              {/* <div className="dashboard_user_photo">
+              <div className="dashboard_user_photo">
                 <FaUserTie />
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
