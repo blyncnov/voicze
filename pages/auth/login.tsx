@@ -4,7 +4,6 @@ import Link from "next/link";
 // React icons
 import { FcGoogle } from "react-icons/fc";
 
-
 // Icon Style
 const IconCardStyle = {
   fontSize: "1.5em",

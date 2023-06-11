@@ -45,7 +45,6 @@
 }
 
 .left_items {
-    gap: 10%;
     display: flex;
     width: 100%;
     align-items: center;
@@ -66,6 +65,7 @@
 
             img {
                 margin-left: -15px;
+                margin-top: -10px;
                 width: 150px;
                 height: auto;
                 object-fit: cover;

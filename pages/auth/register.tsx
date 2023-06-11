@@ -93,15 +93,17 @@ const Register = () => {
                   <span>Terms of Service</span> and <span>Privacy Policy.</span>
                 </li>
               </form>
-              <div className="another_login_option">
-                <h2 style={{ textAlign: "center" }}>COMING SOON 😊</h2>
-              </div>
-              <div className="social_media_login_option">
-                <div className="social_btn">
-                  <button id="google">
-                    <FcGoogle style={IconCardStyle} />
-                    <span>Continue with Google</span>
-                  </button>
+              <div>
+                <div className="another_login_option">
+                  <h2 style={{ textAlign: "center" }}>COMING SOON 😊</h2>
+                </div>
+                <div className="social_media_login_option">
+                  <div className="social_btn">
+                    <button id="google">
+                      <FcGoogle style={IconCardStyle} />
+                      <span>Continue with Google</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

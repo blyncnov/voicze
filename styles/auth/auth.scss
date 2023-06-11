@@ -12,7 +12,7 @@
         height: 100%;
         min-height: 100vh;
         display: grid;
-        grid-template-columns: 1fr 550px;
+        grid-template-columns: 400px 1fr;
 
         @media (max-width: 800px) {
             grid-template-columns: 1fr;
@@ -20,11 +20,11 @@
 
         .auth_grid_column {
             width: 100%;
+            max-width: 550px !important;
             border-radius: 2px;
             padding: 1em;
             line-height: 1.5;
-            background-color: white;
-
+            margin: 0 auto;
 
             h1 {
                 font-size: 30pt;
@@ -45,12 +45,16 @@
             &:nth-child(1) {
                 display: flex;
                 gap: 20px;
-                padding: 6em;
+                padding: 1em 2em;
                 flex-direction: column;
                 justify-content: center;
                 color: #ffffff !important;
                 border-radius: 0;
                 background-color: var(--primary-color);
+                background-image: url("../../public/rocket1.avif");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top;
 
                 @media (max-width: 800px) {
                     display: none;
@@ -58,8 +62,8 @@
             }
 
             &:nth-child(2) {
-                max-width: 550px !important;
                 padding: 4em 2em;
+
 
                 h1 {
                     font-size: 20pt;
@@ -105,7 +109,7 @@
         }
 
         @media (max-width: 900px) {
-            padding: 1em;
+
             border-radius: 5px;
         }
 

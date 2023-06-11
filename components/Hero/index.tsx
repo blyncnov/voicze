@@ -20,10 +20,18 @@ const Hero = () => {
   const [isWaitList] = useState(true);
 
   useEffect(() => {
+    //create a controller
+    let controller = new AbortController();
+
     voicze_config.get("waitlist").then((waitlist) => {
       // Number of People who are on the waitlist
       setWaitListCount(waitlist.data.length);
     });
+
+    return () => {
+      // Cleanup
+      controller?.abort();
+    };
   }, [waitlistCount]);
 
   // Join Waitlist Function
@@ -96,7 +104,7 @@ const Hero = () => {
               <Partner waitlistCount={waitlistCount} />
             </div>
             <div className={style.hero_image_illustration}>
-              <Image src={SvgImage} alt="hero_image_showcase" />
+              <Image src={SvgImage} alt="hero_image_showcase" priority={true} />
               <div className={style.floating_banner}>
                 <p>
                   Simplify, Create, Promote: Streamline Your Invoices, Boost

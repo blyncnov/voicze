@@ -13,15 +13,13 @@ const Support = () => {
       <div id="container">
         <div className={style.support_section}>
           <div className={style.support_container}>
-            <Image src={SvgImage} alt="hero_image_showcase" />
+            <Image src={SvgImage} alt="hero_image_showcase" priority={true} />
             <form action="POST" className={style.support_form}>
               <div className={style.support_text_holder}>
                 <h2>Make Your Enquiries!</h2>
-                <br />
                 <p>
-                  Voicze will generate a polished invoice ready to be sent. You
-                  can customize the design, add your branding elements, and even
-                  include payment options for your clients convenience
+                  We would love to hear from you if you have any questions
+                  concerning our platform.
                 </p>
               </div>
 
@@ -40,7 +38,7 @@ const Support = () => {
                   name="message"
                   className={style.input}
                   lang="en"
-                  placeholder="Enter your Message/Enquiry "
+                  placeholder="Enter your Message "
                 />
               </div>
               <div className={style.support_button}>
