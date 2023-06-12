@@ -71,22 +71,22 @@ const Footer = () => {
                 </div>
                 <div className={style.column_flex_details}>
                   <Link href="/">
-                    <p>Pricing</p>
-                  </Link>
-                </div>
-                <div className={style.column_flex_details}>
-                  <Link href="/">
-                    <p>Showcase</p>
-                  </Link>
-                </div>
-                <div className={style.column_flex_details}>
-                  <Link href="/">
-                    <p>Extensions</p>
-                  </Link>
-                </div>
-                <div className={style.column_flex_details}>
-                  <Link href="/">
                     <p>Collaboration</p>
+                  </Link>
+                </div>
+                <div className={style.column_flex_details}>
+                  <Link href="/">
+                    <p>Quick Survey</p>
+                  </Link>
+                </div>
+                <div className={style.column_flex_details}>
+                  <Link href="/">
+                    <p>Business Cards</p>
+                  </Link>
+                </div>
+                <div className={style.column_flex_details}>
+                  <Link href="/">
+                    <p>Invoice Generator</p>
                   </Link>
                 </div>
               </div>

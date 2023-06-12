@@ -30,23 +30,6 @@
     max-height: calc(100vh - 70px);
 }
 
-a {
-    img {
-        max-width: 150px !important;
-        margin-left: -20px;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-        filter: brightness(0%);
-    }
-
-    h2 {
-        display: flex !important;
-        gap: 1px;
-        align-items: center !important;
-        justify-content: flex-start !important;
-    }
-}
-
 a,
 a:visited {
     text-decoration: none;
@@ -61,14 +44,32 @@ a:visited {
 .dashboard_sideBar {
     width: 100%;
     min-height: 100vh;
-    padding: 0;
+    padding: 0 .3em;
     z-index: 99999999999;
     transition: left .5s ease-out;
     color: var(--white) !important;
     border-radius: 0 0.5px .5px 0;
     background-color: var(--white);
-    border-right: 1px solid rgba(55, 49, 49, 0.038);
+    border-right: 1px solid rgba(55, 49, 49, 0.074);
     background-color: white !important;
+
+
+    a {
+        img {
+            max-width: 150px !important;
+            margin-left: -20px;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            filter: brightness(0%);
+        }
+
+        h2 {
+            display: flex !important;
+            gap: 1px;
+            align-items: center !important;
+            justify-content: flex-start !important;
+        }
+    }
 
     @media (max-width: 800px) {
         position: absolute;

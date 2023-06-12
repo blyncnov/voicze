@@ -85,12 +85,6 @@ const Sidebar = () => {
                 <li>Contacts</li>
               </div>
             </Link>
-            <Link href="/invoices" onClick={CloseSidebar}>
-              <div className="dashboard_flex_item">
-                <MdHistory style={Iconstyle} />
-                <li>Quick Survey</li>
-              </div>
-            </Link>
             <div className="sidebar_quicklinks_summary">
               <li>Generate</li>
               <BsUsbCFill />
@@ -105,6 +99,12 @@ const Sidebar = () => {
               <div className="dashboard_flex_item">
                 <FcBusiness style={Iconstyle} />
                 <li>Business ID</li>
+              </div>
+            </Link>
+            <Link href="/invoices" onClick={CloseSidebar}>
+              <div className="dashboard_flex_item">
+                <MdHistory style={Iconstyle} />
+                <li>Quick Survey</li>
               </div>
             </Link>
             <div className="sidebar_quicklinks_summary">

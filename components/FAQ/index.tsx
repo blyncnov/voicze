@@ -45,7 +45,7 @@ const FAQTab = ({ data }: any) => {
               : `${style.show_tab}  `
           }
         >
-          <p className={style.tab_answer}>{data.answer}</p>
+          <p className={style.tab_answer}> - {data.answer}</p>
         </div>
       </div>
     </div>

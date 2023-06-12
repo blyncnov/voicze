@@ -12,7 +12,7 @@ import BarChart from "@/components/Dashboard/Utils/BarChart";
 // Icon Style
 const IconCardStyle = {
   color: "black",
-  fontSize: "1.5em",
+  fontSize: "2em",
 };
 
 export default function Dashboard() {
