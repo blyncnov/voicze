@@ -15,9 +15,8 @@
     grid-template-columns: 1fr;
     padding: 0 1em;
 
-
     @media (max-width: 800px) {
-        padding: 0 !important;
+        padding: 0 .5em !important;
     }
 }
 
@@ -75,12 +74,12 @@ a:visited {
         position: absolute;
         top: 0;
         left: 0;
-        width: 270px !important;
+        width: 250px !important;
     }
 }
 
 .sidebar_quicklinks_summary {
-    padding: 1.2em 0;
+    padding: .7em 0;
     color: #333;
     text-transform: uppercase;
     font-size: 13px !important;
