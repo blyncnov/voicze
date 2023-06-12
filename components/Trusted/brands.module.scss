@@ -14,12 +14,13 @@
 
     h1 {
         text-transform: capitalize;
+        font-weight: 500;
     }
-
 
     .brands_identites {
         display: flex;
         gap: 30px;
+        padding: 1em 0;
         align-items: center;
         justify-content: space-between;
         overflow-x: scroll;

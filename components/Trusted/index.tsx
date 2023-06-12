@@ -23,8 +23,9 @@ const Brands = () => {
       <div id="container">
         <div className={style.brands_container}>
           <div>
-            <h1>Trusted by 7+ customers</h1>
-            <p>Become one of our trusted user today!</p>
+            <h1>
+              Join <b>40,000+</b> entrepreneur who use our invoice generator{" "}
+            </h1>
           </div>
           <div className={style.brands_identites}>
             <div className={style.brand}>

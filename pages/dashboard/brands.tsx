@@ -5,3 +5,7 @@ const Brands = () => {
 };
 
 export default Brands;
+
+Brands.getLayout = function getLayout(page: any) {
+  return page;
+};

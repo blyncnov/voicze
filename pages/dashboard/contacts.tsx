@@ -5,3 +5,7 @@ const Contacts = () => {
 };
 
 export default Contacts;
+
+Contacts.getLayout = function getLayout(page: any) {
+  return page;
+};

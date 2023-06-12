@@ -5,3 +5,7 @@ const EventCard = () => {
 };
 
 export default EventCard;
+
+EventCard.getLayout = function getLayout(page: any) {
+  return page;
+};

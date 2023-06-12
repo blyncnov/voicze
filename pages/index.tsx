@@ -4,6 +4,7 @@ import Head from "next/head";
 // => Componentss
 import Naviagtion from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import Trusted from "@/components/Trusted";
 import Feature from "@/components/Feature";
 import FAQ from "@/components/FAQ";
 import Support from "@/components/Support";
@@ -33,6 +34,8 @@ export default function Home() {
         <Hero />
       </section>
       <section>
+        {/* Trusted component */}
+        <Trusted />
         {/* Feature component */}
         <Feature />
         {/* FAQ component */}

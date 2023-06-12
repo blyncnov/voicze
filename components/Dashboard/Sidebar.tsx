@@ -73,13 +73,13 @@ const Sidebar = () => {
               <li> Services</li>
               <BsUsbCFill />
             </div>
-            <Link href="/traffic_usage" onClick={CloseSidebar}>
+            <Link href="/dashboard/invoice" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <GiTrafficLightsReadyToGo style={Iconstyle} />
                 <li>Invoices</li>
               </div>
             </Link>
-            <Link href="/fund_wallet" onClick={CloseSidebar}>
+            <Link href="/dashboard/contacts" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <RiExchangeDollarFill style={Iconstyle} />
                 <li>Contacts</li>
@@ -89,19 +89,22 @@ const Sidebar = () => {
               <li>Generate</li>
               <BsUsbCFill />
             </div>
-            <Link href="/invoices" onClick={CloseSidebar}>
+            <Link href="/dashboard/generate/event_card" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <HiOutlineIdentification style={Iconstyle} />
                 <li>Event Card</li>
               </div>
             </Link>
-            <Link href="/invoices" onClick={CloseSidebar}>
+            <Link
+              href="/dashboard/generate/business_card"
+              onClick={CloseSidebar}
+            >
               <div className="dashboard_flex_item">
                 <FcBusiness style={Iconstyle} />
                 <li>Business ID</li>
               </div>
             </Link>
-            <Link href="/invoices" onClick={CloseSidebar}>
+            <Link href="/dashboard/survey" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <MdHistory style={Iconstyle} />
                 <li>Quick Survey</li>
@@ -111,13 +114,13 @@ const Sidebar = () => {
               <li>preference</li>
               <BsUsbCFill />
             </div>
-            <Link href="/settings" onClick={CloseSidebar}>
+            <Link href="/dashboard/settings/profile" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <RiListSettingsFill style={Iconstyle} />
                 <li>My Profile</li>
               </div>
             </Link>
-            <Link href="/settings" onClick={CloseSidebar}>
+            <Link href="/dashboard/settings/referrals" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <VscReferences style={Iconstyle} />
                 <li>My Referrals</li>

@@ -5,3 +5,7 @@ const Referrals = () => {
 };
 
 export default Referrals;
+
+Referrals.getLayout = function getLayout(page: any) {
+  return page;
+};

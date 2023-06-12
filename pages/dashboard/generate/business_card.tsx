@@ -5,3 +5,8 @@ const BusinessCard = () => {
 };
 
 export default BusinessCard;
+
+
+BusinessCard.getLayout = function getLayout(page: any) {
+  return page;
+};
