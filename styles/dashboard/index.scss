@@ -4,7 +4,7 @@
     line-height: 1.5;
     border: 1px;
     background-color: var(--white);
-    border: 1px solid rgba(240, 233, 233, 0.531);
+    background-color: rgba(204, 204, 204, 0.12);
 
     .dashboard_create_invoice_header {
         width: 100%;
@@ -14,7 +14,7 @@
 
         .dashboard_create_invoice_button {
             font-weight: 500;
-            padding: 10px 1em !important;
+            padding: 12px 1em !important;
             color: white !important;
             border-radius: 3px !important;
             background-color: #000000 !important;
@@ -65,7 +65,7 @@
                 .quick_analytic_icon {
                     padding: 1em 1em;
                     border-radius: 4px;
-                    background-color: rgba(198, 204, 204, 0.178);
+                    // background-color: rgba(198, 204, 204, 0.178);
                     box-shadow: 0 1px 5px 0 rgba(248, 253, 253, 0.095);
                 }
 

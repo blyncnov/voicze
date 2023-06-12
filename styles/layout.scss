@@ -13,23 +13,31 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
+    padding: 0 1em;
+
+
+    @media (max-width: 800px) {
+        padding: 0 !important;
+    }
 }
 
 .main_content {
     width: 100%;
     overflow: scroll;
     padding: 0 .5em;
-    background-color: rgb(249, 249, 249);
+    background-color: rgb(255, 255, 255);
     height: calc(100vh - 70px);
     min-height: calc(100vh - 70px);
     max-height: calc(100vh - 70px);
 }
 
 a {
-
     img {
         max-width: 150px !important;
         margin-left: -20px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: brightness(0%);
     }
 
     h2 {
@@ -46,7 +54,6 @@ a:visited {
     color: inherit;
 }
 
-
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -55,14 +62,14 @@ a:visited {
 .dashboard_sideBar {
     width: 100%;
     min-height: 100vh;
+    padding: 0;
     z-index: 99999999999;
     transition: left .5s ease-out;
     color: var(--white) !important;
     border-radius: 0 0.5px .5px 0;
     background-color: var(--white);
-    border-right: 1px solid rgba(55, 49, 49, 0.077);
+    border-right: 1px solid rgba(55, 49, 49, 0.038);
     background-color: white !important;
-
 
     @media (max-width: 800px) {
         position: absolute;
@@ -77,10 +84,13 @@ a:visited {
     color: #333;
     text-transform: uppercase;
     font-size: 13px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     li {
         color: rgb(0, 0, 0) !important;
-        font-weight: 900 !important;
+        font-weight: 600 !important;
     }
 }
 
@@ -98,7 +108,6 @@ a:visited {
     overflow: hidden;
     min-height: 70px;
     align-items: center;
-    border-bottom: 1px solid rgba(55, 49, 49, 0.053);
 
     .dashboard_logo {
         width: 100%;
@@ -138,18 +147,17 @@ a:visited {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: .8em 1em;
+            padding: 1em 1em;
             cursor: pointer;
             color: #373131 !important;
             transition: background-image .5s ease-in-out;
 
             &:hover {
                 color: var(--secondary-color) !important;
-                background-image:
-                    linear-gradient(to right,
-                        #c3fdfe, rgba(240, 255, 253, 0.382), rgba(240, 255, 253, 0.482));
-                padding: .8em 1em;
-                border-radius: 1px;
+                background-color: black;
+                color: #ffffff !important;
+                padding: 1em 2em 1em 1em;
+                border-radius: 3px;
                 font-weight: 700 !important;
             }
         }
@@ -157,9 +165,8 @@ a:visited {
         #dashboard_active_home {
             color: var(--black) !important;
             background-color: rgba(242, 242, 243, 0.571);
-            background-image:
-                linear-gradient(to right,
-                    #c3fdfe, #f0fffde1, #c3fdfe);
+            background: black;
+            color: #ffffff !important;
             padding: 1em 1em;
             border-radius: 5px;
         }
@@ -207,7 +214,6 @@ a:visited {
     }
 }
 
-
 .nav_icons {
     font-size: 1.5em;
 }
@@ -216,19 +222,16 @@ a:visited {
     width: 0;
 }
 
-
 // TOBAR LAYOUT STYLE
 .dashboard_topBar {
     width: 100%;
     height: 70px;
-    padding: 1em;
+    padding: 0 .4em;
     align-items: center;
     overflow: hidden;
     display: flex;
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
     background-color: white !important;
-    border-bottom: 1px solid rgba(55, 49, 49, 0.077);
 
     .dashboard_topBar_flex {
         width: 100%;
@@ -245,7 +248,7 @@ a:visited {
             .dashboard_user_photo {
                 width: 30px;
                 height: 30px;
-                background-color: var(--primary-color);
+                background-color: black;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -277,7 +280,7 @@ a:visited {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    color: var(--primary-color);
+                    color: black;
                     border: 1px solid rgba(216, 203, 203, 0.356);
                     background-color: var(--white);
                 }

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
 import { useRouter } from "next/router";
+
+import "aos/dist/aos.css";
 
 // Voicze Config
 import { voicze_config } from "../../axios.config";
@@ -19,7 +22,16 @@ const Hero = () => {
   const router = useRouter();
   const [isWaitList] = useState(true);
 
+  //AOS ANIMATION
   useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
+  // FETCH WAITLIST COUNTS
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
     //create a controller
     let controller = new AbortController();
 
@@ -61,9 +73,20 @@ const Hero = () => {
           <div className={style.hero_section_cto}>
             <div className={style.hero_text}>
               <div className={style.cto_text}>
-                <h1>Streamline invoices and amplify your brand with Voicze.</h1>
+                <h1
+                  data-aos="fade-right"
+                  data-aos-offset="300"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-duration="1000"
+                >
+                  Streamline invoices and amplify your brand with Voicze.
+                </h1>
               </div>
-              <div className={style.cto_desc}>
+              <div
+                className={style.cto_desc}
+                data-aos="zoom-in"
+                data-aos-duration="500"
+              >
                 <p>
                   The ultimate platform for business professionals to
                   effortlessly create invoices and effectively promote their
@@ -71,7 +94,7 @@ const Hero = () => {
                   process and boost your marketing efforts.
                 </p>
               </div>
-              <div className={style.cto_action}>
+              <div className={style.cto_action} data-aos="zoom-in">
                 <>
                   {/* {* FORM - TRY FOR FREE*} */}
                   <form
@@ -103,9 +126,9 @@ const Hero = () => {
               </div>
               <Partner waitlistCount={waitlistCount} />
             </div>
-            <div className={style.hero_image_illustration}>
+            <div className={style.hero_image_illustration} data-aos="flip-left">
               <Image src={SvgImage} alt="hero_image_showcase" priority={true} />
-              <div className={style.floating_banner}>
+              <div className={style.floating_banner} data-aos="flip-up">
                 <p>
                   Simplify, Create, Promote: Streamline Your Invoices, Boost
                   Your Business.
