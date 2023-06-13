@@ -10,18 +10,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { CLOSE } from "../../redux/actions/action";
 
 // React Icon
-import { BiTargetLock } from "react-icons/bi";
+import { AiOutlineContacts, AiOutlinePoweroff } from "react-icons/ai";
 import { MdSpaceDashboard, MdHistory } from "react-icons/md";
-import { RiListSettingsFill, RiExchangeDollarFill } from "react-icons/ri";
-import { GiTrafficLightsReadyToGo } from "react-icons/gi";
-import { BsUsbCFill } from "react-icons/bs";
-import { HiOutlineIdentification } from "react-icons/hi";
+import { RiListSettingsFill } from "react-icons/ri";
+import { TbFileInvoice } from "react-icons/tb";
+import { BsUsbCFill, BsPatchQuestion } from "react-icons/bs";
+import { FaIdCardAlt } from "react-icons/fa";
 import { VscReferences } from "react-icons/vsc";
-import { FcBusiness } from "react-icons/fc";
+import { BiIdCard } from "react-icons/bi";
 
 // Icon Style
 const Iconstyle = {
   fontSize: "1.5em",
+  color: "#373131",
+};
+
+// Icon Style
+const IconSidestyle = {
+  opacity: "0.45",
   color: "#373131",
 };
 
@@ -71,27 +77,33 @@ const Sidebar = () => {
             <br />
             <div className="sidebar_quicklinks_summary">
               <li> Services</li>
-              <BsUsbCFill />
+              <BsUsbCFill style={IconSidestyle} />
             </div>
             <Link href="/dashboard/invoice" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
-                <GiTrafficLightsReadyToGo style={Iconstyle} />
+                <div id="sidebar__icon__style">
+                  <TbFileInvoice style={Iconstyle} />
+                </div>
                 <li>Invoices</li>
               </div>
             </Link>
             <Link href="/dashboard/contacts" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
-                <RiExchangeDollarFill style={Iconstyle} />
+                <div id="sidebar__icon__style">
+                  <AiOutlineContacts style={Iconstyle} />
+                </div>
                 <li>Contacts</li>
               </div>
             </Link>
             <div className="sidebar_quicklinks_summary">
               <li>Generate</li>
-              <BsUsbCFill />
+              <BsUsbCFill style={IconSidestyle} />
             </div>
             <Link href="/dashboard/generate/event_card" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
-                <HiOutlineIdentification style={Iconstyle} />
+                <div id="sidebar__icon__style">
+                  <FaIdCardAlt style={Iconstyle} />
+                </div>
                 <li>Event Card</li>
               </div>
             </Link>
@@ -100,41 +112,58 @@ const Sidebar = () => {
               onClick={CloseSidebar}
             >
               <div className="dashboard_flex_item">
-                <FcBusiness style={Iconstyle} />
+                <div id="sidebar__icon__style">
+                  <BiIdCard style={Iconstyle} />
+                </div>
                 <li>Business ID</li>
               </div>
             </Link>
             <Link href="/dashboard/survey" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
-                <MdHistory style={Iconstyle} />
+                <div id="sidebar__icon__style">
+                  <BsPatchQuestion style={Iconstyle} />
+                </div>
                 <li>Quick Survey</li>
               </div>
             </Link>
             <div className="sidebar_quicklinks_summary">
               <li>preference</li>
-              <BsUsbCFill />
+              <BsUsbCFill style={IconSidestyle} />
             </div>
             <Link href="/dashboard/settings/profile" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
-                <RiListSettingsFill style={Iconstyle} />
+                <div id="sidebar__icon__style">
+                  <RiListSettingsFill style={Iconstyle} />
+                </div>
                 <li>My Profile</li>
               </div>
             </Link>
             <Link href="/dashboard/settings/referrals" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
-                <VscReferences style={Iconstyle} />
+                <div id="sidebar__icon__style">
+                  <VscReferences style={Iconstyle} />
+                </div>
                 <li>My Referrals</li>
               </div>
             </Link>
-            {/* <div className="sidebar_quicklinks_summary">
+            <div className="sidebar_quicklinks_summary">
               <li>Others</li>
-            </div> */}
+            </div>
+            <Link href="/dashboard/settings/profile" onClick={CloseSidebar}>
+              <div className="dashboard_flex_item">
+                <div id="sidebar__icon__style">
+                  <AiOutlinePoweroff style={Iconstyle} />
+                </div>
+                <li>Log Out</li>
+              </div>
+            </Link>
             {/* <div
               className="dashboard_sidebar_bottom_height"
               onClick={LogOutHandler}
             >
               <div className="dashboard_link_logout">
-                <AiOutlinePoweroff style={Iconstyle} />
+                <AiOutlinePoweroff style={Iconstyle}        id="sidebar__icon__style"/>
+
                 <button>Log out</button>
               </div>
             </div> */}
