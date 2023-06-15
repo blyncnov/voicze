@@ -10,7 +10,7 @@
     background-image: linear-gradient(to top left, #e4fafb, #fff, #fff, #fff, #fff);
 
     h2 {
-        font-size: 20px;
+        font-size: calc(var(--title-size)) !important;
     }
 
     .copy_right {
@@ -18,7 +18,7 @@
         padding: 1em;
 
         p {
-            font-size: 13px;
+            font-size: 14px;
         }
     }
 
@@ -60,7 +60,8 @@
     color: var(--primary-color) !important;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    gap: 40px;
+    column-gap: 50px;
+    row-gap: 40px;
     justify-content: flex-start;
     align-items: flex-start;
 
@@ -75,8 +76,13 @@
         gap: 10px;
         flex-direction: column;
 
+        p {
+            font-size: 16px !important;
+        }
+
         .column_flex_details {
             display: block;
+            font-size: 16px !important;
 
             .social_link_grid {
                 display: flex;

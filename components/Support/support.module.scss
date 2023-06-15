@@ -52,10 +52,8 @@
         position: relative;
         background-color: var(--white);
         border-radius: 0px;
-        // padding: 2em 1em;
         display: flex;
         gap: unset !important;
-        // justify-content: center;
         align-items: flex-start;
         flex-direction: column;
 
@@ -67,12 +65,12 @@
             text-transform: uppercase;
 
             @media (max-width: 900px) {
-                font-size: 20px;
+                font-size: calc(var(--title-size)) !important;
             }
         }
 
         p {
-            font-size: 14px;
+            font-size: 16px;
         }
 
         button {
@@ -93,7 +91,6 @@
 
         .grouped_data {
             width: 100%;
-
 
             label {
                 opacity: .9;

@@ -42,6 +42,7 @@ const Feature = () => {
             </div>
           </div>
           <br />
+          <br />
           <div className={style.our_features_vision_container}>
             <div className={style.our_features_vision_grid}>
               <div

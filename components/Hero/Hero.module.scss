@@ -3,6 +3,7 @@
     width: 100%;
     max-width: 90%;
     margin: 0 auto;
+    font-size: var(--description-size);
     padding: 70px 0 50px 0;
 
     .hero_section_cto {
@@ -10,9 +11,9 @@
         width: 100%;
         display: grid;
         gap: 30px;
-        grid-template-columns: 1.5fr 400px;
         justify-content: flex-start;
         color: var(--primary-color);
+        grid-template-columns: 60% 40%;
 
         .hero_text {
             position: relative;
@@ -33,8 +34,12 @@
 
             .cto_desc {
                 width: auto;
-                font-size: 16px;
+                font-size: var(--description-size);
                 opacity: .95;
+
+                @media (max-width: 768px) {
+                    font-size: calc(var(--description-size) - 2pt);
+                }
             }
 
             .cto_action {
@@ -66,6 +71,7 @@
 
                     li {
                         margin: 1em 0;
+                        font-size: calc(var(--description-size) - 2pt);
                     }
                 }
 
@@ -95,7 +101,7 @@
         img {
             width: 100% !important;
             max-width: 100% !important;
-            object-fit: cover !important;
+            object-fit: contain !important;
         }
 
         .floating_banner {
@@ -107,9 +113,11 @@
             border-radius: 3px;
             text-align: center;
             color: var(--primary-color);
+            line-height: 1.5;
             border: 1px solid rgba(72, 79, 88, 0.087);
             background-color: rgb(255, 255, 255);
             box-shadow: 0 3px 1px 0 rgba(37, 85, 152, 0.5);
+            font-size: 16px !important;
 
             @media (max-width: 1000px) {
                 display: none !important;

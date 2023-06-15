@@ -3,7 +3,6 @@
     color: #fff;
     background-color: #ffffff;
 
-
     .feature_container {
         position: relative;
         width: 100%;
@@ -33,8 +32,12 @@
             }
 
             p {
-                font-size: 16px;
+                font-size: calc(var(--description-size) - 1pt);
                 opacity: .8;
+
+                @media (max-width: 768px) {
+                    font-size: calc(var(--description-size) - 2pt);
+                }
             }
 
             @media(max-width:768px) {
@@ -71,10 +74,16 @@
             h4 {
                 font-size: 20px;
                 padding-bottom: .5em;
+                font-size: calc(var(--title-size));
             }
 
             li {
                 opacity: .7;
+                font-size: calc(var(--description-size) - 2pt);
+
+                @media (max-width: 768px) {
+                    font-size: calc(var(--description-size) - 4pt);
+                }
             }
 
             &:hover {

@@ -34,7 +34,9 @@ const Footer = () => {
                 </div>
                 <p>
                   Voicze is here to streamline your invoicing process and boost
-                  your marketing efforts.
+                  your marketing efforts and ensures the highest level of
+                  security for transactions, giving you and your clients peace
+                  of mind.
                 </p>
                 <br />
                 <div className={style.footer_grid_column}>

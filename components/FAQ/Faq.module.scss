@@ -6,21 +6,20 @@
     margin: 0 auto;
     transition: all 1s ease-in-out;
 
-
     .faq_top_container {
         color: var(--primary-color) !important;
         padding: 20px 0;
         text-align: center !important;
 
         h1 {
-            font-size: calc(var(--heading-size));
             text-align: center !important;
+            font-size: calc(var(--heading-size));
         }
 
         p {
             margin: .4em 0;
-            font-size: calc(var(--description-size));
             text-align: center;
+            font-size: calc(var(--description-size) - 2pt);
         }
     }
 
@@ -74,8 +73,8 @@
 
                     li {
                         color: #201f1f;
-                        font-size: 16px;
                         font-weight: 450;
+                        font-size: calc(var(--description-size) - 1pt);
                     }
                 }
             }
@@ -87,8 +86,7 @@
     }
 }
 
-
 .tab_answer {
     opacity: .8;
-    font-size: 14px;
+    font-size: calc(var(--description-size) - 4pt) !important;
 }

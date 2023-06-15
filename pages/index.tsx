@@ -35,7 +35,7 @@ export default function Home() {
       </section>
       <section>
         {/* Trusted component */}
-        <Trusted />
+        {/* <Trusted /> */}
         {/* Feature component */}
         <Feature />
         {/* FAQ component */}

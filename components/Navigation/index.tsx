@@ -32,7 +32,7 @@ const Naviagtion = () => {
   const onScroll = useCallback((event: any) => {
     const { scrollY } = window;
 
-    if (scrollY > 80) {
+    if (scrollY > 40) {
       setScrollY(true);
     } else {
       setScrollY(false);
