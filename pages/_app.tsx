@@ -46,8 +46,10 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   }
 
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
+    <>
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </>
   );
 }

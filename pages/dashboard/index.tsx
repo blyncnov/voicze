@@ -1,5 +1,4 @@
 import React from "react";
-import dynamic from "next/dynamic";
 
 // React Icon
 import { CgCalendarDue } from "react-icons/cg";

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "voicze": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -20,6 +21,7 @@
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "faker": "^6.6.6",
+    "million": "^2.4.6-beta.2",
     "next": "13.4.2",
     "postcss": "8.4.23",
     "query-string": "^8.1.0",

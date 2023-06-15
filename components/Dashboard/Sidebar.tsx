@@ -76,7 +76,7 @@ const Sidebar = () => {
             </Link>
             <br />
             <div className="sidebar_quicklinks_summary">
-              <li> Services</li>
+              <li>MY Services</li>
               <BsUsbCFill style={IconSidestyle} />
             </div>
             <Link href="/dashboard/invoice" onClick={CloseSidebar}>
@@ -127,7 +127,7 @@ const Sidebar = () => {
               </div>
             </Link>
             <div className="sidebar_quicklinks_summary">
-              <li>preference</li>
+              <li>MY preference</li>
               <BsUsbCFill style={IconSidestyle} />
             </div>
             <Link href="/dashboard/settings/profile" onClick={CloseSidebar}>
@@ -149,24 +149,12 @@ const Sidebar = () => {
             <div className="sidebar_quicklinks_summary">
               <li>Others</li>
             </div>
-            <Link href="/dashboard/settings/profile" onClick={CloseSidebar}>
-              <div className="dashboard_flex_item">
-                <div id="sidebar__icon__style">
-                  <AiOutlinePoweroff style={Iconstyle} />
-                </div>
-                <li>Log Out</li>
+            <div className="dashboard_flex_item">
+              <div id="sidebar__icon__style" onClick={LogOutHandler}>
+                <AiOutlinePoweroff style={Iconstyle} />
               </div>
-            </Link>
-            {/* <div
-              className="dashboard_sidebar_bottom_height"
-              onClick={LogOutHandler}
-            >
-              <div className="dashboard_link_logout">
-                <AiOutlinePoweroff style={Iconstyle}        id="sidebar__icon__style"/>
-
-                <button>Log out</button>
-              </div>
-            </div> */}
+              <li>Log Out</li>
+            </div>
           </ul>
         </div>
       </div>

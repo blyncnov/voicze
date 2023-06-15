@@ -4,7 +4,9 @@
     background-color: #ffffff;
     overflow: hidden;
     display: flex;
-    gap: 4em;
+    justify-content: space-between;
+    gap: 10%;
+    overflow-x: scroll !important;
 
     h1 {
         text-transform: capitalize;
@@ -15,7 +17,12 @@
         display: flex;
         gap: 5px;
         align-items: center;
-        overflow-x: scroll;
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+        }
     }
 
     @media (max-width: 768px) {

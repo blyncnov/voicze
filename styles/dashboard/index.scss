@@ -1,10 +1,9 @@
 .dashboard_special_container {
     width: 100%;
-    padding: 1.5em 1em;
+    padding: 1em 0;
     line-height: 1.5;
     border: 1px;
     background-color: var(--white);
-    background-color: rgba(204, 204, 204, 0.12);
 
     .dashboard_create_invoice_header {
         width: 100%;
@@ -14,7 +13,7 @@
 
         .dashboard_create_invoice_button {
             font-weight: 500;
-            padding: 12px 1em !important;
+            padding: 10px 1em !important;
             color: white !important;
             border-radius: 3px !important;
             background-color: #000000 !important;
@@ -87,6 +86,6 @@
     }
 
     @media (max-width: 768px) {
-        padding: 1em !important;
+        padding: 1em 0 !important;
     }
 }

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
-import { useRouter } from "next/router";
 
 import "aos/dist/aos.css";
+
+import { BsBagHeart, BsBinocularsFill } from "react-icons/bs";
 
 // Voicze Config
 import { voicze_config } from "../../axios.config";
@@ -19,7 +20,6 @@ import style from "./Hero.module.scss";
 
 const Hero = () => {
   const [waitlistCount, setWaitListCount] = useState(0);
-  const router = useRouter();
   const [isWaitList] = useState(true);
 
   //AOS ANIMATION
@@ -79,7 +79,8 @@ const Hero = () => {
                   data-aos-easing="ease-in-sine"
                   data-aos-duration="1000"
                 >
-                  Streamline invoices and amplify your brand with Voicze.
+                  Voicze <BsBinocularsFill /> create invoices and effectively
+                  promote your business <BsBagHeart />.
                 </h1>
               </div>
               <div

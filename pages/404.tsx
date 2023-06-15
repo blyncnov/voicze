@@ -1,6 +1,6 @@
 import React from "react";
 
-const ErrorPageModel = () => {
+const NotFoundErrorPage = function () {
   return (
     <div>
       <h1>You seem lost!!!</h1>
@@ -8,4 +8,4 @@ const ErrorPageModel = () => {
   );
 };
 
-export default ErrorPageModel;
+export default NotFoundErrorPage;

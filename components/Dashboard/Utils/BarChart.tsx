@@ -9,7 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Line, Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
 
 ChartJS.register(
@@ -64,8 +64,8 @@ export const data = {
     {
       label: "Montly Generated Invoice",
       data: labels.map(() => faker.number.int({ min: 0, max: 70 })),
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      borderColor: "#4AC3C6",
+      backgroundColor: "#4AC3C6",
       fill: true,
       tension: 0.3,
     },

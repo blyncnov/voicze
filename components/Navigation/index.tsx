@@ -117,7 +117,7 @@ const Naviagtion = () => {
                 </Link>
                 <Link href="/waitlist">
                   <button className={style.btn} id={style.primary}>
-                    Quick Survey
+                    Get Started
                   </button>
                 </Link>
               </div>

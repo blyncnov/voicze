@@ -11,7 +11,7 @@
         width: 100%;
         display: grid;
         gap: 20px;
-        grid-template-columns: 1.6fr 400px;
+        grid-template-columns: 1.5fr 1fr;
         justify-content: flex-start;
         color: var(--primary-color);
 
@@ -97,14 +97,16 @@
 
         img {
             width: 100% !important;
+            height: 100% !important;
+            max-height: 100% !important;
             max-width: 100% !important;
             object-fit: cover !important;
         }
 
         .floating_banner {
             position: absolute;
-            bottom: 11%;
-            left: -15%;
+            bottom: -1%;
+            left: .5%;
             width: 100%;
             padding: .5em 1em;
             border-radius: 3px;

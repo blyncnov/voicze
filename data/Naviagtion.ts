@@ -23,13 +23,13 @@ export const NavBarData: NavBarType[] = [
   },
   {
     id: 4,
-    title: "FAQ",
-    url: "#faq",
+    title: "Invoice Generator",
+    url: "/dashboard/invoice",
   },
   {
     id: 5,
-    title: "Invoice Generator",
-    url: "/dashboard/invoice",
+    title: "FAQ",
+    url: "#faq",
   },
 ];
 
