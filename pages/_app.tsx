@@ -1,6 +1,7 @@
-import type { ReactElement, ReactNode } from "react";
+import { useEffect, type ReactElement, type ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
 
 // CSS STYLES
 import "@/styles/globals.css";
@@ -32,6 +33,16 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  const router = useRouter();
+  useEffect(() => {
+    const token = "";
+
+    // Check If Token exists , Else Redirect Back to Home Page
+    if (!token) {
+      router.push("/");
+    }
+  }, [router]);
+
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout || ((page: any) => page);
 
