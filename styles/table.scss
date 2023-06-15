@@ -1,0 +1,78 @@
+// EVENT TABLE
+#dashboard_sec {
+    padding: 1em;
+    margin-top: -60px;
+}
+
+#table {
+    width: 100%;
+    max-width: calc(100vw - 280px);
+    overflow-x: auto;
+    overflow-x: auto !important;
+
+    @media (max-width: 800px) {
+        max-width: calc(100vw - 2em);
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto !important;
+    white-space: nowrap;
+    // table-layout: fixed;
+}
+
+.table td {
+    hyphens: none;
+    overflow-wrap: break-spaces !important;
+    word-break: keep-all !important;
+    break-inside: auto;
+    color: #333 !important;
+}
+
+th {
+    color: black !important;
+    overflow-x: auto;
+    background-color: #F8FBFE;
+    white-space: nowrap;
+    border-bottom: 1px solid #e0e1e3;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 1.5em 1em;
+    break-inside: auto;
+}
+
+td {
+    a {
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        color: #0f2a98 !important;
+    }
+}
+
+tr:nth-child(even) {
+    break-inside: auto;
+    // background-color: #F8FBFE;
+    border: 1px solid #2f6dcb1a !important;
+}
+
+.table-bordered {
+    border: 1px solid #2f6ecb29 !important;
+}
+
+table caption {
+    padding: .5em 0;
+}
+
+@media screen and (max-width: 767px) {
+    table caption {
+        display: none;
+    }
+}
