@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 // React Icon
 import { CgCalendarDue } from "react-icons/cg";
@@ -23,9 +24,11 @@ export default function Dashboard() {
             <h2 className="dashboard_greeting_text">Hi, Blyncnov!</h2>
             <p>Welcome back </p>
           </div>
-          <button className="dashboard_create_invoice_button">
-            Create Invoice
-          </button>
+          <Link href="dashboard/invoice/new">
+            <button className="dashboard_create_invoice_button">
+              Create Invoice
+            </button>
+          </Link>
         </div>
       </header>
       <br />

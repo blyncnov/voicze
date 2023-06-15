@@ -1,8 +1,4 @@
 // EVENT TABLE
-#dashboard_sec {
-    padding: 1em;
-    margin-top: -60px;
-}
 
 #table {
     width: 100%;
@@ -20,7 +16,6 @@ table {
     width: 100%;
     overflow-x: auto !important;
     white-space: nowrap;
-    // table-layout: fixed;
 }
 
 .table td {
@@ -59,7 +54,6 @@ td {
 
 tr:nth-child(even) {
     break-inside: auto;
-    // background-color: #F8FBFE;
     border: 1px solid #2f6dcb1a !important;
 }
 

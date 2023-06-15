@@ -1,11 +1,15 @@
 import React from "react";
 
-const New = () => {
-  return <div>New</div>;
+const CreateNewInvoice = () => {
+  return (
+    <div>
+      <h1>Create New Invoice</h1>
+    </div>
+  );
 };
 
-export default New;
+export default CreateNewInvoice;
 
-New.getLayout = function getLayout(page: any) {
+CreateNewInvoice.getLayout = function getLayout(page: any) {
   return page;
 };

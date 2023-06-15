@@ -1,7 +1,11 @@
 import React from "react";
 
 const BusinessCard = () => {
-  return <div>BusinessCard</div>;
+  return (
+    <div>
+      <h1>Business Card</h1>
+    </div>
+  );
 };
 
 export default BusinessCard;

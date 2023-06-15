@@ -1,7 +1,11 @@
 import React from "react";
 
 const EventCard = () => {
-  return <div>EventCard</div>;
+  return (
+    <div>
+      <h1>Event Card</h1>
+    </div>
+  );
 };
 
 export default EventCard;

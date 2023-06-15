@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Invoice = () => {
@@ -7,12 +8,13 @@ const Invoice = () => {
         <div className="dashboard_create_invoice_header">
           <div>
             <h1>Invoices</h1>
-            <p>List of available invoices available in database</p>
           </div>
           <div>
-            <button className="dashboard_create_invoice_button">
-              New Invoice
-            </button>
+            <Link href="invoice/new">
+              <button className="dashboard_create_invoice_button">
+                New Invoice
+              </button>
+            </Link>
           </div>
         </div>
       </header>
@@ -20,7 +22,9 @@ const Invoice = () => {
       <section className="dashboard_special_container">
         <div>
           <h2 className="dashboard_title">Total Invoice Generated!</h2>
+          <p>List of available invoices available in database</p>
         </div>
+        <br />
         <Invoice_Table />
       </section>
     </>
