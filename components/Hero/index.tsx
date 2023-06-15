@@ -80,7 +80,7 @@ const Hero = () => {
                   data-aos-duration="1000"
                 >
                   Voicze <BsBinocularsFill /> create invoices and effectively
-                  promote your business <BsBagHeart />.
+                  promote your business <BsBagHeart />
                 </h1>
               </div>
               <div
@@ -95,7 +95,7 @@ const Hero = () => {
                   process and boost your marketing efforts.
                 </p>
               </div>
-              <div className={style.cto_action} data-aos="zoom-in">
+              <div className={style.cto_action}>
                 <>
                   {/* {* FORM - TRY FOR FREE*} */}
                   <form
@@ -127,7 +127,7 @@ const Hero = () => {
               </div>
               <Partner waitlistCount={waitlistCount} />
             </div>
-            <div className={style.hero_image_illustration} data-aos="flip-left">
+            <div className={style.hero_image_illustration}>
               <Image src={SvgImage} alt="hero_image_showcase" priority={true} />
               <div className={style.floating_banner} data-aos="flip-up">
                 <p>

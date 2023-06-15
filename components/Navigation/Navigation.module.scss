@@ -1,9 +1,11 @@
 #nav {
+    position: relative;
     width: 100%;
     max-width: 100%;
     color: var(--secondary-color) !important;
     font-family: 'Source Sans 3', sans-serif;
     transition: background-color .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    z-index: 99999999999999 !important;
 }
 
 // Ignorte this rule
@@ -12,9 +14,9 @@
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    background-color: #fff !important;
+    background-color: #ffffff !important;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    z-index: 99999999999999;
+    z-index: 99999999999999 !important;
     transition: background-color .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 

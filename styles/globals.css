@@ -40,7 +40,9 @@ body {
 }
 
 section {
+  background-color: #ffffff !important;
   position: relative !important;
+  z-index: 5;
 }
 
 canvas {
@@ -48,4 +50,14 @@ canvas {
   min-width: 100% !important;
   height: 100% !important;
   min-height: 100% !important;
+}
+
+@media (min-width: 768px) {
+  footer {
+    width: 100% !important;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }

@@ -1,17 +1,16 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
+import Image from "next/image";
+import Link from "next/link";
 
 // Voicze Logo
 import MyLogo from "@/public/logo/voicze_logo.svg";
 
-// React Icons
-import { RiBarChartHorizontalLine } from "react-icons/ri";
-import { FaTimes } from "react-icons/fa";
-
 // Naviagtion Data
 import { NavBarData, PlatformName } from "../../data/Naviagtion";
+
+// React Icons
+import { FaTimes, FaBars } from "react-icons/fa";
 
 // Naviagtion Style
 import style from "./Navigation.module.scss";
@@ -126,7 +125,7 @@ const Naviagtion = () => {
                   {!isClicked ? (
                     <FaTimes style={Iconstyle} />
                   ) : (
-                    <RiBarChartHorizontalLine style={Iconstyle} />
+                    <FaBars style={Iconstyle} />
                   )}
                 </div>
               </div>

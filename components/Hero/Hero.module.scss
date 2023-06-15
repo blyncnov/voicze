@@ -3,15 +3,14 @@
     width: 100%;
     max-width: 90%;
     margin: 0 auto;
-    line-height: 1.3;
     padding: 70px 0 50px 0;
 
     .hero_section_cto {
         position: relative;
         width: 100%;
         display: grid;
-        gap: 20px;
-        grid-template-columns: 1.5fr 1fr;
+        gap: 30px;
+        grid-template-columns: 1.5fr 400px;
         justify-content: flex-start;
         color: var(--primary-color);
 
@@ -40,7 +39,6 @@
 
             .cto_action {
                 position: relative;
-                width: auto;
                 gap: 20px;
 
                 form {
@@ -91,14 +89,11 @@
         }
     }
 
-
     .hero_image_illustration {
         position: relative;
 
         img {
             width: 100% !important;
-            height: 100% !important;
-            max-height: 100% !important;
             max-width: 100% !important;
             object-fit: cover !important;
         }

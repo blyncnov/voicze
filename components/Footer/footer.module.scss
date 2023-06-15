@@ -1,14 +1,11 @@
 .footer_layout_container {
-    position: sticky;
-    bottom: 0;
     width: 100%;
     margin: 50px 0 0 0;
     padding: 20px 0;
     color: var(--primary-color);
     font-size: 15px;
-    background-color: var(--primary-color);
-    background-color: white;
     z-index: 1 !important;
+    background-color: white;
     box-shadow: rgba(20, 21, 94, 0.1) 0px 1px 3px 0px, rgba(20, 21, 94, 0.06) 0px 1px 10px 2px;
     background-image: linear-gradient(to top left, #e4fafb, #fff, #fff, #fff, #fff);
 
