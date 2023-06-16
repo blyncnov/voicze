@@ -38,11 +38,19 @@ const Loading = () => {
   }, [router.asPath, router.events, loading]);
 
   return (
-    loading && (
-      <div id={style.loading}>
-        <Image src={MyLoadingStateLogo} alt={`loading state`} priority={true} />
-      </div>
-    )
+    <>
+      {loading && (
+        <>
+          <div id={style.loading}>
+            <Image
+              src={MyLoadingStateLogo}
+              alt={`loading state`}
+              priority={true}
+            />
+          </div>
+        </>
+      )}
+    </>
   );
 };
 
