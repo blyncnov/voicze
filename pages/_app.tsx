@@ -23,6 +23,7 @@ import store from "../redux/store";
 
 // Bright-Technologies Dashboard Layout
 import DashboardLayout from "@/layout/dashboard";
+import Loading from "@/components/Loading";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -35,13 +36,13 @@ type AppPropsWithLayout = AppProps & {
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
   useEffect(() => {
-    const token = "";
+    const token = "fake";
 
     // Check If Token exists , Else Redirect Back to Home Page
     if (!token) {
       router.push("/");
     }
-  }, []);
+  });
 
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout || ((page: any) => page);
@@ -49,6 +50,8 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   if (Component.getLayout) {
     return (
       <Provider store={store}>
+        {/* Loading State Component */}
+        <Loading />
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
@@ -58,6 +61,8 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <>
+      {/* Loading State Component */}
+      <Loading />
       <Provider store={store}>
         <Component {...pageProps} />
       </Provider>

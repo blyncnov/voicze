@@ -9,7 +9,6 @@ import Feature from "@/components/Feature";
 import FAQ from "@/components/FAQ";
 import Support from "@/components/Support";
 import Footer from "@/components/Footer";
-import Loading from "@/components/Loading";
 
 export default function Home() {
   return (
@@ -47,9 +46,6 @@ export default function Home() {
         {/* Footer component*/}
         <Footer />
       </footer>
-
-      {/* Loading State Component */}
-      {/* <Loading /> */}
     </>
   );
 }
