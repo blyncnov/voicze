@@ -11,20 +11,15 @@ import { useRouter } from "next/router";
 const Loading = () => {
   const router = useRouter();
 
-  console.log(router);
-
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     const handleStart = (url: string) => {
-      url !== router.route && setLoading(true);
+      url !== router.asPath && setLoading(true);
     };
 
     const handleComplete = (url: string) => {
-      url === router.route &&
+      url === router.asPath &&
         setTimeout(() => {
-          console.log(router.route);
-          console.log(url);
-
           setLoading(false);
         }, 500);
     };
@@ -38,11 +33,11 @@ const Loading = () => {
       router.events.off("routeChangeComplete", handleComplete);
       router.events.off("routeChangeError", handleComplete);
     };
-  }, [router.route, router.events, loading]);
+  }, [router.asPath, router.events, loading]);
 
   return (
     <>
-      {loading && (
+      {false && (
         <>
           <div id={style.loading}>
             <Image
