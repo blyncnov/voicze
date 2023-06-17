@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 // React Icon
 import { CgCalendarDue } from "react-icons/cg";
 import { MdPendingActions, MdOutlineVerifiedUser } from "react-icons/md";
 import { VscArchive } from "react-icons/vsc";
-import { BsFillEyeSlashFill } from "react-icons/bs";
+import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
 
 // Chart
 import BarChart from "@/components/Dashboard/Utils/BarChart";
@@ -23,6 +23,12 @@ const ShowIconStyleEncoding = {
 };
 
 export default function Dashboard() {
+  const [isShow, setIsShow] = useState(false);
+
+  const HideToggleEye = () => {
+    setIsShow(!isShow);
+  };
+
   return (
     <>
       <header className="dashboard_special_container">
@@ -44,7 +50,13 @@ export default function Dashboard() {
         <div>
           <h2 className="dashboard_title">
             Invoice Analytics{" "}
-            <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+            <div onClick={HideToggleEye}>
+              {isShow ? (
+                <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+              ) : (
+                <BsFillEyeFill style={ShowIconStyleEncoding} />
+              )}
+            </div>
           </h2>
         </div>
         <div className="dashboard_invoice_grid">
@@ -52,21 +64,25 @@ export default function Dashboard() {
             icon={<VscArchive style={IconCardStyle} />}
             title="Total"
             count={80}
+            isShow={isShow}
           />
           <QuickAnalytic
             icon={<MdOutlineVerifiedUser style={IconCardStyle} />}
             title="Paid"
             count={77}
+            isShow={isShow}
           />
           <QuickAnalytic
             icon={<MdPendingActions style={IconCardStyle} />}
             title="Pending"
             count={2}
+            isShow={isShow}
           />
           <QuickAnalytic
             icon={<CgCalendarDue style={IconCardStyle} />}
             title="Due"
             count={1}
+            isShow={isShow}
           />
         </div>
       </section>
@@ -82,21 +98,25 @@ export default function Dashboard() {
             icon={<VscArchive style={IconCardStyle} />}
             title="Today"
             count={80}
+            isShow={isShow}
           />
           <QuickAnalytic
             icon={<MdOutlineVerifiedUser style={IconCardStyle} />}
             title="Weekly"
             count={7}
+            isShow={isShow}
           />
           <QuickAnalytic
             icon={<MdPendingActions style={IconCardStyle} />}
             title="Monthly"
             count={2}
+            isShow={isShow}
           />
           <QuickAnalytic
             icon={<CgCalendarDue style={IconCardStyle} />}
             title="Yearly"
             count={1}
+            isShow={isShow}
           />
         </div>
       </section>
@@ -119,7 +139,13 @@ export default function Dashboard() {
   );
 }
 
-const QuickAnalytic = ({ title, icon, count }: any) => {
+const QuickAnalytic = ({ title, icon, count, isShow }: any) => {
+  const [isShowBlur, setIsShowBlur] = useState(false);
+
+  const HideToggleEye = () => {
+    setIsShowBlur(isShow);
+  };
+
   return (
     <div>
       <div className="quick_analytic_grid">
@@ -129,7 +155,7 @@ const QuickAnalytic = ({ title, icon, count }: any) => {
         <div className="quick_analytic_column">
           <h1>
             <span>$</span>
-            {count}.00{" "}
+            {!isShow ? `${count}.00` : "**"}
           </h1>
           <li>
             {" "}
