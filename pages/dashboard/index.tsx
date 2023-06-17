@@ -34,7 +34,7 @@ export default function Dashboard() {
       <br />
       <section className="dashboard_special_container">
         <div>
-          <h2 className="dashboard_title">Invoice Analytics!</h2>
+          <h2 className="dashboard_title">Invoice Analytics</h2>
         </div>
         <div className="dashboard_invoice_grid">
           <QuickAnalytic
@@ -61,8 +61,42 @@ export default function Dashboard() {
       </section>
       <br />
       <section className="dashboard_special_container">
+        <div>
+          <h2 className="dashboard_title">Issued Invoices</h2>
+        </div>
+        <div className="dashboard_invoice_grid">
+          <QuickAnalytic
+            icon={<VscArchive style={IconCardStyle} />}
+            title="Today"
+            count={80}
+          />
+          <QuickAnalytic
+            icon={<MdOutlineVerifiedUser style={IconCardStyle} />}
+            title="Weekly"
+            count={7}
+          />
+          <QuickAnalytic
+            icon={<MdPendingActions style={IconCardStyle} />}
+            title="Monthly"
+            count={2}
+          />
+          <QuickAnalytic
+            icon={<CgCalendarDue style={IconCardStyle} />}
+            title="Yearly"
+            count={1}
+          />
+        </div>
+      </section>
+      <br />
+      <section className="dashboard_special_container">
         <h2 className="dashboard_title">Analytic Chart</h2>
         <BarChart />
+      </section>
+      <br />
+      <section className="dashboard_special_container">
+        <h2 className="dashboard_title">Payment Receipts</h2>
+        <br />
+        <Invoice_Table />
       </section>
     </>
   );
@@ -76,8 +110,58 @@ const QuickAnalytic = ({ title, icon, count }: any) => {
           <div className="quick_analytic_icon">{icon}</div>
         </div>
         <div className="quick_analytic_column">
-          <h1> {count} </h1>
+          <h1>
+            <span>$</span>
+            {count}.00{" "}
+          </h1>
           <li> {title} Invoice</li>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Invoice_Table = () => {
+  return (
+    <div>
+      <div id="table">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12">
+              <div className="table-responsive" data-pattern="priority-columns">
+                <table
+                  summary="This table shows all the events that are available"
+                  className="table table-bordered table-hover"
+                >
+                  <caption className="text-center"></caption>
+                  <thead>
+                    <tr>
+                      <th data-priority="1">ID</th>
+                      <th data-priority="2">All</th>
+                      <th data-priority="3">Paid</th>
+                      <th data-priority="4">Pending</th>
+                      <th data-priority="5">Overdue </th>
+                      <th data-priority="6">Recurring</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[0, 1].map((data: any) => {
+                      return (
+                        <tr key={data}>
+                          <td>{data + 1} </td>
+                          <td> Gaming </td>
+                          <td> Yes</td>
+                          <td>None</td>
+                          <td>None</td>
+                          <td>None</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

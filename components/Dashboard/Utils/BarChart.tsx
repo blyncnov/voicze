@@ -74,7 +74,7 @@ export const data = {
 
 const BarChart = () => {
   return (
-    <div className="chart_container" style={{ minHeight: "500px" }}>
+    <div className="chart_container">
       <Line options={options} data={data} updateMode={"resize"} />
     </div>
   );

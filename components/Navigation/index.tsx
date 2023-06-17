@@ -114,7 +114,7 @@ const Naviagtion = () => {
                     Login
                   </button>
                 </Link>
-                <Link href="/waitlist">
+                <Link href="/auth/register">
                   <button className={style.btn} id={style.primary}>
                     Get Started
                   </button>
