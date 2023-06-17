@@ -5,6 +5,7 @@ import Link from "next/link";
 import { CgCalendarDue } from "react-icons/cg";
 import { MdPendingActions, MdOutlineVerifiedUser } from "react-icons/md";
 import { VscArchive } from "react-icons/vsc";
+import { BsFillEyeSlashFill } from "react-icons/bs";
 
 // Chart
 import BarChart from "@/components/Dashboard/Utils/BarChart";
@@ -15,6 +16,12 @@ const IconCardStyle = {
   fontSize: "2em",
 };
 
+// Show Icon Style
+const ShowIconStyleEncoding = {
+  color: "black",
+  cursor: "pointer",
+};
+
 export default function Dashboard() {
   return (
     <>
@@ -22,7 +29,7 @@ export default function Dashboard() {
         <div className="dashboard_create_invoice_header">
           <div>
             <h2 className="dashboard_greeting_text">Hi, Blyncnov!</h2>
-            <p>Welcome back </p>
+            <p>Welcome to your dashboard!</p>
           </div>
           <Link href="dashboard/invoice/new">
             <button className="dashboard_create_invoice_button">
@@ -32,9 +39,13 @@ export default function Dashboard() {
         </div>
       </header>
       <br />
+
       <section className="dashboard_special_container">
         <div>
-          <h2 className="dashboard_title">Invoice Analytics</h2>
+          <h2 className="dashboard_title">
+            Invoice Analytics{" "}
+            <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+          </h2>
         </div>
         <div className="dashboard_invoice_grid">
           <QuickAnalytic
@@ -59,10 +70,12 @@ export default function Dashboard() {
           />
         </div>
       </section>
-      <br />
+
       <section className="dashboard_special_container">
         <div>
-          <h2 className="dashboard_title">Issued Invoices</h2>
+          <h2 className="dashboard_title">
+            Issued Invoices <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+          </h2>
         </div>
         <div className="dashboard_invoice_grid">
           <QuickAnalytic
@@ -87,14 +100,18 @@ export default function Dashboard() {
           />
         </div>
       </section>
-      <br />
+
       <section className="dashboard_special_container">
-        <h2 className="dashboard_title">Analytic Chart</h2>
+        <h2 className="dashboard_title">
+          Analytic Chart <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+        </h2>
         <BarChart />
       </section>
-      <br />
+
       <section className="dashboard_special_container">
-        <h2 className="dashboard_title">Payment Receipts</h2>
+        <h2 className="dashboard_title">
+          Payment Received <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+        </h2>
         <br />
         <Invoice_Table />
       </section>
@@ -114,7 +131,10 @@ const QuickAnalytic = ({ title, icon, count }: any) => {
             <span>$</span>
             {count}.00{" "}
           </h1>
-          <li> {title} Invoice</li>
+          <li>
+            {" "}
+            {title} Invoice ({count / 1 + 10 * 0.5})
+          </li>
         </div>
       </div>
     </div>

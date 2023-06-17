@@ -3,6 +3,7 @@
     padding: 1em 0;
     line-height: 1.5;
     border: 1px;
+    color: #333 !important;
     background-color: var(--white);
 
     .dashboard_create_invoice_header {
@@ -16,7 +17,7 @@
             padding: 10px 1em !important;
             color: white !important;
             border-radius: 3px !important;
-            background-color: #000000 !important;
+            background-color: var(--black) !important;
             border: 1px solid rgba(51, 51, 51, 0.08) !important;
             box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 4px 0px inset !important;
 
@@ -35,8 +36,12 @@
     }
 
     .dashboard_title {
+        color: var(--black) !important;
         font-size: 18px !important;
         font-weight: 600 !important;
+        display: flex;
+        gap: .5em;
+        align-items: center;
 
         @media (max-width: 768px) {
             font-size: 15px;
@@ -57,10 +62,14 @@
             align-items: center;
             grid-template-columns: auto 1fr;
             padding: 1em;
-            background-color: rgba(204, 204, 204, 0.159);
             border-radius: 3px;
+            background-color: rgba(204, 204, 204, 0.159);
 
             .quick_analytic_column {
+                display: flex;
+                gap: .1em;
+                flex-direction: column;
+
                 .quick_analytic_icon {
                     padding: 1em 1em;
                     width: 50px;
@@ -71,6 +80,11 @@
                     border-radius: 50%;
                     background-color: rgba(198, 204, 204, 0.178);
                     box-shadow: 0 1px 5px 0 rgba(248, 253, 253, 0.095);
+                }
+
+                h1 {
+                    color: #333;
+                    font-weight: 500;
                 }
 
                 li {

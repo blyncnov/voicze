@@ -87,7 +87,7 @@ a:visited {
             z-index: 99;
             width: 100vw;
             height: 100vh !important;
-            background-color: rgba(0, 0, 0, 0.4) !important;
+            background-color: rgba(0, 0, 0, 0) !important; // Look Into This Later
         }
     }
 }
@@ -169,7 +169,7 @@ a:visited {
             gap: 10px;
             padding: .8em 1em;
             cursor: pointer;
-            color: #000 !important;
+            color: var(--black) !important;
             border-radius: 2.5px;
             transition: all .5s ease-in;
             border-inline: 1px solid transparent;
@@ -186,7 +186,7 @@ a:visited {
             &:hover {
                 background-color: #F7F7F7;
                 border-inline: 1px solid #e8e5e5;
-                color: #000 !important;
+                color: var(--black) !important;
                 padding: .8em 1em;
             }
         }
@@ -195,7 +195,7 @@ a:visited {
             color: var(--white) !important;
             padding: 1em;
             border-radius: 3px;
-            background-color: #000000 !important;
+            background-color: var(--black) !important;
         }
     }
 
@@ -275,7 +275,7 @@ a:visited {
             .dashboard_user_photo {
                 width: 30px;
                 height: 30px;
-                background-color: black;
+                background-color: var(--black);
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -307,7 +307,7 @@ a:visited {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    color: black;
+                    color: var(--black);
                     border: 1px solid rgba(216, 203, 203, 0.356);
                     background-color: var(--white);
                 }
