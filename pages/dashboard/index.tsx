@@ -6,6 +6,7 @@ import { CgCalendarDue } from "react-icons/cg";
 import { MdPendingActions, MdOutlineVerifiedUser } from "react-icons/md";
 import { VscArchive } from "react-icons/vsc";
 import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
+import { RiCodeView } from "react-icons/ri";
 
 // Chart
 import BarChart from "@/components/Dashboard/Utils/BarChart";
@@ -47,16 +48,14 @@ export default function Dashboard() {
       <br />
 
       <section className="dashboard_special_container">
-        <div>
-          <h2 className="dashboard_title">
-            Invoice Analytics{" "}
-            <div onClick={HideToggleEye}>
-              {isShow ? (
-                <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
-              ) : (
-                <BsFillEyeFill style={ShowIconStyleEncoding} />
-              )}
-            </div>
+        <div className="dashboard_tile_control">
+          <h2 className="dashboard_title">Invoice Analytics </h2>
+          <h2 onClick={HideToggleEye}>
+            {isShow ? (
+              <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+            ) : (
+              <BsFillEyeFill style={ShowIconStyleEncoding} />
+            )}
           </h2>
         </div>
         <div className="dashboard_invoice_grid">
@@ -88,9 +87,14 @@ export default function Dashboard() {
       </section>
 
       <section className="dashboard_special_container">
-        <div>
-          <h2 className="dashboard_title">
-            Issued Invoices <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+        <div className="dashboard_tile_control">
+          <h2 className="dashboard_title">Issued Invoices </h2>
+          <h2 onClick={HideToggleEye}>
+            {isShow ? (
+              <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+            ) : (
+              <BsFillEyeFill style={ShowIconStyleEncoding} />
+            )}
           </h2>
         </div>
         <div className="dashboard_invoice_grid">
@@ -123,14 +127,14 @@ export default function Dashboard() {
 
       <section className="dashboard_special_container">
         <h2 className="dashboard_title">
-          Analytic Chart <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+          Analytic Chart <RiCodeView style={ShowIconStyleEncoding} />
         </h2>
         <BarChart />
       </section>
 
       <section className="dashboard_special_container">
         <h2 className="dashboard_title">
-          Payment Received <BsFillEyeSlashFill style={ShowIconStyleEncoding} />
+          Payment Received <RiCodeView style={ShowIconStyleEncoding} />
         </h2>
         <br />
         <Invoice_Table />
@@ -153,12 +157,8 @@ const QuickAnalytic = ({ title, icon, count, isShow }: any) => {
           <div className="quick_analytic_icon">{icon}</div>
         </div>
         <div className="quick_analytic_column">
-          <h1>
-            <span>$</span>
-            {!isShow ? `${count}.00` : "**"}
-          </h1>
+          <h1>{!isShow ? `$${count}.00` : "***"}</h1>
           <li>
-            {" "}
             {title} Invoice ({count / 1 + 10 * 0.5})
           </li>
         </div>

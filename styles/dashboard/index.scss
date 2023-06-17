@@ -6,6 +6,12 @@
     color: #333 !important;
     background-color: var(--white);
 
+    .dashboard_tile_control {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+    }
+
     .dashboard_create_invoice_header {
         width: 100%;
         display: flex;
