@@ -27,7 +27,7 @@ body {
 #Main__Header {
   width: 100%;
   position: relative;
-  min-height: 80vh;
+  /* min-height: 80vh; */
   background-color: #ffffff !important;
   background-image: linear-gradient(to bottom, #f3f9fa79, #fff, #fff, #fff);
 }
