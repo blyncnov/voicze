@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 // Voicze Logo
 import MyLogo from "@/public/logo/voicze_reverse.svg";
@@ -32,7 +33,13 @@ const IconSidestyle = {
 };
 
 const Sidebar = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
+
+  // Current Path
+  const current_url_pathname: any = router.pathname;
+
+  console.log(current_url_pathname);
 
   const CloseSidebar = () => {
     // Do This Action
@@ -69,7 +76,14 @@ const Sidebar = () => {
         <div className="dashboard_sidebar_navigation ">
           <ul>
             <Link href="/dashboard" onClick={CloseSidebar}>
-              <div className="dashboard_flex_item" id="dashboard_active_home">
+              <div
+                className={
+                  current_url_pathname === "/dashboard"
+                    ? "active_link_enable dashboard_flex_item"
+                    : "dashboard_flex_item"
+                }
+                id="dashboard_active_home"
+              >
                 <MdSpaceDashboard style={Iconstyle} />
                 <li>Dashboard </li>
               </div>

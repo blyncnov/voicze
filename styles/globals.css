@@ -52,6 +52,19 @@ canvas {
   min-height: 100% !important;
 }
 
+.invoice_status_sucess {
+  padding: 0.5em 0.4em;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #edfaf0;
+  cursor: pointer;
+}
+
+.invoice_status_err {
+  padding: 1em;
+  background-color: #faf0f0;
+}
+
 @media (min-width: 768px) {
   footer {
     width: 100% !important;
@@ -98,4 +111,9 @@ canvas {
   #container {
     max-width: 1400px !important;
   }
+}
+
+#active_link_enable {
+  background-color: var(--black) !important;
+  color: white !important;
 }

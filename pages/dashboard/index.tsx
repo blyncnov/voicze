@@ -182,24 +182,53 @@ const Invoice_Table = () => {
                   <caption className="text-center"></caption>
                   <thead>
                     <tr>
-                      <th data-priority="1">ID</th>
-                      <th data-priority="2">All</th>
-                      <th data-priority="3">Paid</th>
-                      <th data-priority="4">Pending</th>
-                      <th data-priority="5">Overdue </th>
-                      <th data-priority="6">Recurring</th>
+                      <th data-priority="1">
+                        <div className="all_selector">
+                          <input type="checkbox" aria-hidden="true" />
+                        </div>
+                      </th>
+                      <th data-priority="2">Name</th>
+                      <th data-priority="3">Price</th>
+                      <th data-priority="4">Client </th>
+                      <th data-priority="5">Status</th>
+                      <th data-priority="6">Date</th>
+                      <th data-priority="7">Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {[0, 1].map((data: any) => {
+                    {[0, 1, 2, 3, 4, 5].map((data: any) => {
                       return (
                         <tr key={data}>
-                          <td>{data + 1} </td>
-                          <td> Gaming </td>
-                          <td> Yes</td>
-                          <td>None</td>
-                          <td>None</td>
-                          <td>None</td>
+                          <td>
+                            <input
+                              type="checkbox"
+                              name="invoice_id"
+                              id="invoice_id"
+                            />
+                          </td>
+                          <td>
+                            <div className="invoice_value">
+                              <p>New Project Expenses Invoice</p>
+                              <li>Invoice No 188</li>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="invoice_value">
+                              <p>$90.00</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="invoice_value">
+                              <p>Apple</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="invoice_status_sucess">
+                              <p>Send</p>
+                            </div>
+                          </td>
+                          <td>08.10.2021</td>
+                          <td>...</td>
                         </tr>
                       );
                     })}
