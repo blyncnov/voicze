@@ -196,7 +196,7 @@ const Invoice_Table = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {[0, 1, 2, 3, 4, 5].map((data: any) => {
+                    {[0, 1, 2].map((data: any) => {
                       return (
                         <tr key={data}>
                           <td>
