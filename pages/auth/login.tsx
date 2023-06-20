@@ -70,7 +70,7 @@ const Login = () => {
                   <span>Terms of Service</span> and <span>Privacy Policy.</span>
                 </li>
               </form>
-
+              <br />
               <div className="social_media_login_option">
                 <div className="social_btn">
                   <button id="google">
