@@ -141,6 +141,18 @@ const Sidebar = () => {
               </div>
             </Link>
             <div className="sidebar_quicklinks_summary">
+              <li>TED TALK</li>
+              <BsUsbCFill style={IconSidestyle} />
+            </div>
+            <Link href="/dashboard/survey" onClick={CloseSidebar}>
+              <div className="dashboard_flex_item">
+                <div id="sidebar__icon__style">
+                  <BsPatchQuestion style={Iconstyle} />
+                </div>
+                <li>Biz Talk</li>
+              </div>
+            </Link>
+            <div className="sidebar_quicklinks_summary">
               <li>MY preference</li>
               <BsUsbCFill style={IconSidestyle} />
             </div>
