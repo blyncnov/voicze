@@ -9,6 +9,12 @@ const nextConfig = {
         permanent: false,
         basePath: false,
       },
+      {
+        source: "/dashboard/invoice",
+        destination: "/",
+        permanent: false,
+        basePath: false,
+      },
     ];
   },
 };

@@ -141,7 +141,7 @@ const Sidebar = () => {
               </div>
             </Link>
             <div className="sidebar_quicklinks_summary">
-              <li>TED TALK</li>
+              <li>Business Talk</li>
               <BsUsbCFill style={IconSidestyle} />
             </div>
             <Link href="/dashboard/survey" onClick={CloseSidebar}>
@@ -149,7 +149,7 @@ const Sidebar = () => {
                 <div id="sidebar__icon__style">
                   <BsPatchQuestion style={Iconstyle} />
                 </div>
-                <li>Biz Talk</li>
+                <li>Podcast</li>
               </div>
             </Link>
             <div className="sidebar_quicklinks_summary">
