@@ -4,8 +4,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/waitlist",
-        destination: "https://forms.gle/zJxqxqw9aSpmx5SF6",
+        source: "/dashboard",
+        destination: "/",
         permanent: false,
         basePath: false,
       },
