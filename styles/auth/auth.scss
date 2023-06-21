@@ -146,25 +146,20 @@
 
 .social_media_login_option {
     display: grid;
-    gap: 5px;
+    gap: 10px;
     grid-template-columns: 1fr;
-
 
     button {
         width: 100%;
         border: unset;
         display: flex;
         align-items: center;
-        gap: 10px !important;
         font-weight: 500;
+        gap: 10px !important;
         color: white !important;
         border-radius: 3px !important;
         box-shadow: none !important;
         transition: all 0.2s ease-in-out !important;
-    }
-
-    #facebook {
-        background-color: #4F86EC !important;
     }
 
     #google {

@@ -4,12 +4,11 @@ import { useRouter } from "next/router";
 
 // React icons
 import { FcGoogle } from "react-icons/fc";
+import { BsTwitter } from "react-icons/bs";
 
 // Icon Style
 const IconCardStyle = {
   fontSize: "1.5em",
-  color: "#ffffff",
-  backgroundColor: "white",
   padding: ".1em",
   borderRadius: "3px",
 };
@@ -105,6 +104,12 @@ const Register = () => {
                     <button id="google">
                       <FcGoogle style={IconCardStyle} />
                       <span>Continue with Google</span>
+                    </button>
+                  </div>
+                  <div className="social_btn">
+                    <button id="google">
+                      <BsTwitter style={IconCardStyle} />
+                      <span>Continue with Twitter</span>
                     </button>
                   </div>
                 </div>
