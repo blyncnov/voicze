@@ -32,11 +32,11 @@ const Login = () => {
           </div>
           <div className="auth_grid_column">
             <div>
-              <h1>Sign in</h1>
+              <h1>Sign in to Voicze</h1>
               <p>
                 New to Voicze?{" "}
                 <span>
-                  <Link href="/auth/register">Create an account</Link>
+                  <Link href="/auth/register">Register here!</Link>
                 </span>
               </p>
             </div>

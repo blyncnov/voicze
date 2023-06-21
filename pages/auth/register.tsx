@@ -40,7 +40,7 @@ const Register = () => {
               <p>
                 Already have an account?{" "}
                 <span>
-                  <Link href="/auth/login">Sign in</Link>
+                  <Link href="/auth/login">Sign in here!</Link>
                 </span>
               </p>
             </div>
