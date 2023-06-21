@@ -82,6 +82,7 @@
 
                     input {
                         width: 100%;
+                        border-radius: 7px !important;
                         background-color: #f3f6f85d;
                         font-weight: 400;
                     }
@@ -90,7 +91,7 @@
                         width: 100%;
                         padding: 1em 2em !important;
                         color: var(--white) !important;
-                        border-radius: 5px !important;
+                        border-radius: 7px !important;
                         border: var(--primary-color) !important;
                         background-color: var(--primary-color) !important;
                     }
@@ -157,7 +158,7 @@
         font-weight: 500;
         gap: 10px !important;
         color: white !important;
-        border-radius: 5px !important;
+        border-radius: 7px !important;
         box-shadow: none !important;
         transition: all 0.2s ease-in-out !important;
     }
