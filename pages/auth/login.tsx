@@ -41,6 +41,10 @@ const Login = () => {
               </p>
             </div>
             <br />
+            <div className="auth_error_logs">
+              <p>IDAN, na wrong credentials you enter na!</p>
+            </div>
+            <br />
             <div>
               <form className="auth_form" autoComplete="false">
                 <div>
