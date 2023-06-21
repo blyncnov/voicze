@@ -74,6 +74,11 @@ const Login = () => {
                 </li>
               </form>
               <br />
+              <br />
+              <p style={{ textAlign: "center", fontWeight: "bold" }}>
+                Or sign in with your social account
+              </p>
+              <br />
               <div className="social_media_login_option">
                 <div className="social_btn">
                   <button id="google">

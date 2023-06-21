@@ -93,7 +93,12 @@ const Register = () => {
                   <span>Terms of Service</span> and <span>Privacy Policy.</span>
                 </li>
               </form>
-              <br />{" "}
+              <br />
+              <br />
+              <p style={{ textAlign: "center", fontWeight: "bold" }}>
+                Or sign up with your social account
+              </p>
+              <br />
               <div>
                 <div className="social_media_login_option">
                   <div className="social_btn">
