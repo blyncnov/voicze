@@ -64,7 +64,7 @@ const Login = () => {
                 <div className="auth_options">
                   <Link href="/auth/reset">Forgot your password?</Link>
                 </div>
-                <button type="submit">Log in</button>
+                <button type="submit">Sign in</button>
                 <li style={{ fontSize: "15px" }}>
                   By continuing, you agree{" "}
                   <Link style={{ color: "#251851" }} href="/">

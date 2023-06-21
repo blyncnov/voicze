@@ -156,10 +156,11 @@
         display: flex;
         align-items: center;
         gap: 10px !important;
-        font-weight: 700;
+        font-weight: 500;
         color: white !important;
         border-radius: 3px !important;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px 1px !important;
+        box-shadow: none !important;
+        transition: all 0.2s ease-in-out !important;
     }
 
     #facebook {
@@ -167,7 +168,14 @@
     }
 
     #google {
-        color: #ffffff !important;
-        background-color: #4F86EC !important;
+        color: #000 !important;
+        border-radius: 6px !important;
+        border: 1px solid #a39c9c3f !important;
+        background-color: transparent !important;
+
+        &:hover {
+            color: #ffffff !important;
+            background-color: #4F86EC !important;
+        }
     }
 }
