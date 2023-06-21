@@ -65,8 +65,11 @@ const Login = () => {
                   <Link href="/auth/reset">Forgot your password?</Link>
                 </div>
                 <button type="submit">Log in</button>
-                <li style={{ fontSize: "13px" }}>
-                  By continuing, you agree <Link href="/">Voicze</Link>{" "}
+                <li style={{ fontSize: "15px" }}>
+                  By continuing, you agree{" "}
+                  <Link style={{ color: "#251851" }} href="/">
+                    Voicze
+                  </Link>{" "}
                   <span>Terms of Service</span> and <span>Privacy Policy.</span>
                 </li>
               </form>

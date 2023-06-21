@@ -88,7 +88,7 @@ const Register = () => {
                   <Link href="/auth/reset">Forgot your password?</Link>
                 </div>
                 <button type="submit">Create account</button>
-                <li style={{ fontSize: "13px" }}>
+                <li style={{ fontSize: "15px" }}>
                   By continuing, you agree <Link href="/">Voicze</Link>{" "}
                   <span>Terms of Service</span> and <span>Privacy Policy.</span>
                 </li>

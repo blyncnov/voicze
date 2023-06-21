@@ -43,6 +43,10 @@
                 }
             }
 
+            a {
+                text-decoration: underline !important;
+            }
+
             &:nth-child(1) {
                 display: flex;
                 gap: 20px;
@@ -84,8 +88,9 @@
 
                     button {
                         width: 100%;
-                        padding: 0.8em 2em !important;
+                        padding: 1em 2em !important;
                         color: var(--white) !important;
+                        border-radius: 5px !important;
                         border: var(--primary-color) !important;
                         background-color: var(--primary-color) !important;
                     }
@@ -94,6 +99,10 @@
                         display: flex;
                         align-items: center;
                         justify-content: flex-end;
+
+                        a {
+                            color: var(--primary-color) !important;
+                        }
                     }
                 }
 
@@ -126,9 +135,8 @@
 
 .another_login_option {
     position: relative;
-
-    padding: 2em 0 !important;
     opacity: .2;
+    padding: 2em 0 !important;
 
     h2 {
         font-weight: 600 !important;
@@ -161,6 +169,5 @@
     #google {
         color: #ffffff !important;
         background-color: #4F86EC !important;
-        // border: 1px solid #db3236 !important;
     }
 }

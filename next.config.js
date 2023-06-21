@@ -4,13 +4,13 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/dashboard",
+        source: "/dashboardx",
         destination: "/",
         permanent: false,
         basePath: false,
       },
       {
-        source: "/dashboard/invoice",
+        source: "/dashboard/invoicex",
         destination: "/",
         permanent: false,
         basePath: false,
