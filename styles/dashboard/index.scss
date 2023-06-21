@@ -22,7 +22,7 @@
             font-weight: 500;
             padding: 10px 1em !important;
             color: white !important;
-            border-radius: 3px !important;
+            border-radius: 7px !important;
             background-color: var(--black) !important;
             border: 1px solid rgba(51, 51, 51, 0.08) !important;
             box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 4px 0px inset !important;
@@ -68,7 +68,7 @@
             align-items: center;
             grid-template-columns: auto 1fr;
             padding: 1em;
-            border-radius: 3px;
+            border-radius: 7px;
             background-color: rgba(204, 204, 204, 0.159);
 
             .quick_analytic_column {
