@@ -1,6 +1,7 @@
 import { useEffect, type ReactElement, type ReactNode } from "react";
-import type { NextPage } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
+import type { NextPage } from "next";
 import { useRouter } from "next/router";
 
 // CSS STYLES
@@ -69,6 +70,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
+        <Analytics />
       </Provider>
     );
   }
@@ -80,6 +82,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       <Provider store={store}>
         <Component {...pageProps} />
       </Provider>
+      <Analytics />
     </>
   );
 }
