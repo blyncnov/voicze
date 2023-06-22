@@ -39,6 +39,17 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   // If User Visit "/dashboard/**/**" and is not logged in, redirect to login page
   useEffect(() => {
     if (typeof window !== "undefined") {
+      if (router.pathname.includes("/auth")) {
+        if (localStorage.getItem("token")) {
+          router.push("/dashboard");
+        }
+      }
+    }
+  });
+
+  // If User is already logged in, redirect to dashboard page
+  useEffect(() => {
+    if (typeof window !== "undefined") {
       if (router.pathname.includes("/dashboard")) {
         if (!localStorage.getItem("token")) {
           router.push("/auth/login");

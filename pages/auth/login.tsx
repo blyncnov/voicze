@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -20,15 +20,6 @@ const Login = () => {
   const router = useRouter();
   const [err, setErr] = useState("");
 
-  // If User is already logged in, redirect to dashboard page
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (localStorage.getItem("token")) {
-        router.push("/dashboard");
-      }
-    }
-  });
-
   // Handle Login Function
   const LoginAuthHandler = async (e: any) => {
     e.preventDefault();
@@ -37,8 +28,10 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    // Email and password to console
-    console.log(email, password);
+    // If Empty Inputs
+    if (!email || !password) {
+      return;
+    }
 
     // "auth/login" API
     voicze_config
@@ -129,6 +122,7 @@ const Login = () => {
                     id="password"
                     placeholder="Password"
                     onChange={(e) => e.target.value}
+                    minLength={5}
                     required
                   />
                 </div>
