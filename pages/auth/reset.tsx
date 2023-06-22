@@ -58,11 +58,11 @@ const Reset = () => {
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="Email"
+                    placeholder="Email Address"
                     required
                   />
                 </div>
-                <button type="submit">Log in</button>
+                <button type="submit">Reset Password</button>
               </form>
             </div>
           </div>

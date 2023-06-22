@@ -110,7 +110,7 @@ const Login = () => {
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="Email"
+                    placeholder="Email Address"
                     onChange={(e) => e.target.value}
                     required
                   />

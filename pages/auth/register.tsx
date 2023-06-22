@@ -148,7 +148,7 @@ const Register = () => {
                     name="email"
                     id="email"
                     defaultValue={email}
-                    placeholder="Email"
+                    placeholder="Email Address"
                     required
                   />
                 </div>
