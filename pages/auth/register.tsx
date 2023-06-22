@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 // React icons
 import { FcGoogle } from "react-icons/fc";
 import { BsTwitter } from "react-icons/bs";
+import voicze_config from "@/axios.config";
 
 // Icon Style
 const IconCardStyle = {
@@ -15,8 +16,60 @@ const IconCardStyle = {
 
 const Register = () => {
   const router = useRouter();
+
+  const [err, setErr] = useState("");
+
+  // Email from query
   const { email } = router.query;
-  console.log(email);
+
+  // Handle Login Function
+  const RegisterAccountHandler = async (e: any) => {
+    e.preventDefault();
+
+    // Input Values
+    const first_name = e.target.first_name.value;
+    const last_name = e.target.last_name.value;
+    const business_name = e.target.business_name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    // If Empty Inputs
+    if (!email || !password || !first_name || !last_name || !business_name) {
+      return;
+    }
+
+    // "auth/login" API
+    voicze_config
+      .post("auth/signup", {
+        first_name,
+        last_name,
+        business_name,
+        email,
+        password,
+      })
+      .then((res: any) => {
+        console.log(res.data.message);
+        console.log(res.data);
+
+        // Set Error Message
+        setErr(res.data.message);
+
+        // If Registration Failed,  Redirect to register page after 2secs again
+        if (res.data.status === 400 && res.data.response.statusCode === 400) {
+          return router.push("/auth/register");
+        }
+
+        // Redirect to Login page after 2secs
+        router.push("/auth/login");
+      })
+      .catch((err: any) => {
+        console.log(err);
+
+        // Redirect to login page after 2secs
+        router.push("/auth/register");
+      });
+  };
+
   return (
     <div>
       <div className="auth_section">
@@ -44,18 +97,26 @@ const Register = () => {
               </p>
             </div>
             <br />
-            <div className="auth_error_logs">
-              <p>IDAN, na wrong credentials you enter na!</p>
-            </div>
+            {err && (
+              <div className="auth_error_logs">
+                <p> {err} </p>
+              </div>
+            )}
             <br />
             <div>
-              <form className="auth_form" autoComplete="false">
+              <form
+                className="auth_form"
+                autoComplete="false"
+                onSubmit={RegisterAccountHandler}
+              >
                 <div>
                   <input
                     type="text"
                     name="first_name"
                     id="first_name"
                     placeholder="First Name"
+                    onChange={(e) => e.target.value}
+                    minLength={2}
                     required
                   />
                 </div>
@@ -65,6 +126,19 @@ const Register = () => {
                     name="last_name"
                     id="last_name"
                     placeholder="Last Name"
+                    onChange={(e) => e.target.value}
+                    minLength={2}
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    name="business_name"
+                    id="business_name"
+                    placeholder="Business Name"
+                    onChange={(e) => e.target.value}
+                    minLength={2}
                     required
                   />
                 </div>
@@ -84,6 +158,8 @@ const Register = () => {
                     name="password"
                     id="password"
                     placeholder="Password"
+                    onChange={(e) => e.target.value}
+                    minLength={5}
                     required
                   />
                 </div>

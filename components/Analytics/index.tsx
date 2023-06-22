@@ -15,12 +15,12 @@ const Analytics = ({ waitlistCount }: any) => {
     <div>
       <div className={style.analytics_container}>
         <div className={style.analytics_identites}>
-          <h1> {waitlistCount || 22}+</h1> <BsDot style={style_icon} />
+          <h1>10+</h1>
+          <BsDot style={style_icon} />
           <p>Users</p>
         </div>
         <div className={style.analytics_identites}>
-          <h1>10+</h1>
-          <BsDot style={style_icon} />
+          <h1> {waitlistCount || 22}+</h1> <BsDot style={style_icon} />
           <p>Verified</p>
         </div>
         <div className={style.analytics_identites}>
