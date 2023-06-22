@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 
 // Font Management
@@ -10,6 +11,8 @@ import Sidebar from "@/components/Dashboard/Sidebar";
 import Topbar from "@/components/Dashboard/Topbar";
 
 const DashboardLayout = ({ children }: any) => {
+  const router = useRouter();
+
   return (
     <>
       <Head>

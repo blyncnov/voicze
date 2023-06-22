@@ -46,8 +46,14 @@ const Sidebar = () => {
     dispatch({ type: CLOSE });
   };
 
+  // LogOut Handler For Later Use
   const LogOutHandler = () => {
     console.log("I want to log out");
+
+    if (typeof window !== "undefined") {
+      localStorage.clear();
+      router.push("/auth/login");
+    }
 
     // Do This Action
     dispatch({ type: CLOSE });
@@ -175,8 +181,8 @@ const Sidebar = () => {
             <div className="sidebar_quicklinks_summary">
               <li>Others</li>
             </div>
-            <div className="dashboard_flex_item">
-              <div id="sidebar__icon__style" onClick={LogOutHandler}>
+            <div className="dashboard_flex_item" onClick={LogOutHandler}>
+              <div id="sidebar__icon__style">
                 <AiOutlinePoweroff style={Iconstyle} />
               </div>
               <li>Log Out</li>

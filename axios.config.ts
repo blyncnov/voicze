@@ -1,8 +1,8 @@
 import axios, { AxiosInstance } from "axios";
 
 export const voicze_config: AxiosInstance = axios.create({
-  baseURL: process.env.BASE_URL,
-  timeout: 3000,
+  baseURL: process.env.NEXT_PUBLIC_BASE_URL,
+  timeout: 5000,
   headers: {
     "Content-Type": "application/json",
   },

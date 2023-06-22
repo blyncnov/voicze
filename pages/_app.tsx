@@ -35,12 +35,15 @@ type AppPropsWithLayout = AppProps & {
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
-  useEffect(() => {
-    const token = "fake";
 
-    // Check If Token exists , Else Redirect Back to Home Page
-    if (!token) {
-      router.push("/");
+  // If User Visit "/dashboard/**/**" and is not logged in, redirect to login page
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (router.pathname.includes("/dashboard")) {
+        if (!localStorage.getItem("token")) {
+          router.push("/auth/login");
+        }
+      }
     }
   });
 

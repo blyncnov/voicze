@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 
-// React icons
+// Axos Custom config
+import voicze_config from "@/axios.config";
+
 // React icons
 import { FcGoogle } from "react-icons/fc";
 import { BsTwitter } from "react-icons/bs";
@@ -14,6 +17,61 @@ const IconCardStyle = {
 };
 
 const Login = () => {
+  const router = useRouter();
+  const [err, setErr] = useState("");
+
+  // If User is already logged in, redirect to dashboard page
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("token")) {
+        router.push("/dashboard");
+      }
+    }
+  });
+
+  // Handle Login Function
+  const LoginAuthHandler = async (e: any) => {
+    e.preventDefault();
+
+    // Input Values
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    // Email and password to console
+    console.log(email, password);
+
+    // "auth/login" API
+    voicze_config
+      .post("auth/login", {
+        email,
+        password,
+      })
+      .then((res: any) => {
+        console.log(res.data.message);
+        console.log(res.data);
+
+        // Set Error Message
+        setErr(res.data.message);
+
+        // If Authentication Failed,  Redirect to login page after 2secs
+        if (res.data.status === 400 && res.data.response.statusCode === 400) {
+          return router.push("/auth/login");
+        }
+
+        // Save token to LocalStorage
+        localStorage.setItem("token", res.data.token);
+
+        // Redirect to dashboard page after 2secs
+        router.push("/dashboard");
+      })
+      .catch((err: any) => {
+        console.log(err);
+
+        // Redirect to login page after 2secs
+        router.push("/auth/login");
+      });
+  };
+
   return (
     <div>
       <div className="auth_section">
@@ -41,18 +99,26 @@ const Login = () => {
               </p>
             </div>
             <br />
-            <div className="auth_error_logs">
-              <p>IDAN, na wrong credentials you enter na!</p>
-            </div>
+            {err && (
+              <div className="auth_error_logs">
+                <p> {err} </p>
+              </div>
+            )}
             <br />
             <div>
-              <form className="auth_form" autoComplete="false">
+              <form
+                className="auth_form"
+                autoComplete="false"
+                method="POST"
+                onSubmit={LoginAuthHandler}
+              >
                 <div>
                   <input
                     type="email"
                     name="email"
                     id="email"
                     placeholder="Email"
+                    onChange={(e) => e.target.value}
                     required
                   />
                 </div>
@@ -62,6 +128,7 @@ const Login = () => {
                     name="password"
                     id="password"
                     placeholder="Password"
+                    onChange={(e) => e.target.value}
                     required
                   />
                 </div>
