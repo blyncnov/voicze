@@ -39,7 +39,7 @@ const Sidebar = () => {
   // Current Path
   const current_url_pathname: any = router.pathname;
 
-  console.log(current_url_pathname);
+  // console.log(current_url_pathname);
 
   const CloseSidebar = () => {
     // Do This Action
@@ -74,7 +74,7 @@ const Sidebar = () => {
         <div className="dashboard_sidebar_height">
           <div className="dashboard_logo">
             <Link href="/dashboard">
-              <Image src={MyLogo} alt={`sidebar-logo`} priority={true} />
+              <Image src={MyLogo} alt="voicze logo" priority={true} />
             </Link>
           </div>
         </div>

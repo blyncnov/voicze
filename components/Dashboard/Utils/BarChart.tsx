@@ -8,6 +8,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
@@ -19,7 +20,8 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  Filler
 );
 
 export const options = {
@@ -41,8 +43,8 @@ export const options = {
         display: true,
         text: "Total Invoice Generated",
       },
-      suggestedMin: -10,
-      suggestedMax: 200,
+      suggestedMin: 0,
+      suggestedMax: 50,
     },
   },
   plugins: {
@@ -56,18 +58,31 @@ export const options = {
   },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
+const labels = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 export const data = {
   labels,
   datasets: [
     {
       label: "Montly Generated Invoice",
-      data: labels.map(() => faker.number.int({ min: 0, max: 70 })),
+      data: labels.map(() => faker.number.int({ min: 0, max: 10000 })),
       borderColor: "#4AC3C6",
       backgroundColor: "#4AC3C6",
       fill: true,
-      tension: 0.3,
+      tension: 1,
     },
   ],
 };
