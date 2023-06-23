@@ -7,6 +7,9 @@ import { FcGoogle } from "react-icons/fc";
 import { BsTwitter } from "react-icons/bs";
 import voicze_config from "@/axios.config";
 
+// Utils
+import { useTimer } from "@/utils/useTimer";
+
 // Icon Style
 const IconCardStyle = {
   fontSize: "1.5em",
@@ -16,8 +19,10 @@ const IconCardStyle = {
 
 const Register = () => {
   const router = useRouter();
+  const { quick } = useTimer();
 
   const [err, setErr] = useState("");
+  const [loadBtn, setloadBtn] = useState(false);
 
   // Email from query
   const { email } = router.query;
@@ -25,6 +30,9 @@ const Register = () => {
   // Handle Login Function
   const RegisterAccountHandler = async (e: any) => {
     e.preventDefault();
+
+    // Change loading btn
+    setloadBtn(!loadBtn);
 
     // Input Values
     const first_name = e.target.first_name.value;
@@ -48,7 +56,6 @@ const Register = () => {
         password,
       })
       .then((res: any) => {
-        console.log(res.data.message);
         console.log(res.data);
 
         // Set Error Message
@@ -56,14 +63,19 @@ const Register = () => {
 
         // If Registration Failed,  Redirect to register page after 2secs again
         if (res.data.status === 400 && res.data.response.statusCode === 400) {
+          setloadBtn(true);
           return router.push("/auth/register");
         }
 
-        // Redirect to Login page after 2secs
-        router.push("/auth/login");
+        // Redirect to dashboard page after 2secs
+        quick(() => {
+          setloadBtn(false);
+          router.push("/auth/login");
+        });
       })
       .catch((err: any) => {
         console.log(err);
+        setloadBtn(true);
 
         // Redirect to login page after 2secs
         router.push("/auth/register");
@@ -166,7 +178,9 @@ const Register = () => {
                 <div className="auth_options">
                   <Link href="/auth/reset">Forgot your password?</Link>
                 </div>
-                <button type="submit">Create account</button>
+                <button type="submit">
+                  {loadBtn ? "Loading ..." : " Create account"}
+                </button>
                 <li style={{ fontSize: "15px" }}>
                   By continuing, you agree <Link href="/">Voicze</Link>{" "}
                   <span>Terms of Service</span> and <span>Privacy Policy.</span>

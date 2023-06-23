@@ -4,6 +4,11 @@
 @import "./utils/table.scss";
 @import "./utils/checkbox.scss";
 
+// Settings => profile & referals
+@import "./dashboard//settings/profile.scss";
+@import "./dashboard//settings/referals.scss";
+
+
 // Root Variables
 :root {
   --black: #181818;

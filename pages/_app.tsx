@@ -4,10 +4,16 @@ import type { AppProps } from "next/app";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 
+// React Toast library
+import { ToastContainer, toast } from "react-toastify";
+
 // CSS STYLES
 import "@/styles/globals.css";
 import "@/styles/base.scss";
 import "@/styles/layout.scss";
+
+// TOASTS
+import "react-toastify/dist/ReactToastify.css";
 
 // SCSS Dashboard Layouts
 import "@/styles/dashboard/index.scss";
@@ -64,19 +70,23 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
   if (Component.getLayout) {
     return (
-      <Provider store={store}>
-        {/* Loading State Component */}
-        <Loading />
-        <DashboardLayout>
-          <Component {...pageProps} />
-        </DashboardLayout>
-        <Analytics />
-      </Provider>
+      <>
+        <Provider store={store}>
+          <ToastContainer />
+          {/* Loading State Component */}
+          <Loading />
+          <DashboardLayout>
+            <Component {...pageProps} />
+          </DashboardLayout>
+          <Analytics />
+        </Provider>
+      </>
     );
   }
 
   return (
     <>
+      <ToastContainer />
       {/* Loading State Component */}
       <Loading />
       <Provider store={store}>

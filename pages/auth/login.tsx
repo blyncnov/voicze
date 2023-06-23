@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
+// Reusable Toast
+import { SuceedToast } from "@/utils/useToasts";
+
 // Axos Custom config
 import voicze_config from "@/axios.config";
 
 // React icons
 import { FcGoogle } from "react-icons/fc";
 import { BsTwitter } from "react-icons/bs";
+
+// Utils
+import { useTimer } from "@/utils/useTimer";
 
 // Icon Style
 const IconCardStyle = {
@@ -18,11 +24,17 @@ const IconCardStyle = {
 
 const Login = () => {
   const router = useRouter();
+  const { quick } = useTimer();
+
   const [err, setErr] = useState("");
+  const [loadBtn, setloadBtn] = useState(false);
 
   // Handle Login Function
   const LoginAuthHandler = async (e: any) => {
     e.preventDefault();
+
+    // Change loading btn
+    setloadBtn(!loadBtn);
 
     // Input Values
     const email = e.target.email.value;
@@ -40,9 +52,6 @@ const Login = () => {
         password,
       })
       .then((res: any) => {
-        console.log(res.data.message);
-        console.log(res.data);
-
         // Set Error Message
         setErr(res.data.message);
 
@@ -54,11 +63,25 @@ const Login = () => {
         // Save token to LocalStorage
         localStorage.setItem("token", res.data.token);
 
+        // Sucess Toast Alert
+        SuceedToast({
+          feedback: res.data.message,
+        });
+
         // Redirect to dashboard page after 2secs
-        router.push("/dashboard");
+        quick(() => {
+          setloadBtn(false);
+          router.push("/dashboard");
+        });
+        // useTimerHook Ends
       })
       .catch((err: any) => {
         console.log(err);
+
+        // Failed Toast Alert
+        // FailedToast({
+        //   feedback: err,
+        // });
 
         // Redirect to login page after 2secs
         router.push("/auth/login");
@@ -129,7 +152,9 @@ const Login = () => {
                 <div className="auth_options">
                   <Link href="/auth/reset">Forgot your password?</Link>
                 </div>
-                <button type="submit">Sign in</button>
+                <button type="submit">
+                  {loadBtn ? "Verifying ..." : "Sign in"}
+                </button>
                 <li style={{ fontSize: "15px" }}>
                   By continuing, you agree{" "}
                   <Link style={{ color: "#251851" }} href="/">
