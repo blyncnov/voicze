@@ -34,7 +34,7 @@ const Login = () => {
     e.preventDefault();
 
     // Change loading btn
-    setloadBtn(!loadBtn);
+    setloadBtn(true);
 
     // Input Values
     const email = e.target.email.value;
@@ -57,11 +57,6 @@ const Login = () => {
         // Set Error Message
         setErr(res.data.message);
 
-        // If Authentication Failed,  Redirect to login page after 2secs
-        if (res.data.status === 400 && res.data.response.statusCode === 400) {
-          return router.push("/auth/login");
-        }
-
         // Save token to LocalStorage
         localStorage.setItem("token", res.data.token);
 
@@ -77,7 +72,12 @@ const Login = () => {
         // useTimerHook Ends
       })
       .catch((err: any) => {
-        console.log(err);
+        setloadBtn(false);
+
+        // Sucess Toast Alert
+        FailedToast({
+          feedback: err.message,
+        });
 
         // Redirect to login page after 2secs
         router.push("/auth/login");

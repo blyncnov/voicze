@@ -9,6 +9,7 @@ import voicze_config from "@/axios.config";
 
 // Utils
 import { useTimer } from "@/utils/useTimer";
+import { FailedToast, SuceedToast } from "@/utils/useToasts";
 
 // Icon Style
 const IconCardStyle = {
@@ -32,7 +33,7 @@ const Register = () => {
     e.preventDefault();
 
     // Change loading btn
-    setloadBtn(!loadBtn);
+    setloadBtn(true);
 
     // Input Values
     const first_name = e.target.first_name.value;
@@ -68,14 +69,23 @@ const Register = () => {
           return router.push("/auth/register");
         }
 
+        // Sucess Toast Alert
+        SuceedToast({
+          feedback: res.data.message,
+        });
+
         // Redirect to dashboard page after 2secs
         quick(() => {
           router.push("/auth/login");
         });
       })
       .catch((err: any) => {
-        console.log(err);
-        setloadBtn(true);
+        setloadBtn(false);
+
+        // Sucess Toast Alert
+        FailedToast({
+          feedback: err.message,
+        });
 
         // Redirect to login page after 2secs
         router.push("/auth/register");
