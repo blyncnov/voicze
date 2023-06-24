@@ -63,7 +63,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         }
       }
     }
-  });
+
+    return () => {};
+  }, [router, router.pathname]);
 
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout || ((page: any) => page);
