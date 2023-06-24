@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 // Reusable Toast
-import { SuceedToast } from "@/utils/useToasts";
+import { SuceedToast, FailedToast } from "@/utils/useToasts";
 
 // Axos Custom config
 import voicze_config from "@/axios.config";
@@ -52,6 +52,8 @@ const Login = () => {
         password,
       })
       .then((res: any) => {
+        setloadBtn(false);
+
         // Set Error Message
         setErr(res.data.message);
 
@@ -70,18 +72,12 @@ const Login = () => {
 
         // Redirect to dashboard page after 2secs
         quick(() => {
-          setloadBtn(false);
           router.push("/dashboard");
         });
         // useTimerHook Ends
       })
       .catch((err: any) => {
         console.log(err);
-
-        // Failed Toast Alert
-        // FailedToast({
-        //   feedback: err,
-        // });
 
         // Redirect to login page after 2secs
         router.push("/auth/login");

@@ -56,6 +56,7 @@ const Register = () => {
         password,
       })
       .then((res: any) => {
+        setloadBtn(false);
         console.log(res.data);
 
         // Set Error Message
@@ -69,7 +70,6 @@ const Register = () => {
 
         // Redirect to dashboard page after 2secs
         quick(() => {
-          setloadBtn(false);
           router.push("/auth/login");
         });
       })
@@ -145,6 +145,7 @@ const Register = () => {
                 </div>
                 <div>
                   <input
+                    data-type="business"
                     type="text"
                     name="business_name"
                     id="business_name"
@@ -179,7 +180,7 @@ const Register = () => {
                   <Link href="/auth/reset">Forgot your password?</Link>
                 </div>
                 <button type="submit">
-                  {loadBtn ? "Loading ..." : " Create account"}
+                  {loadBtn ? "Setting Up Account ..." : " Create account"}
                 </button>
                 <li style={{ fontSize: "15px" }}>
                   By continuing, you agree <Link href="/">Voicze</Link>{" "}

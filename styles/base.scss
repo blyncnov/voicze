@@ -122,6 +122,13 @@ input[type=text] {
   background-size: 15px;
 }
 
+input[data-type="business"] {
+  background-image: url('../public/icon/business.png') !important;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
 input[type=password] {
   background-color: transparent !important;
   background-image: url('../public/icon/key.png');
