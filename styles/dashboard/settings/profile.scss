@@ -5,14 +5,23 @@
     border-radius: 6px;
     background-color: #181818;
     padding: 1em 1em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#profile_relativity {
+    position: relative;
+    width: 100%;
+    background-color: var(--white);
 }
 
 #profile_mainpage_container {
+    position: relative;
     width: 100%;
     margin-top: -50px;
-    // height: calc(100vh - 120px);
+    height: calc(100vh - 120px);
     border-radius: 6px;
     background-color: var(--white);
+    overflow-y: scroll;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -24,19 +33,19 @@
     gap: 30px;
     padding: 1em;
     grid-template-columns: 300px 1fr;
+    background-color: var(--white);
 
     .profile_main_section {
         border-radius: 6px;
-        position: relative;
         border: 1px solid #dddddd;
+        background-color: var(--white);
 
         &:nth-child(1) {
             padding: 1em 0;
-            background-color: transparent;
         }
 
         &:nth-child(2) {
-            background-color: transparent;
+            position: relative;
             padding: 2em 1em;
         }
     }
@@ -145,8 +154,6 @@ form {
                         border: 1.8px solid #181818;
                     }
                 }
-
-
             }
 
             @media (max-width: 1200px) {

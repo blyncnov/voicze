@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
+// Ambassador Image
 import HelenDee from "@/public/model/helendee.jpeg";
 
 // React Icons
@@ -7,48 +8,77 @@ import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Image from "next/image";
 
 const Profile = () => {
+  // default to profile settings
+  const [settingsKey, setSettingskey] = useState<React.JSX.Element>(
+    <ProfileSettings />
+  );
+
+  let key: string = "profile";
+
+  // switch (key) {
+  //   case "profile":
+  //     return 1;
+
+  //   case "business":
+  //     return setSettingskey(<BusinessSettings />);
+
+  //   case "invoice":
+  //     return setSettingskey(<InvoiceSettings />);
+
+  //   case "teams":
+  //     return setSettingskey(<TeamSettings />);
+
+  //   case "billings":
+  //     return setSettingskey(<BillingSettings />);
+
+  //   default:
+  //     break;
+  // }
+
   return (
     <div>
-      <div id="profile_cover_container">{/* <h2>Account Settings</h2> */}</div>
+      <div id="profile_cover_container"></div>
       <div id="profile_mainpage_container">
-        <div className="profile_grid_container">
-          <div className="profile_main_section">
-            <section className="profile_summary_header">
-              <div className="profile_image_container">
-                <Image src={HelenDee} alt="Helendee" />
-              </div>
-              <div className="profile_details_container">
-                <h3>Taiwo Helen_dee 🌿</h3>
-                <p>Helena&apos;s Inc.</p>
-              </div>
-            </section>
-            <br />
-            <br />
-            <section className="profile_additional_options">
-              <div className="profile_additional_row">
-                <p>Profile</p>
-                <MdOutlineArrowForwardIos />
-              </div>
-              <div className="profile_additional_row">
-                <p>Business </p>
-                <MdOutlineArrowForwardIos />
-              </div>
-              <div className="profile_additional_row">
-                <p>Invoice </p>
-                <MdOutlineArrowForwardIos />
-              </div>
-              <div className="profile_additional_row">
-                <p>Teams </p>
-                <MdOutlineArrowForwardIos />
-              </div>
-              <div className="profile_additional_row">
-                <p>Billings </p>
-                <MdOutlineArrowForwardIos />
-              </div>
-            </section>
-          </div>
-          <div className="profile_main_section">
-            <InvoiceSettings />
+        <div id="profile_relativity">
+          <div className="profile_grid_container">
+            <div className="profile_main_section">
+              <section className="profile_summary_header">
+                <div className="profile_image_container">
+                  <Image src={HelenDee} alt="Helendee" />
+                </div>
+                <div className="profile_details_container">
+                  <h3>Taiwo Helen_dee 🌿</h3>
+                  <p>Helena&apos;s Inc.</p>
+                </div>
+              </section>
+              <br />
+              <br />
+              <section className="profile_additional_options">
+                <div className="profile_additional_row">
+                  <p>Profile</p>
+                  <MdOutlineArrowForwardIos />
+                </div>
+                <div className="profile_additional_row">
+                  <p>Business </p>
+                  <MdOutlineArrowForwardIos />
+                </div>
+                <div className="profile_additional_row">
+                  <p>Invoice </p>
+                  <MdOutlineArrowForwardIos />
+                </div>
+                <div className="profile_additional_row">
+                  <p>Teams </p>
+                  <MdOutlineArrowForwardIos />
+                </div>
+                <div className="profile_additional_row">
+                  <p>Billings </p>
+                  <MdOutlineArrowForwardIos />
+                </div>
+              </section>
+            </div>
+            <div className="profile_main_section">
+              <>{settingsKey}</>
+            </div>
           </div>
         </div>
       </div>
