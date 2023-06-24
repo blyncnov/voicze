@@ -64,7 +64,7 @@ const Register = () => {
         setErr(res.data.message);
 
         // If Registration Failed,  Redirect to register page after 2secs again
-        if (res.data.status === 400 && res.data.response.statusCode === 400) {
+        if (res.data.status === 401) {
           setloadBtn(true);
           return router.push("/auth/register");
         }

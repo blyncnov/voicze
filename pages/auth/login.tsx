@@ -54,8 +54,15 @@ const Login = () => {
       .then((res: any) => {
         setloadBtn(false);
 
+        console.log(res.data);
+
         // Set Error Message
         setErr(res.data.message);
+
+        // If Authentication Failed,  Redirect to login page after 2secs
+        if (res.data.status === 401) {
+          return router.push("/auth/login");
+        }
 
         // Save token to LocalStorage
         localStorage.setItem("token", res.data.token);
