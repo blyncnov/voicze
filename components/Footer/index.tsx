@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -14,9 +14,54 @@ import { PlatformName } from "../../data/Naviagtion";
 // Utilities
 import { getLocaltimeAndDate } from "@/utils/getTimeDate";
 import LabelTag from "../Label";
+import voicze_config from "@/axios.config";
+import { FailedToast, SuceedToast } from "@/utils/useToasts";
 
 const Footer = () => {
+  const [loadBtn, setloadBtn] = useState(false);
   const { getFullYear } = getLocaltimeAndDate();
+
+  // Join Waitlist Function
+  const onJoinNewsLetterHandler = (e: any) => {
+    e.preventDefault();
+
+    // Change loading btn
+    setloadBtn(true);
+
+    // Email from body
+    const email = e.target.email.value;
+
+    voicze_config
+      .post("newsletter", { email })
+      .then((res) => {
+        console.log(res);
+
+        if (res.data.status == 409) {
+          setloadBtn(false);
+          // Sucess Toast Alert
+          FailedToast({
+            feedback: "An Error Just Occur",
+          });
+          return;
+        }
+
+        // Sucess Toast Alert
+        SuceedToast({
+          feedback: "You have successfully Joined Our Newsletter",
+        });
+
+        // Clear Value
+        e.target.email.value = "";
+      })
+      .catch((err) => {
+        console.log(err);
+        setloadBtn(false);
+        // Sucess Toast Alert
+        FailedToast({
+          feedback: "An Error Just Occur",
+        });
+      });
+  };
 
   return (
     <div className={style.footer_layout_container}>
@@ -101,7 +146,10 @@ const Footer = () => {
                 </p>
                 <br />
 
-                <form className={style.newsletter_form}>
+                <form
+                  className={style.newsletter_form}
+                  onSubmit={onJoinNewsLetterHandler}
+                >
                   <input
                     type="email"
                     name="email"
@@ -109,7 +157,10 @@ const Footer = () => {
                     placeholder="Enter your email address..."
                     required
                   />
-                  <button type="submit">Subscribe </button>
+                  <button type="submit">
+                    {" "}
+                    {loadBtn ? "Joining..." : "Subscribe"}{" "}
+                  </button>
                 </form>
               </div>
             </div>

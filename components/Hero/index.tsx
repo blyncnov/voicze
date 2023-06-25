@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
 
+// AOS
 import "aos/dist/aos.css";
 
 import { BsBagHeart, BsBinocularsFill } from "react-icons/bs";
+
+// TOAST
+import { SuceedToast, FailedToast } from "@/utils/useToasts";
 
 // Voicze Config
 import { voicze_config } from "../../axios.config";
@@ -19,6 +23,7 @@ import Partner from "@/components/Analytics";
 import style from "./Hero.module.scss";
 
 const Hero = () => {
+  const [loadBtn, setloadBtn] = useState(false);
   const [waitlistCount, setWaitListCount] = useState(0);
   const [isWaitList] = useState(true);
 
@@ -50,6 +55,9 @@ const Hero = () => {
   const onJoinWaitListHandler = (e: any) => {
     e.preventDefault();
 
+    // Change loading btn
+    setloadBtn(true);
+
     // Email from body
     const email = e.target.email.value;
 
@@ -57,13 +65,33 @@ const Hero = () => {
       .post("join-waitlist", { email })
       .then((res) => {
         console.log(res);
+
+        if (res.data.status == 409) {
+          setloadBtn(false);
+          // Sucess Toast Alert
+          FailedToast({
+            feedback: res.data.message,
+          });
+          return;
+        }
+
+        // Sucess Toast Alert
+        SuceedToast({
+          feedback: "You have successfully Joined Our Waitlist",
+        });
+
+        setloadBtn(false);
+
+        // Clear Value
+        e.target.email.value = "";
       })
       .catch((err) => {
         console.log(err);
+        // Sucess Toast Alert
+        FailedToast({
+          feedback: err.data.message,
+        });
       });
-
-    // Clear Value
-    e.target.email.value = "";
   };
 
   return (
@@ -112,7 +140,11 @@ const Hero = () => {
                         required
                       />
                       <button type="submit">
-                        {isWaitList ? "Join Waitlist" : "Try for free"}
+                        {loadBtn ? (
+                          "Joining..."
+                        ) : (
+                          <>{isWaitList ? "Join Waitlist" : "Try for free"}</>
+                        )}
                       </button>
                     </div>
 
