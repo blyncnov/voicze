@@ -50,7 +50,7 @@ const ReferalsLevels: refLevelType[] = [
 const Referrals = () => {
   return (
     <div id="special_shadow_container">
-      <h3>Referrals</h3>
+      <h3 className="referals_title">Referrals</h3>
       <br />
       <section id="referals_options">
         <div className="referals_grid_container">
@@ -66,7 +66,7 @@ const Referrals = () => {
       </section>
       <br />
       <section id="referals_desc">
-        <h2>Referals </h2>
+        <h2 className="referals_title">Referals </h2>
         <p>
           Submit your promo code, send points with your friends or donate to
           chat pool.
@@ -78,7 +78,7 @@ const Referrals = () => {
         <div className="referals_details_grid">
           <div className="referals_column">
             <div>
-              <h3> Your Referals Code</h3>
+              <h3 className="referals_title"> Your Referals Code</h3>
             </div>
             <div className="referals_code">
               <div className="referals_code_value">
@@ -94,7 +94,7 @@ const Referrals = () => {
               return (
                 <div key={idx} className="referals_select">
                   <div>
-                    <h3> {data.title} </h3>
+                    <h3 className="referals_title"> {data.title} </h3>
                   </div>
                   <div className="referals_select_options">
                     <p>Level #{data.id} </p>
