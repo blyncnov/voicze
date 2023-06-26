@@ -22,6 +22,7 @@ export interface refType {
 export interface refLevelType {
   id: number;
   title: string;
+  value: string;
 }
 
 export default FeaturedHostel;

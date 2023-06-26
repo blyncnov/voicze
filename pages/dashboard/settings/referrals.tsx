@@ -36,16 +36,21 @@ const ReferralLevels: refLevelType[] = [
   {
     id: 1,
     title: "Referral Level",
+    value: "Level #3",
   },
   {
     id: 2,
     title: "Total Referrals",
+    value: "991",
   },
   {
     id: 3,
     title: "Amount Earned",
+    value: "$200",
   },
 ];
+
+const referral_code: string = "Helen_dee000000";
 
 const Referrals = () => {
   return (
@@ -82,7 +87,7 @@ const Referrals = () => {
             </div>
             <div className="referral_code">
               <div className="referral_code_value">
-                <p> Blyncnov_key000000777 </p>
+                <p> {referral_code} </p>
               </div>
               <div className="referal_copy_button">
                 <p>Copy</p>
@@ -97,7 +102,7 @@ const Referrals = () => {
                     <h3 className="referral_title"> {data.title} </h3>
                   </div>
                   <div className="referral_select_options">
-                    <p>Level #{data.id} </p>
+                    <p>{data.value} </p>
                   </div>
                 </div>
               );
