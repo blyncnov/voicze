@@ -1,9 +1,12 @@
 import React from "react";
 
+// Soon Components
+import ComingSoon from "@/components/Soon";
+
 const CreateNewInvoice = () => {
   return (
     <div>
-      <h1>Create New Invoice</h1>
+      <ComingSoon />
     </div>
   );
 };

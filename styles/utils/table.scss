@@ -62,8 +62,7 @@ tr {
     border: 2px solid transparent !important;
 
     &:hover {
-        border-inline: 2px solid var(--secondary-color) !important;
-        background: #f6fdfe;
+        background-color: rgba(50, 123, 232, 0.014);
     }
 }
 

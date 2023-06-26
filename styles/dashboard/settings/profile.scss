@@ -3,7 +3,7 @@
     height: 60px;
     color: white;
     border-radius: 6px;
-    background-color: #181818;
+    background-color: var(--tertiary-color);
     padding: 1em 1em;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -156,9 +156,10 @@ form {
                     width: 100% !important;
                     background: none !important;
                     padding: 14px 10px !important;
+                    border: 1px solid #dddddd;
 
                     &:focus-visible {
-                        border: 1.8px solid #181818;
+                        border: 1px solid var(--tertiary-color);
                     }
                 }
             }
