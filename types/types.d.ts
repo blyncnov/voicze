@@ -13,4 +13,15 @@ export interface FeaturedHostel {
   no_available: string;
 }
 
+export interface refType {
+  id: number;
+  title: string;
+  icon: React.JSX.Element;
+}
+
+export interface refLevelType {
+  id: number;
+  title: string;
+}
+
 export default FeaturedHostel;
