@@ -1,9 +1,12 @@
 import React from "react";
 
+// Soon Components
+import ComingSoon from "@/components/Soon";
+
 const EventCard = () => {
   return (
     <div>
-      <h1>Event Card</h1>
+      <ComingSoon />
     </div>
   );
 };

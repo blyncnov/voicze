@@ -1,15 +1,17 @@
 import React from "react";
 
+// Soon Components
+import ComingSoon from "@/components/Soon";
+
 const BusinessCard = () => {
   return (
     <div>
-      <h1>Business Card</h1>
+      <ComingSoon />
     </div>
   );
 };
 
 export default BusinessCard;
-
 
 BusinessCard.getLayout = function getLayout(page: any) {
   return page;

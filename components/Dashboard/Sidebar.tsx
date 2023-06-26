@@ -16,7 +16,7 @@ import { MdSpaceDashboard, MdHistory } from "react-icons/md";
 import { RiListSettingsFill } from "react-icons/ri";
 import { TbFileInvoice } from "react-icons/tb";
 import { BsUsbCFill, BsPatchQuestion } from "react-icons/bs";
-import { FaIdCardAlt } from "react-icons/fa";
+import { FaIdCardAlt, FaPodcast } from "react-icons/fa";
 import { VscReferences } from "react-icons/vsc";
 import { BiIdCard } from "react-icons/bi";
 
@@ -153,7 +153,7 @@ const Sidebar = () => {
             <Link href="/dashboard/survey" onClick={CloseSidebar}>
               <div className="dashboard_flex_item">
                 <div id="sidebar__icon__style">
-                  <BsPatchQuestion style={Iconstyle} />
+                  <FaPodcast style={Iconstyle} />
                 </div>
                 <li>Podcast</li>
               </div>

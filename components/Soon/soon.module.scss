@@ -1,0 +1,12 @@
+#coming_soon_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 90px);
+
+    h1 {
+        font-size: 50px;
+        opacity: .1;
+    }
+}

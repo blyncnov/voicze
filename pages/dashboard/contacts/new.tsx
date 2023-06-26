@@ -1,9 +1,12 @@
 import React from "react";
 
+// Soon Components
+import ComingSoon from "@/components/Soon";
+
 const NewContact = () => {
   return (
     <div>
-      <h1>New Contact</h1>
+      <ComingSoon />
     </div>
   );
 };
