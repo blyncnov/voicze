@@ -1,10 +1,9 @@
 import React from "react";
 import Head from "next/head";
 
-// => Componentss
+// => Components
 import Naviagtion from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import Trusted from "@/components/Trusted";
 import Feature from "@/components/Feature";
 import FAQ from "@/components/FAQ";
 import Support from "@/components/Support";
@@ -25,25 +24,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Header component */}
+      {/* Header components */}
       <section id="Main__Header">
-        {/* Navigation component */}
         <Naviagtion />
-        {/* Hero component */}
         <Hero />
       </section>
+
+      {/* Other components */}
       <section>
-        {/* Trusted component */}
-        {/* <Trusted /> */}
-        {/* Feature component */}
         <Feature />
-        {/* FAQ component */}
         <FAQ />
-        {/* Support components */}
         <Support />
       </section>
+
+      {/* Footer components */}
       <footer>
-        {/* Footer component*/}
         <Footer />
       </footer>
     </>

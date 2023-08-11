@@ -1,14 +1,14 @@
 import React from "react";
 
-// React Icon
-import { HiSpeakerphone } from "react-icons/hi";
-import { GiTrophyCup } from "react-icons/gi";
-import { AiOutlineGift } from "react-icons/ai";
-
-//Types
+// Types
 import { refLevelType, refType } from "@/types/types";
 
-// Icon Style
+// React Icon
+import { GiTrophyCup } from "react-icons/gi";
+import { AiOutlineGift } from "react-icons/ai";
+import { HiSpeakerphone } from "react-icons/hi";
+
+// Icon Style Settings
 const IconS = {
   fontSize: "3em",
   color: "#327be8",

@@ -5,8 +5,8 @@
 @import "./utils/checkbox.scss";
 
 // Settings => profile & referals
-@import "./dashboard//settings/profile.scss";
-@import "./dashboard//settings/referals.scss";
+@import "./dashboard/settings/profile.scss";
+@import "./dashboard/settings/referals.scss";
 
 
 // Root Variables
@@ -40,7 +40,6 @@ button {
   gap: 1em;
   white-space: nowrap;
   outline: none;
-  padding: 0.75em 2em !important;
   border-radius: 7px;
   font-weight: 400;
   line-height: 1.5;
@@ -53,13 +52,18 @@ button {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  box-shadow: var(--rav-shadow) !important;
-  background-color: var(--secondary-color) !important;
-  color: var(--primary-color) !important;
   border-width: 1.5px;
   border-style: solid;
-  border-color: var(--primary-color) !important;
   transition: all 0.2s ease-in;
+  padding: 0.75em 2em !important;
+  color: var(--primary-color) !important;
+  box-shadow: var(--rav-shadow) !important;
+  border-color: var(--primary-color) !important;
+  background-color: var(--secondary-color) !important;
+}
+
+h1 {
+  font-weight: 800 !important;
 }
 
 button[data-btn="primary"] {

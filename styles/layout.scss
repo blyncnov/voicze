@@ -45,22 +45,19 @@ a:visited {
     width: 100%;
     min-height: 100vh;
     padding: 0 .3em;
-    z-index: 99999999999;
+    z-index: 9999999999999;
     transition: left .5s ease-out;
-    color: var(--white) !important;
     border-radius: 0 0.5px .5px 0;
     background-color: var(--white);
+    color: var(--white) !important;
     border-right: 1px solid rgba(55, 49, 49, 0.074);
-    background-color: white !important;
-    z-index: 9999999999999;
-
 
     a {
         img {
             max-width: 150px !important;
             margin-left: -20px;
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
+            -webkit-filter: saturate(100%);
+            filter: saturate(100%);
             filter: brightness(0%);
         }
 
@@ -195,7 +192,7 @@ a:visited {
             color: var(--white) !important;
             padding: 1em;
             border-radius: 3px;
-            background-color: var(--black) !important;
+            background-color: var(--primary-color) !important;
         }
     }
 

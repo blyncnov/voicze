@@ -1,6 +1,6 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 // Font Management
 import { Inter } from "next/font/google";
@@ -17,11 +17,12 @@ const DashboardLayout = ({ children }: any) => {
     <>
       <Head>
         <title>
-          Voicze | Streamline Invoices And Amplify Your Brand With Voicze.
+          Voicze dashboard | Streamline Invoices And Amplify Your Brand With
+          Voicze.
         </title>
         <meta
-          name="Voicze | Streamline Invoices And Amplify Your Brand With Voicze."
-          content="Voicze | Streamline Invoices And Amplify Your Brand With Voicze."
+          name="Voicze dashboard | Streamline Invoices And Amplify Your Brand With Voicze."
+          content="Voicze dashboard | Streamline Invoices And Amplify Your Brand With Voicze."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 // Ambassador Image
 import HelenDee from "@/public/model/helendee.jpeg";
 
 // React Icons
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import Image from "next/image";
 
 const Profile = () => {
   // default to profile settings

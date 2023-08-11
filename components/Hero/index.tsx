@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import AOS from "aos";
 
 // AOS
 import "aos/dist/aos.css";
 
-import { BsBagHeart, BsBinocularsFill } from "react-icons/bs";
+import { BsBinocularsFill } from "react-icons/bs";
 
 // TOAST
 import { SuceedToast, FailedToast } from "@/utils/useToasts";
@@ -27,17 +26,9 @@ const Hero = () => {
   const [waitlistCount, setWaitListCount] = useState(0);
   const [isWaitList] = useState(true);
 
-  //AOS ANIMATION
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
-
   // FETCH WAITLIST COUNTS
   useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-    //create a controller
+    // create a controller
     let controller = new AbortController();
 
     voicze_config.get("waitlist").then((waitlist) => {
@@ -101,19 +92,13 @@ const Hero = () => {
           <div className={style.hero_section_cto}>
             <div className={style.hero_text}>
               <div className={style.cto_text}>
-                <h1
-                  data-aos="fade-right"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                  data-aos-duration="1000"
-                >
-                  Voicze <BsBinocularsFill /> create invoices and effectively
-                  promote your business <BsBagHeart />
+                <h1 data-aos="fade-down" data-aos-duration="500">
+                  Voicze create invoices and effectively promote your business{" "}
                 </h1>
               </div>
               <div
                 className={style.cto_desc}
-                data-aos="zoom-in"
+                data-aos="zoom-out"
                 data-aos-duration="500"
               >
                 <p>
@@ -161,7 +146,11 @@ const Hero = () => {
             </div>
             <div className={style.hero_image_illustration}>
               <Image src={SvgImage} alt="hero_image_showcase" priority={true} />
-              <div className={style.floating_banner} data-aos="flip-up">
+              <div
+                className={style.floating_banner}
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+              >
                 <p>
                   Simplify, Create, Promote: Streamline Your Invoices, Boost
                   Your Business.
